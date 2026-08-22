@@ -93,3 +93,9 @@ The context/data layer can be replaced with a Supabase repository without changi
 ## License
 
 Use and adapt this personal dashboard responsibly and in compliance with every source's terms.
+
+## Freshness filters and manual application workflow
+
+The Jobs page calculates **Last 24 Hours** and **Last 7 Days** from the real source `postedAt` timestamp or, when a source has no posted timestamp, the exact `discoveredAt` scan timestamp. Time, role, match, work-mode, location, and source filters can be combined. Search filters only the indexed dataset; it does not query job sites from the browser.
+
+Selecting **Apply** validates and opens the real source URL, records `Application Started`, the click time, and the active resume version in browser-local storage. When you return, JobPilot asks whether you submitted. Only **Yes, Mark Applied** records the application as Applied. JobPilot never logs in or presses a final submit button. The Applications page tracks status, dates, resume, source URL, notes, and follow-up date.

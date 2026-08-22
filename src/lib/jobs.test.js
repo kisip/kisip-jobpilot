@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { calculateMatchDetails, calculateMatchScore, deduplicateJobs, isEligibleDiscoveredJob, rejectionReason, normalizeJob, validateJob, validateJobUrl } from './jobs'
 
-const target = { title: 'Junior DevOps Engineer', company: 'Real Company', location: 'Remote, India', experience: '1–2 Years', skills: ['Linux', 'AWS', 'Docker', 'Git'], jobType: 'Full-time', workMode: 'Remote', source: 'Remotive Public API', url: 'https://remotive.com/remote-jobs/devops/sample-role-123' }
+const target = { title: 'Junior DevOps Engineer', company: 'Real Company', location: 'Remote, India', experience: '1–2 Years', skills: ['Linux', 'AWS', 'Docker', 'Git'], jobType: 'Full-time', workMode: 'Remote', source: 'Remotive Public API', url: 'https://remotive.com/remote-jobs/devops/sample-role-123', discoveredAt: '2026-08-22T10:00:00Z' }
 const placeholder = (...parts) => `https://${parts.join('.')}/job/1`
 describe('job utilities', () => {
   it('scores a strong one-year target as excellent', () => { const details = calculateMatchDetails(target); expect(details.experience).toBe(100); expect(details.overall).toBeGreaterThanOrEqual(90) })

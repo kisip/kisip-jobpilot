@@ -22,17 +22,17 @@ const dateIso = value => {
   if (!value) return ''
   if (typeof value === 'number' || /^\d{10,13}$/.test(String(value))) {
     const numeric = Number(value)
-    return new Date(numeric > 1e12 ? numeric : numeric * 1000).toISOString().slice(0, 10)
+    return new Date(numeric > 1e12 ? numeric : numeric * 1000).toISOString()
   }
   const parsed = new Date(value)
-  return Number.isNaN(parsed.valueOf()) ? '' : parsed.toISOString().slice(0, 10)
+  return Number.isNaN(parsed.valueOf()) ? '' : parsed.toISOString()
 }
 const salary = (min, max, currency = '') => min || max ? [currency, min && Number(min).toLocaleString('en-US'), max && `- ${Number(max).toLocaleString('en-US')}`].filter(Boolean).join(' ') : 'Not provided'
 const locationText = value => Array.isArray(value) ? value.map(item => typeof item === 'string' ? item : item?.name || item?.slug).filter(Boolean).join(', ') : String(value || '')
 const common = (row, source, text) => ({
   title: row.title, company: row.company, location: locationText(row.location) || 'Worldwide', experience: row.experience || detectExperience(text),
   salary: row.salary || 'Not provided', skills: detectSkills(text), jobType: row.jobType || 'Full-time', workMode: row.workMode || 'Remote', source: source.name,
-  datePosted: dateIso(row.datePosted), dateDiscovered: today, url: row.url, applyUrl: row.applyUrl || row.url,
+  datePosted: dateIso(row.datePosted).slice(0, 10), postedAt: dateIso(row.datePosted), dateDiscovered: today, discoveredAt: now.toISOString(), url: row.url, applyUrl: row.applyUrl || row.url,
   descriptionSummary: summarize(row.summary || text), status: 'New', notes: `${source.attribution}. Final application remains manual.`, resumeVersion: ''
 })
 function adaptRemotive(row, source) {
@@ -119,7 +119,7 @@ const automaticSources = new Set(enabled.map(source => source.name))
 const manualExisting = allExisting.filter(job => !automaticSources.has(job.source))
 const tracked = eligible.map(job => {
   const previous = existingMap.get(duplicateKey(job))
-  return previous ? { ...job, status: previous.status, notes: previous.notes || job.notes, resumeVersion: previous.resumeVersion, applicationDate: previous.applicationDate, dateDiscovered: previous.dateDiscovered, dateFound: previous.dateFound } : job
+  return previous ? { ...job, status: previous.status, notes: previous.notes || job.notes, resumeVersion: previous.resumeVersion, applicationDate: previous.applicationDate, applicationStartedAt: previous.applicationStartedAt, followUpDate: previous.followUpDate, discoveredAt: previous.discoveredAt?.includes('T') ? previous.discoveredAt : job.discoveredAt, dateDiscovered: previous.dateDiscovered, dateFound: previous.dateFound } : job
 })
 const merged = deduplicateJobs([...tracked, ...manualExisting])
 const newJobs = tracked.filter(job => !existingMap.has(duplicateKey(job))).length

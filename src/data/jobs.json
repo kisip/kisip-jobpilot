@@ -1,6 +1,6 @@
 [
   {
-    "id": "844faf48-ab24-4c06-9a80-c6c3feed68f2",
+    "id": "c049e568-c795-4560-85cf-88e1164b7b85",
     "title": "[IT] DEVOPS / SYSADMIN ENG | JUNIOR / MID",
     "company": "Human Power BG",
     "location": "United States",
@@ -14,7 +14,9 @@
     "jobType": "Full-time",
     "workMode": "Remote",
     "source": "Himalayas",
+    "postedAt": "2026-08-22T10:33:08.000Z",
     "datePosted": "2026-08-22",
+    "discoveredAt": "2026-08-22T18:55:52.236Z",
     "dateDiscovered": "2026-08-22",
     "dateFound": "2026-08-22",
     "url": "https://himalayas.app/companies/human-power-bg/jobs/it-devops-sysadmin-eng-junior-mid",
@@ -23,7 +25,9 @@
     "status": "New",
     "notes": "Jobs by Himalayas. Final application remains manual.",
     "resumeVersion": "",
+    "applicationStartedAt": "",
     "applicationDate": "",
+    "followUpDate": "",
     "matchScore": 78,
     "matchDetails": {
       "role": 100,
@@ -50,7 +54,7 @@
     }
   },
   {
-    "id": "0fddf8b4-4c40-4780-b250-4b797765ceb0",
+    "id": "c2681cef-7f92-40aa-83a9-782da4e9d5fe",
     "title": "Devops/Cloud Engineer",
     "company": "Alcor",
     "location": "Mexico",
@@ -69,7 +73,9 @@
     "jobType": "Full-time",
     "workMode": "Remote",
     "source": "Himalayas",
+    "postedAt": "2026-08-22T15:36:01.000Z",
     "datePosted": "2026-08-22",
+    "discoveredAt": "2026-08-22T18:55:52.236Z",
     "dateDiscovered": "2026-08-22",
     "dateFound": "2026-08-22",
     "url": "https://himalayas.app/companies/alcor/jobs/devops-cloud-engineer",
@@ -78,7 +84,9 @@
     "status": "New",
     "notes": "Jobs by Himalayas. Final application remains manual.",
     "resumeVersion": "",
+    "applicationStartedAt": "",
     "applicationDate": "",
+    "followUpDate": "",
     "matchScore": 77,
     "matchDetails": {
       "role": 100,
@@ -110,7 +118,7 @@
     }
   },
   {
-    "id": "e070e3f4-4019-4532-8291-bccff5dec677",
+    "id": "821c0128-20f9-478a-a047-e25c436cec2b",
     "title": "DevOps Engineer",
     "company": "Human Power BG",
     "location": "United States",
@@ -133,7 +141,9 @@
     "jobType": "Full-time",
     "workMode": "Remote",
     "source": "Himalayas",
+    "postedAt": "2026-08-22T15:21:09.000Z",
     "datePosted": "2026-08-22",
+    "discoveredAt": "2026-08-22T18:55:52.236Z",
     "dateDiscovered": "2026-08-22",
     "dateFound": "2026-08-22",
     "url": "https://himalayas.app/companies/human-power-bg/jobs/devops-engineer",
@@ -142,7 +152,9 @@
     "status": "New",
     "notes": "Jobs by Himalayas. Final application remains manual.",
     "resumeVersion": "",
+    "applicationStartedAt": "",
     "applicationDate": "",
+    "followUpDate": "",
     "matchScore": 77,
     "matchDetails": {
       "role": 100,
@@ -178,7 +190,7 @@
     }
   },
   {
-    "id": "944b214e-b9a4-4bff-99ff-6bc3a5e39aad",
+    "id": "d93be0f7-6c86-49e7-a1e7-83a7f77e02a9",
     "title": "Intermediate Platform Engineer",
     "company": "Boardroom Appointments",
     "location": "South Africa",
@@ -199,7 +211,9 @@
     "jobType": "Full-time",
     "workMode": "Remote",
     "source": "Himalayas",
+    "postedAt": "2026-08-22T09:58:42.000Z",
     "datePosted": "2026-08-22",
+    "discoveredAt": "2026-08-22T18:55:52.236Z",
     "dateDiscovered": "2026-08-22",
     "dateFound": "2026-08-22",
     "url": "https://himalayas.app/companies/boardroom-appointments/jobs/intermediate-platform-engineer",
@@ -208,7 +222,9 @@
     "status": "New",
     "notes": "Jobs by Himalayas. Final application remains manual.",
     "resumeVersion": "",
+    "applicationStartedAt": "",
     "applicationDate": "",
+    "followUpDate": "",
     "matchScore": 77,
     "matchDetails": {
       "role": 100,
@@ -242,7 +258,7 @@
     }
   },
   {
-    "id": "a369f643-44a0-43e1-a430-432e9894d613",
+    "id": "48dafd2c-1873-4309-81d5-db3bd06599ec",
     "title": "Regular Cloud Engineer B2B",
     "company": "Human Power BG",
     "location": "United States",
@@ -260,7 +276,9 @@
     "jobType": "Full-time",
     "workMode": "Remote",
     "source": "Himalayas",
+    "postedAt": "2026-08-22T04:05:43.000Z",
     "datePosted": "2026-08-22",
+    "discoveredAt": "2026-08-22T18:55:52.236Z",
     "dateDiscovered": "2026-08-22",
     "dateFound": "2026-08-22",
     "url": "https://himalayas.app/companies/human-power-bg/jobs/regular-cloud-engineer-b2b",
@@ -269,7 +287,9 @@
     "status": "New",
     "notes": "Jobs by Himalayas. Final application remains manual.",
     "resumeVersion": "",
+    "applicationStartedAt": "",
     "applicationDate": "",
+    "followUpDate": "",
     "matchScore": 77,
     "matchDetails": {
       "role": 100,
@@ -300,7 +320,7 @@
     }
   },
   {
-    "id": "d47f0731-5e8d-449f-b05b-bb1375f9a16f",
+    "id": "269283b5-c5a8-466d-be08-424db0f5b7ca",
     "title": "CLOUD ENGINEER",
     "company": "Black Financial Consult",
     "location": "United States",
@@ -322,7 +342,9 @@
     "jobType": "Contract",
     "workMode": "Remote",
     "source": "Himalayas",
+    "postedAt": "2026-08-06T06:49:40.000Z",
     "datePosted": "2026-08-06",
+    "discoveredAt": "2026-08-22T18:55:52.236Z",
     "dateDiscovered": "2026-08-22",
     "dateFound": "2026-08-22",
     "url": "https://himalayas.app/companies/black-financial-consult/jobs/cloud-engineer",
@@ -331,7 +353,9 @@
     "status": "New",
     "notes": "Jobs by Himalayas. Final application remains manual.",
     "resumeVersion": "",
+    "applicationStartedAt": "",
     "applicationDate": "",
+    "followUpDate": "",
     "matchScore": 77,
     "matchDetails": {
       "role": 100,
@@ -367,7 +391,7 @@
     }
   },
   {
-    "id": "562bcf4f-e8fa-44d9-85a4-b8106c2cfa98",
+    "id": "b690f962-feec-43e1-abc1-d22d35fc59cd",
     "title": "Cloud Engineer | Remota - 135368 INT (Alphaville - Barueri, BR, 06.454-000)",
     "company": "gft",
     "location": "Brazil",
@@ -379,7 +403,9 @@
     "jobType": "Full-time",
     "workMode": "Remote",
     "source": "Himalayas",
+    "postedAt": "2026-08-20T19:17:29.000Z",
     "datePosted": "2026-08-20",
+    "discoveredAt": "2026-08-22T18:55:52.236Z",
     "dateDiscovered": "2026-08-22",
     "dateFound": "2026-08-22",
     "url": "https://himalayas.app/companies/gft/jobs/cloud-engineer-remota-135368-int-alphaville-barueri-br-06-454-000",
@@ -388,7 +414,9 @@
     "status": "New",
     "notes": "Jobs by Himalayas. Final application remains manual.",
     "resumeVersion": "",
+    "applicationStartedAt": "",
     "applicationDate": "",
+    "followUpDate": "",
     "matchScore": 55,
     "matchDetails": {
       "role": 100,

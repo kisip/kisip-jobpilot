@@ -1,5 +1,6 @@
 import { renderHook, act } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
+import { dashboardCounters } from '../services/jobService'
 import { JobProvider, useJobs } from './JobContext'
 
 const manual = { title: 'DevOps Engineer', company: 'Verified Company', location: 'Chennai', experience: '1 Year', skills: ['Linux'], jobType: 'Full-time', workMode: 'Hybrid', source: 'LinkedIn (manual)', url: 'https://www.linkedin.com/jobs/view/123456789' }
@@ -19,7 +20,35 @@ describe('application tracking automation', () => {
     act(() => result.current.markApplied(job.id))
     const applied = result.current.jobs.find(item => item.id === job.id)
     expect(applied.status).toBe('Applied')
-    expect(applied.applicationDate).toMatch(/^\d{4}-\d{2}-\d{2}$/)
+    expect(applied.applicationDate).toContain('T')
     expect(applied.resumeVersion).toBe('Anandha Krishnan DevOps CV v1')
+    expect(dashboardCounters(result.current.jobs).applied).toBeGreaterThanOrEqual(1)
+  })
+})
+
+describe('safe application start workflow', () => {
+  it('records Application Started, exact click time, and active resume', () => {
+    const { result } = renderHook(() => useJobs(), { wrapper: JobProvider })
+    act(() => result.current.addJob(manual))
+    const job = result.current.jobs.find(item => item.url === manual.url)
+    let response
+    act(() => { response = result.current.startApplication(job.id) })
+    const started = result.current.jobs.find(item => item.id === job.id)
+    expect(response).toMatchObject({ ok: true, url: manual.url })
+    expect(started.status).toBe('Application Started')
+    expect(started.applicationStartedAt).toMatch(/^\d{4}-\d{2}-\d{2}T/)
+    expect(started.resumeVersion).toBe('Anandha Krishnan DevOps CV v1')
+  })
+  it('prevents a second application after Applied', () => {
+    const { result } = renderHook(() => useJobs(), { wrapper: JobProvider })
+    act(() => result.current.addJob(manual))
+    const job = result.current.jobs.find(item => item.url === manual.url)
+    act(() => result.current.startApplication(job.id))
+    act(() => result.current.markApplied(job.id))
+    act(() => result.current.updateJob(job.id, { status: 'Saved' }))
+    let duplicate
+    act(() => { duplicate = result.current.startApplication(job.id) })
+    expect(duplicate).toEqual({ ok: false, message: 'You already applied to this job.' })
+    expect(result.current.jobs.filter(item => item.id === job.id)).toHaveLength(1)
   })
 })

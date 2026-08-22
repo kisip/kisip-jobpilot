@@ -1,17 +1,12 @@
-import { render, screen } from '@testing-library/react'
-import { describe, expect, it } from 'vitest'
+import { cleanup, fireEvent, render, screen } from '@testing-library/react'
+import { afterEach, describe, expect, it, vi } from 'vitest'
 import JobTable from './JobTable'
 import { JobProvider } from '../context/JobContext'
-
-describe('JobTable', () => {
-  it('shows the real-jobs empty state', () => { render(<JobProvider><JobTable jobs={[]} onEdit={() => {}} /></JobProvider>); expect(screen.getByText('No jobs have been discovered yet.')).toBeInTheDocument(); expect(screen.getByText(/Run Safe job discovery from GitHub Actions/)).toBeInTheDocument() })
-  it('disables links when a URL is unavailable', () => { const job = { id: 'bad', title: 'DevOps Engineer', company: 'Company', location: 'India', experience: '1 Year', source: 'Manual', datePosted: '', dateDiscovered: '2026-08-22', matchScore: 80, matchDetails: {}, status: 'New', skills: [], jobType: 'Full-time', workMode: 'Remote', url: '', applyUrl: '' }; render(<JobProvider><JobTable jobs={[job]} onEdit={() => {}} /></JobProvider>); expect(screen.getAllByText('Application URL unavailable')).toHaveLength(2) })
-  it('uses the real listing URL for View Job and Apply without submitting', () => {
-    const url = 'https://remotive.com/remote-jobs/devops/real-listing-123'
-    const job = { id: 'real', title: 'Junior DevOps Engineer', company: 'Company', location: 'Remote, India', experience: '1 Year', source: 'Remotive Public API', datePosted: '2026-08-20', dateDiscovered: '2026-08-22', matchScore: 92, matchDetails: {}, status: 'New', skills: ['Linux'], jobType: 'Full-time', workMode: 'Remote', url, applyUrl: url }
-    render(<JobProvider><JobTable jobs={[job]} onEdit={() => {}} /></JobProvider>)
-    expect(screen.getByRole('link', { name: /View Job/ })).toHaveAttribute('href', url)
-    expect(screen.getByRole('link', { name: /Apply/ })).toHaveAttribute('href', url)
-    expect(screen.getByRole('link', { name: /Apply/ })).toHaveAttribute('target', '_blank')
-  })
+afterEach(()=>{cleanup();vi.restoreAllMocks()})
+describe('JobTable',()=>{
+  it('shows the real-jobs empty state',()=>{render(<JobProvider><JobTable jobs={[]} onEdit={()=>{}}/></JobProvider>);expect(screen.getByText('No jobs have been discovered yet.')).toBeInTheDocument();expect(screen.getByText(/Run Safe job discovery/)).toBeInTheDocument()})
+  it('disables actions when a URL is unavailable',()=>{const job={id:'bad',title:'DevOps Engineer',company:'Company',location:'India',experience:'1 Year',source:'Manual',dateDiscovered:'2026-08-22',matchScore:80,matchDetails:{},status:'New',skills:[],jobType:'Full-time',workMode:'Remote',url:'',applyUrl:''};render(<JobProvider><JobTable jobs={[job]} onEdit={()=>{}}/></JobProvider>);expect(screen.getByText('View unavailable')).toBeDisabled();expect(screen.getByText('Application URL unavailable')).toBeDisabled()})
+  it('uses the real listing for View and starts manual Apply',()=>{const url='https://himalayas.app/companies/real-company/jobs/real-listing';const open=vi.spyOn(window,'open').mockImplementation(()=>null);localStorage.setItem('jobpilot.jobs.v1',JSON.stringify([{title:'Manual Test Role',company:'Real Company',location:'Remote, India',experience:'1 Year',source:'Manual link',dateDiscovered:'2026-08-22',skills:['Linux'],jobType:'Full-time',workMode:'Remote',url,applyUrl:url,status:'New'}]));render(<JobProvider><JobTable jobs={[]} onEdit={()=>{}}/></JobProvider>);cleanup();render(<JobProvider><JobTableFromContext/></JobProvider>);expect(screen.getByRole('link',{name:'View'})).toHaveAttribute('href',url);fireEvent.click(screen.getByRole('button',{name:/Apply/}));expect(open).toHaveBeenCalledWith(url,'_blank','noopener,noreferrer');expect(screen.getByText('Did you submit this application?')).toBeInTheDocument();fireEvent.click(screen.getByRole('button',{name:'Yes, Mark Applied'}));expect(screen.getByRole('button',{name:'Applied'})).toBeInTheDocument();fireEvent.click(screen.getByRole('button',{name:'Applied'}));expect(screen.getByText('You already applied to this job.')).toBeInTheDocument()})
 })
+function JobTableFromContext(){const{jobs}=requireContext();return <JobTable jobs={jobs.filter(job=>job.title==='Manual Test Role')} onEdit={()=>{}}/>}
+import { useJobs as requireContext } from '../context/JobContext'
