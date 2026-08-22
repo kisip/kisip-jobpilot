@@ -1,0 +1,11 @@
+import { useMemo, useState } from 'react'
+import { Filter, Plus, Search } from 'lucide-react'
+import { useJobs } from '../context/JobContext'
+import JobForm from '../components/JobForm'
+import JobTable from '../components/JobTable'
+
+export default function Jobs({ preset }) {
+  const { jobs } = useJobs(); const [search, setSearch] = useState(''); const [status, setStatus] = useState(preset === 'Saved' ? 'Saved' : 'All'); const [mode, setMode] = useState('All'); const [sort, setSort] = useState('match'); const [modal, setModal] = useState(false); const [edit, setEdit] = useState(null)
+  const displayed = useMemo(() => jobs.filter(j => preset === 'applications' ? ['Applied','Interview','Rejected','Offer'].includes(j.status) : true).filter(j => status === 'All' || j.status === status).filter(j => mode === 'All' || j.workMode === mode).filter(j => `${j.title} ${j.company} ${j.location} ${j.skills.join(' ')}`.toLowerCase().includes(search.toLowerCase())).sort((a,b) => sort === 'match' ? b.matchScore-a.matchScore : new Date(b.dateFound)-new Date(a.dateFound)), [jobs,preset,status,mode,search,sort])
+  return <><div className="page-heading"><div><p>{displayed.length} opportunities in your pipeline</p></div><button className="button button-primary" onClick={() => setModal(true)}><Plus size={18}/> Add job</button></div><div className="toolbar"><label className="search"><Search/><input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Search roles, companies, skills…"/></label><label><Filter size={16}/><select value={status} onChange={e=>setStatus(e.target.value)}><option>All</option>{['New','Saved','Applied','Interview','Rejected','Offer'].map(x=><option key={x}>{x}</option>)}</select></label><label><select value={mode} onChange={e=>setMode(e.target.value)}><option>All</option><option>Remote</option><option>Hybrid</option><option>On-site</option></select></label><label>Sort<select value={sort} onChange={e=>setSort(e.target.value)}><option value="match">Highest match</option><option value="date">Newest</option></select></label></div><section className="panel"><JobTable jobs={displayed} onEdit={job => setEdit(job)}/></section>{(modal||edit)&&<JobForm job={edit} onClose={()=>{setModal(false);setEdit(null)}}/>}</>
+}

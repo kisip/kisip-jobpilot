@@ -1,0 +1,4 @@
+[
+  {"name":"Example company feed","type":"json","url":"https://example.com/careers/jobs.json","enabled":false,"permitted":true},
+  {"name":"Example public RSS","type":"rss","url":"https://example.com/jobs.rss","enabled":false,"permitted":true}
+]
