@@ -2,13 +2,14 @@ import { createContext, useContext, useEffect, useMemo, useState } from 'react'
 import seedJobs from '../data/jobs.json'
 import { deduplicateJobs, duplicateKey, normalizeJob, validateJob } from '../lib/jobs'
 import { load, save } from '../lib/storage'
+import { defaultResume, migrateResumes } from '../config/resumeProfile'
 
 const JobContext = createContext(null)
 const sanitizeJobs = jobs => deduplicateJobs((Array.isArray(jobs) ? jobs : []).map(normalizeJob).filter(job => validateJob(job).valid))
 
 export function JobProvider({ children }) {
   const [jobs, setJobs] = useState(() => sanitizeJobs(load('jobs', seedJobs)))
-  const [resumes, setResumes] = useState(() => load('resumes', [{ id: 'resume-1', name: 'DevOps CV', version: 'v1', url: '', skills: ['Linux', 'AWS', 'Docker'] }]))
+  const [resumes, setResumes] = useState(() => migrateResumes(load('resumes', [defaultResume])))
   useEffect(() => { save('jobs', jobs) }, [jobs])
   useEffect(() => { save('resumes', resumes) }, [resumes])
   const actions = useMemo(() => ({
