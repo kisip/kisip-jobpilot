@@ -48,26 +48,17 @@ npm run preview
 
 ## Permitted discovery sources
 
-Edit `src/data/sources.json`. A source is fetched only when both `enabled` and `permitted` are `true`. The included examples are disabled. JSON feeds must return either an array of normalized-ish jobs or `{ "jobs": [] }`. Each item can provide `title`, `company`, `location`, `experience`, `skills`, `jobType`, `workMode`, `url`, and `notes`.
+The enabled automatic source is the documented **Remotive Public API** at `https://remotive.com/api/remote-jobs`. JobPilot makes one filtered request per six-hour scan (four per day), links every result back to Remotive, and labels Remotive as the source as required by its public API terms. No key is required. The public feed may legitimately contain no currently eligible DevOps jobs; in that case JobPilot displays an empty state and never inserts demo records.
 
-```json
-{
-  "name": "Acme public careers API",
-  "type": "json",
-  "url": "https://careers.acme.example/api/jobs",
-  "enabled": true,
-  "permitted": true,
-  "apiKeyEnv": "JOB_API_KEY"
-}
-```
+Sources are declared in `src/data/sources.json` and are fetched only when both `enabled` and `permitted` are true. Every adapter must be reviewed against the source documentation. Discovery requires title, company, location, source, and a real HTTPS URL; placeholder or malformed URLs are rejected before storage.
 
-Confirm the source's terms and API documentation before enabling it. RSS entries are represented in the configuration UI but require a reviewed feed-specific adapter before the runner will ingest them. This prevents silently mis-parsing or scraping an HTML page.
-
-Run a local scan with `npm run discover`. The pipeline is:
+Run `npm run discover` locally. The pipeline is:
 
 ```text
-permitted source → fetch → normalize → deduplicate → match score → src/data/jobs.json
+permitted API → normalize → validate HTTPS URL → profile filter → deduplicate → score → src/data/jobs.json
 ```
+
+LinkedIn, Indeed, and Naukri are manual-link sources only. JobPilot never logs in, scrapes their sites, bypasses CAPTCHA, or submits an application.
 
 ## Scheduled GitHub Actions
 
