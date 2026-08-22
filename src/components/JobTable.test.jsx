@@ -4,7 +4,7 @@ import JobTable from './JobTable'
 import { JobProvider } from '../context/JobContext'
 
 describe('JobTable', () => {
-  it('shows the real-jobs empty state', () => { render(<JobProvider><JobTable jobs={[]} onEdit={() => {}} /></JobProvider>); expect(screen.getByText('No real jobs discovered yet.')).toBeInTheDocument(); expect(screen.getByText(/Configure a permitted job source/)).toBeInTheDocument() })
+  it('shows the real-jobs empty state', () => { render(<JobProvider><JobTable jobs={[]} onEdit={() => {}} /></JobProvider>); expect(screen.getByText('No real jobs discovered yet.')).toBeInTheDocument(); expect(screen.getByText(/Waiting for the next configured job source scan/)).toBeInTheDocument() })
   it('disables links when a URL is unavailable', () => { const job = { id: 'bad', title: 'DevOps Engineer', company: 'Company', location: 'India', experience: '1 Year', source: 'Manual', datePosted: '', dateDiscovered: '2026-08-22', matchScore: 80, matchDetails: {}, status: 'New', skills: [], jobType: 'Full-time', workMode: 'Remote', url: '', applyUrl: '' }; render(<JobProvider><JobTable jobs={[job]} onEdit={() => {}} /></JobProvider>); expect(screen.getAllByText('Application URL unavailable')).toHaveLength(2) })
   it('uses the real listing URL for View Job and Apply without submitting', () => {
     const url = 'https://remotive.com/remote-jobs/devops/real-listing-123'

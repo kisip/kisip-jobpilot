@@ -14,3 +14,12 @@ describe('job utilities', () => {
   it('accepts only valid HTTPS job URLs', () => { expect(validateJobUrl(target.url)).toBe(true); expect(validateJobUrl('http://remotive.com/job/1')).toBe(false); expect(validateJobUrl(placeholder('local', 'host'))).toBe(false); expect(validateJobUrl('not-a-url')).toBe(false) })
   it('requires the production job fields', () => { expect(validateJob(target).valid).toBe(true); expect(validateJob({ ...target, company: '' }).reason).toContain('company'); expect(validateJob({ ...target, url: placeholder('test', 'com') }).valid).toBe(false) })
 })
+
+describe('automatic discovery services', () => {
+  it('normalizes salary, summary, and CV match explanation', () => {
+    const job = normalizeJob({ ...target, salary: 'INR 600,000', descriptionSummary: 'Linux AWS Docker Terraform CI/CD role' })
+    expect(job.salary).toBe('INR 600,000')
+    expect(job.matchDetails.matchedSkills).toContain('Linux')
+    expect(job.matchDetails.explanation).toEqual(expect.arrayContaining([expect.stringMatching(/^Experience/)]))
+  })
+})

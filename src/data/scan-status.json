@@ -1,0 +1,13 @@
+{
+  "status": "Completed",
+  "lastScan": "2026-08-22T17:32:08.490Z",
+  "nextScan": "2026-08-22T23:32:08.490Z",
+  "sourcesChecked": 3,
+  "jobsFetched": 107,
+  "invalidRejected": 107,
+  "duplicatesRemoved": 0,
+  "newJobsAdded": 0,
+  "goodMatches": 0,
+  "excellentMatches": 0,
+  "errors": []
+}

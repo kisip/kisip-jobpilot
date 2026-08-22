@@ -24,7 +24,7 @@ The initial frontend stores job status, notes, resume metadata, and user setting
 
 ## Matching
 
-The candidate baseline is **1 year of professional DevOps / Linux / Server Administration experience**, targeting junior and entry-level roles in the 0–2 year range. `src/lib/jobs.js` returns a 0–100 score using role (25), skills (30), experience (20), location (15), remote (5), and job type (5). Preferred 1-year ranges receive full experience credit. Two-year and 2+ year roles remain eligible when skills match strongly. Senior, Lead, Principal, Manager, Architect, Staff Engineer, and 3+ year roles are suppressed. Adjust the editable profile in `src/config/jobPreferences.js`; never put credentials there.
+The candidate baseline is **1 year of professional DevOps / Linux / Server Administration experience**, targeting junior and entry-level roles in the 0–2 year range. `src/services/matchService.js` returns a 0–100 score using role (25), skills (30), experience (20), location (15), remote (5), and job type (5). Preferred 1-year ranges receive full experience credit. Two-year and 2+ year roles remain eligible when skills match strongly. Senior, Lead, Principal, Manager, Architect, Staff Engineer, and 3+ year roles are suppressed. Adjust the editable profile in `src/config/jobPreferences.js`; never put credentials there.
 
 ## Install and run
 
@@ -48,7 +48,7 @@ npm run preview
 
 ## Permitted discovery sources
 
-The enabled automatic source is the documented **Remotive Public API** at `https://remotive.com/api/remote-jobs`. JobPilot makes one filtered request per six-hour scan (four per day), links every result back to Remotive, and labels Remotive as the source as required by its public API terms. No key is required. The public feed may legitimately contain no currently eligible DevOps jobs; in that case JobPilot displays an empty state and never inserts demo records.
+The enabled sources are the documented **Remotive**, **Himalayas**, and **Jobicy** public job APIs. Each result keeps its real source URL and attribution. None of the currently configured sources requires an API key. Remotive is polled at most four times per day, matching its documented usage guidance. The public feed may legitimately contain no currently eligible DevOps jobs; in that case JobPilot displays an empty state and never inserts demo records.
 
 Sources are declared in `src/data/sources.json` and are fetched only when both `enabled` and `permitted` are true. Every adapter must be reviewed against the source documentation. Discovery requires title, company, location, source, and a real HTTPS URL; placeholder or malformed URLs are rejected before storage.
 
@@ -62,7 +62,7 @@ LinkedIn, Indeed, and Naukri are manual-link sources only. JobPilot never logs i
 
 ## Scheduled GitHub Actions
 
-`.github/workflows/discover-jobs.yml` runs at minute 17 every six hours and on manual dispatch. It installs locked dependencies, fetches only enabled/permitted feeds, normalizes jobs, removes duplicates, calculates scores, tests the project, scans for credential-shaped values, and commits only a changed jobs JSON file. Secrets are passed as environment variables and are never printed by the runner.
+`.github/workflows/discover-jobs.yml` runs at minute 17 every six hours and on manual dispatch. It installs locked dependencies, fetches only enabled/permitted feeds, normalizes jobs, removes duplicates, calculates scores, tests the project, scans for credential-shaped values, and commits only changed job-data and scan-status JSON files. Secrets are passed as environment variables and are never printed by the runner.
 
 To add an API credential: repository **Settings → Secrets and variables → Actions → New repository secret**, name it `JOB_API_KEY`, and paste the value. Add other secret names only when a feed requires them; reference their environment-variable names in source configuration. Never add a real value to `.env.example`, source, JSON, workflow YAML, README, or a public issue.
 

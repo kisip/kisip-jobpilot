@@ -2,61 +2,22 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import preferences from '../src/config/jobPreferences.js'
-import { deduplicateJobs, normalizeJob, validateJob } from '../src/lib/jobs.js'
-
-const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
-const readJson = async file => JSON.parse(await fs.readFile(path.join(root, file), 'utf8'))
-const sources = await readJson('src/data/sources.json')
-const existing = await readJson('src/data/jobs.json')
-const today = new Date().toISOString().slice(0, 10)
-const targetRole = /\b(devops|site reliability|\bsre\b|linux administrator|system administrator|server administrator|cloud support|cloud operations|infrastructure support|linux support)\b/i
-const eligibleLocation = /\b(worldwide|anywhere|global|india|asia|kerala|kochi|bengaluru|bangalore|chennai|hyderabad)\b/i
-const stripHtml = value => String(value || '').replace(/<[^>]*>/g, ' ').replace(/&[a-z]+;/gi, ' ').replace(/\s+/g, ' ').trim()
-const detectSkills = value => preferences.skills.filter(skill => new RegExp(`\\b${skill.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i').test(value))
-const detectExperience = value => value.match(/\b(?:0\s*[–-]\s*2|0\s*[–-]\s*1|1\s*[–-]\s*2|1\+?|2\+?)\s*years?\b/i)?.[0] || (/(?:junior|entry.?level)/i.test(value) ? 'Entry Level / Junior' : 'Not specified')
-const jobType = value => ({ full_time: 'Full-time', contract: 'Contract', internship: 'Internship', part_time: 'Part-time', freelance: 'Contract' }[value] || 'Full-time')
-
-function adaptRemotive(row, source) {
-  const description = stripHtml(row.description)
-  return {
-    id: `remotive-${row.id}`, title: row.title, company: row.company_name, location: row.candidate_required_location || 'Remote', experience: detectExperience(`${row.title} ${description}`),
-    skills: detectSkills(`${row.title} ${description}`), jobType: jobType(row.job_type), workMode: 'Remote', source: source.name, datePosted: String(row.publication_date || '').slice(0, 10),
-    dateDiscovered: today, url: row.url, applyUrl: row.url, status: 'New', notes: 'Public API listing. Application remains manual.', resumeVersion: ''
-  }
-}
-
-async function fetchSource(source) {
-  const headers = { Accept: 'application/json', 'User-Agent': 'Kisip-JobPilot/1.0 permitted-public-feed-reader' }
-  if (source.apiKeyEnv) {
-    const key = process.env[source.apiKeyEnv]
-    if (!key) throw new Error(`Missing repository secret: ${source.apiKeyEnv}`)
-    headers.Authorization = `Bearer ${key}`
-  }
-  const response = await fetch(source.url, { headers, signal: AbortSignal.timeout(20000) })
-  if (!response.ok) throw new Error(`${source.name}: HTTP ${response.status}`)
-  const payload = await response.json()
-  if (source.type === 'remotive') return (payload.jobs || []).map(row => adaptRemotive(row, source))
-  throw new Error(`${source.name}: unsupported source adapter ${source.type}`)
-}
-
-const enabled = sources.filter(source => source.enabled && source.permitted)
-if (sources.some(source => source.enabled && !source.permitted)) throw new Error('Enabled sources must be explicitly marked permitted.')
-const discovered = []
-for (const source of enabled) {
-  const rows = await fetchSource(source)
-  discovered.push(...rows.filter(job => targetRole.test(`${job.title} ${job.notes}`) && eligibleLocation.test(job.location)))
-}
-
-const rejected = []
-const normalizeValid = job => {
-  const normalized = normalizeJob(job)
-  const validation = validateJob(normalized)
-  if (!validation.valid) { rejected.push(`${job.source || 'Unknown source'}: ${validation.reason}`); return null }
-  return normalized
-}
-const validExisting = existing.map(normalizeValid).filter(Boolean)
-const validDiscovered = discovered.map(normalizeValid).filter(Boolean).filter(job => !job.matchDetails.excluded)
-const merged = deduplicateJobs([...validDiscovered, ...validExisting])
-const duplicateCount = validDiscovered.length + validExisting.length - merged.length
-await fs.writeFile(path.join(root, 'src/data/jobs.json'), `${JSON.stringify(merged, null, 2)}\n`)
-console.log(`Scan complete: ${validDiscovered.length} valid target jobs, ${rejected.length} invalid rejected, ${duplicateCount} duplicates removed, ${validDiscovered.filter(job => job.matchScore >= 80).length} high match.`)
+import { deduplicateJobs, duplicateKey, isEligibleDiscoveredJob, normalizeJob, validateJob } from '../src/services/jobService.js'
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');const readJson=async file=>JSON.parse(await fs.readFile(path.join(root,file),'utf8'));const sources=await readJson('src/data/sources.json');const existing=await readJson('src/data/jobs.json');const now=new Date(),today=now.toISOString().slice(0,10)
+const stripHtml=value=>String(value||'').replace(/<[^>]*>/g,' ').replace(/&(?:amp|#038);/gi,'&').replace(/&[a-z#0-9]+;/gi,' ').replace(/\s+/g,' ').trim()
+const summarize=value=>stripHtml(value).slice(0,420);const detectSkills=value=>preferences.skills.filter(skill=>String(value).toLowerCase().includes(skill.toLowerCase()))
+const detectExperience=value=>String(value).match(/\b(?:0\s*[–-]\s*2|0\s*[–-]\s*1|1\s*[–-]\s*2|1\+?|2\+?)\s*years?\b/i)?.[0] || String(value).match(/\b(?:junior|entry.?level|senior|lead|principal|staff|manager|architect)\b/i)?.[0] || "Not specified"
+const type=value=>{const text=Array.isArray(value)?value[0]:value;return({full_time:'Full-time','full-time':'Full-time','full time':'Full-time',contract:'Contract',internship:'Internship',part_time:'Part-time','part-time':'Part-time'}[String(text||'').toLowerCase()]||'Full-time')}
+const dateIso=value=>(typeof value==="number"||/^\d{10}$/.test(String(value||"")))?new Date(Number(value)*1000).toISOString().slice(0,10):String(value||"").slice(0,10);const salary=(min,max,currency="")=>min||max?[currency,min&&Number(min).toLocaleString("en-US"),max&&"- "+Number(max).toLocaleString("en-US")].filter(Boolean).join(" "):"Not provided"
+const common=(row,source,text)=>({title:row.title,company:row.company,location:row.location||'Remote',experience:row.experience||detectExperience(text),salary:row.salary||'Not provided',skills:detectSkills(text),jobType:row.jobType||'Full-time',workMode:row.workMode||'Remote',source:source.name,datePosted:dateIso(row.datePosted),dateDiscovered:today,url:row.url,applyUrl:row.applyUrl||row.url,descriptionSummary:summarize(row.summary||text),status:'New',notes:`${source.attribution}. Final application remains manual.`,resumeVersion:''})
+function adaptRemotive(row,source){const text=`${row.title} ${stripHtml(row.description)}`;return common({title:row.title,company:row.company_name,location:row.candidate_required_location||'Remote',experience:detectExperience(text),salary:row.salary||'Not provided',jobType:type(row.job_type),datePosted:row.publication_date,url:row.url,summary:row.description},source,text)}
+function adaptHimalayas(row,source){const text=`${row.title} ${(row.seniority||[]).join(' ')} ${stripHtml(row.description)}`;return common({title:row.title,company:row.companyName,location:(row.locationRestrictions||[]).join(', ')||'Remote',experience:detectExperience(text),salary:salary(row.minSalary,row.maxSalary,row.currency),jobType:type(row.employmentType),datePosted:row.pubDate||row.publishedAt,url:row.applicationLink||row.url,summary:row.excerpt||row.description},source,text)}
+function adaptJobicy(row,source){const text=`${row.jobTitle} ${row.jobLevel||''} ${stripHtml(row.jobDescription)}`;return common({title:row.jobTitle,company:row.companyName,location:row.jobGeo||'Remote',experience:detectExperience(text),salary:salary(row.annualSalaryMin,row.annualSalaryMax,row.salaryCurrency),jobType:type(row.jobType),datePosted:row.pubDate,url:row.url,summary:row.jobExcerpt||row.jobDescription},source,text)}
+async function fetchSource(source){const headers={Accept:'application/json','User-Agent':'Kisip-JobPilot/2.0 permitted-public-feed-reader'};if(source.requiresSecret){const key=process.env[source.apiKeyEnv];if(!key)throw new Error(`Missing repository secret: ${source.apiKeyEnv}`);headers.Authorization=`Bearer ${key}`}const response=await fetch(source.endpoint,{headers,signal:AbortSignal.timeout(30000)});if(!response.ok)throw new Error(`HTTP ${response.status}`);const payload=await response.json();const adapters={remotive:adaptRemotive,himalayas:adaptHimalayas,jobicy:adaptJobicy};if(!adapters[source.type])throw new Error(`unsupported adapter ${source.type}`);return(payload.jobs||[]).map(row=>adapters[source.type](row,source))}
+const enabled=sources.filter(source=>source.enabled&&source.permitted);if(sources.some(source=>source.enabled&&!source.permitted))throw new Error('Enabled sources must be explicitly marked permitted.')
+const discovered=[],errors=[];let fetched=0
+for(const source of enabled){try{const rows=await fetchSource(source);fetched+=rows.length;discovered.push(...rows)}catch(error){errors.push(`${source.name}: ${error.message}`)}}
+const rejected=[];const normalized=discovered.map(job=>{const next=normalizeJob(job),validation=validateJob(next);if(!validation.valid){rejected.push(validation.reason);return null}if(!isEligibleDiscoveredJob(next)){rejected.push('Outside target role, location, or experience');return null}return next}).filter(Boolean)
+const allExisting=existing.map(job=>normalizeJob(job)).filter(job=>validateJob(job).valid);const existingMap=new Map(allExisting.map(job=>[duplicateKey(job),job]));const automaticSources=new Set(enabled.map(source=>source.name));const validExisting=allExisting.filter(job=>!automaticSources.has(job.source));const withTracking=normalized.map(job=>{const previous=existingMap.get(duplicateKey(job));return previous?{...job,status:previous.status,notes:previous.notes||job.notes,resumeVersion:previous.resumeVersion,applicationDate:previous.applicationDate,dateDiscovered:previous.dateDiscovered,dateFound:previous.dateFound}:job});const merged=deduplicateJobs([...withTracking,...validExisting]);const duplicates=withTracking.length+validExisting.length-merged.length;const newJobs=withTracking.filter(job=>!existingMap.has(duplicateKey(job))).length
+const nextScan=new Date(now.getTime()+6*60*60*1000).toISOString();const scan={status:errors.length===enabled.length?'Error':errors.length?'Completed with warnings':'Completed',lastScan:now.toISOString(),nextScan,sourcesChecked:enabled.length,jobsFetched:fetched,invalidRejected:rejected.length,duplicatesRemoved:duplicates,newJobsAdded:newJobs,goodMatches:withTracking.filter(job=>job.matchScore>=80).length,excellentMatches:withTracking.filter(job=>job.matchScore>=90).length,errors}
+await fs.writeFile(path.join(root,'src/data/jobs.json'),`${JSON.stringify(merged,null,2)}\n`);await fs.writeFile(path.join(root,'src/data/scan-status.json'),`${JSON.stringify(scan,null,2)}\n`);console.log(`Scan complete: ${fetched} fetched, ${newJobs} new, ${rejected.length} rejected, ${duplicates} duplicates, ${scan.goodMatches} good matches, ${scan.excellentMatches} excellent matches, ${errors.length} source errors.`)
