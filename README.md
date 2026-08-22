@@ -14,7 +14,7 @@ The initial frontend stores job status, notes, resume metadata, and user setting
 
 - Dashboard counters for total, new, saved, applied, interviews, rejected, and offers
 - Today/week, high-match, and remote insights plus pipeline charts
-- Search, status/work-mode filters, and match/date sorting
+- Immediate case-insensitive search across the indexed title, company, skills, and location fields; status/work-mode filters; and match/date sorting
 - Manual URL entry for company, LinkedIn, Indeed, and Naukri postings
 - Save, applied, interview, rejected, offer, edit, delete, and safe external-view actions
 - Duplicate detection using normalized company, title, location, and URL
@@ -48,14 +48,14 @@ npm run preview
 
 ## Permitted discovery sources
 
-The enabled sources are the documented **Remotive**, **Himalayas**, and **Jobicy** public job APIs. Each result keeps its real source URL and attribution. None of the currently configured sources requires an API key. Remotive is polled at most four times per day, matching its documented usage guidance. The public feed may legitimately contain no currently eligible DevOps jobs; in that case JobPilot displays an empty state and never inserts demo records.
+The enabled sources are the documented **Remotive**, **Himalayas**, and **Jobicy** public job APIs. Himalayas uses its current keyword search endpoint (the browse endpoint is capped at 20 records), with DevOps and Cloud Engineer queries. Each result keeps its real source URL and attribution. None of the currently configured sources requires an API key. Remotive is polled at most four times per day, matching its documented usage guidance. The public feed may legitimately contain no currently eligible DevOps jobs; in that case JobPilot displays an empty state and never inserts demo records.
 
 Sources are declared in `src/data/sources.json` and are fetched only when both `enabled` and `permitted` are true. Every adapter must be reviewed against the source documentation. Discovery requires title, company, location, source, and a real HTTPS URL; placeholder or malformed URLs are rejected before storage.
 
 Run `npm run discover` locally. The pipeline is:
 
 ```text
-permitted API → normalize → validate HTTPS URL → profile filter → deduplicate → score → src/data/jobs.json
+permitted API → basic HTTPS validation → normalize → deduplicate → hard-reject only invalid, unrelated, senior, or mandatory 3+ year roles → CV score → rank → src/data/jobs.json
 ```
 
 LinkedIn, Indeed, and Naukri are manual-link sources only. JobPilot never logs in, scrapes their sites, bypasses CAPTCHA, or submits an application.

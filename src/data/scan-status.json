@@ -1,13 +1,72 @@
 {
   "status": "Completed",
-  "lastScan": "2026-08-22T17:32:08.490Z",
-  "nextScan": "2026-08-22T23:32:08.490Z",
+  "lastScan": "2026-08-22T18:12:47.287Z",
+  "nextScan": "2026-08-23T00:12:47.287Z",
   "sourcesChecked": 3,
-  "jobsFetched": 107,
-  "invalidRejected": 107,
+  "sourceStats": [
+    {
+      "name": "Remotive",
+      "requests": 1,
+      "httpStatus": [
+        200
+      ],
+      "rawJobs": 20,
+      "normalizedJobs": 20,
+      "invalidRejected": 0,
+      "unrelatedRejected": 9,
+      "seniorRejected": 11,
+      "experienceRejected": 0,
+      "duplicatesRemoved": 0,
+      "eligibleJobs": 0,
+      "errors": []
+    },
+    {
+      "name": "Himalayas",
+      "requests": 2,
+      "httpStatus": [
+        200,
+        200
+      ],
+      "rawJobs": 36,
+      "normalizedJobs": 36,
+      "invalidRejected": 0,
+      "unrelatedRejected": 0,
+      "seniorRejected": 24,
+      "experienceRejected": 5,
+      "duplicatesRemoved": 0,
+      "eligibleJobs": 7,
+      "errors": []
+    },
+    {
+      "name": "Jobicy",
+      "requests": 1,
+      "httpStatus": [
+        200
+      ],
+      "rawJobs": 67,
+      "normalizedJobs": 67,
+      "invalidRejected": 0,
+      "unrelatedRejected": 1,
+      "seniorRejected": 62,
+      "experienceRejected": 4,
+      "duplicatesRemoved": 0,
+      "eligibleJobs": 0,
+      "errors": []
+    }
+  ],
+  "jobsFetched": 123,
+  "invalidRejected": 0,
+  "unrelatedRejected": 10,
+  "seniorRejected": 97,
+  "experienceRejected": 9,
+  "locationRejected": 0,
   "duplicatesRemoved": 0,
+  "newJobs": 0,
   "newJobsAdded": 0,
+  "jobsIndexed": 7,
+  "highMatchJobs": 0,
   "goodMatches": 0,
+  "excellentMatchJobs": 0,
   "excellentMatches": 0,
   "errors": []
 }

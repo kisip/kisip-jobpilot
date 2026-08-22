@@ -1,5 +1,35 @@
 [
-  {"name":"Remotive","type":"remotive","endpoint":"https://remotive.com/api/remote-jobs?search=devops&limit=100","enabled":true,"permitted":true,"requiresSecret":false,"documentation":"https://github.com/remotive-io/remote-jobs-api","attribution":"Jobs by Remotive"},
-  {"name":"Himalayas","type":"himalayas","endpoint":"https://himalayas.app/jobs/api?limit=100","enabled":true,"permitted":true,"requiresSecret":false,"documentation":"https://himalayas.app/docs/remote-jobs-api","attribution":"Jobs by Himalayas"},
-  {"name":"Jobicy","type":"jobicy","endpoint":"https://jobicy.com/api/v2/remote-jobs?count=100&tag=devops","enabled":true,"permitted":true,"requiresSecret":false,"documentation":"https://jobicy.com/jobs-rss-feed","attribution":"Jobs by Jobicy"}
+  {
+    "name": "Remotive",
+    "type": "remotive",
+    "endpoint": "https://remotive.com/api/remote-jobs?search=devops&limit=100",
+    "enabled": true,
+    "permitted": true,
+    "requiresSecret": false,
+    "documentation": "https://github.com/remotive-com/remote-jobs-api",
+    "attribution": "Jobs by Remotive"
+  },
+  {
+    "name": "Himalayas",
+    "type": "himalayas",
+    "endpoint": "https://himalayas.app/jobs/api/search?q=devops&sort=recent",
+    "additionalEndpoints": [
+      "https://himalayas.app/jobs/api/search?q=cloud%20engineer&sort=recent"
+    ],
+    "enabled": true,
+    "permitted": true,
+    "requiresSecret": false,
+    "documentation": "https://himalayas.app/docs/remote-jobs-api",
+    "attribution": "Jobs by Himalayas"
+  },
+  {
+    "name": "Jobicy",
+    "type": "jobicy",
+    "endpoint": "https://jobicy.com/api/v2/remote-jobs?count=100&tag=devops",
+    "enabled": true,
+    "permitted": true,
+    "requiresSecret": false,
+    "documentation": "https://jobicy.com/jobs-rss-feed",
+    "attribution": "Jobs by Jobicy"
+  }
 ]
