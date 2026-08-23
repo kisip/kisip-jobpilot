@@ -1,7 +1,7 @@
 {
   "status": "Completed",
-  "lastScan": "2026-08-23T07:05:47.032Z",
-  "nextScan": "2026-08-23T13:05:47.032Z",
+  "lastScan": "2026-08-23T13:05:31.520Z",
+  "nextScan": "2026-08-23T19:05:31.520Z",
   "sourcesChecked": 3,
   "sourceStats": [
     {
@@ -43,26 +43,26 @@
       "httpStatus": [
         200
       ],
-      "rawJobs": 72,
-      "normalizedJobs": 72,
+      "rawJobs": 73,
+      "normalizedJobs": 73,
       "invalidRejected": 0,
       "unrelatedRejected": 2,
-      "seniorRejected": 66,
+      "seniorRejected": 67,
       "experienceRejected": 4,
       "duplicatesRemoved": 0,
       "eligibleJobs": 0,
       "errors": []
     }
   ],
-  "jobsFetched": 125,
+  "jobsFetched": 126,
   "invalidRejected": 0,
   "unrelatedRejected": 11,
-  "seniorRejected": 97,
+  "seniorRejected": 98,
   "experienceRejected": 11,
   "locationRejected": 0,
   "duplicatesRemoved": 0,
-  "newJobs": 1,
-  "newJobsAdded": 1,
+  "newJobs": 0,
+  "newJobsAdded": 0,
   "jobsIndexed": 6,
   "highMatchJobs": 0,
   "goodMatches": 0,
