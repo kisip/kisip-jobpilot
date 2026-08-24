@@ -1,9 +1,14 @@
 import { cleanup, fireEvent, render, screen } from '@testing-library/react'
-import { afterEach, describe, expect, it } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import { JobProvider } from '../context/JobContext'
 import Jobs from './Jobs'
 
-afterEach(cleanup)
+const fixtures=[
+  {title:'Devops/Cloud Engineer',company:'Fixture Cloud',location:'Mexico',experience:'1 Year',source:'Himalayas',url:'https://careers.fixture-cloud.dev/jobs/devops',skills:['Linux','AWS'],workMode:'Remote',jobType:'Full-time',discoveredAt:'2026-08-24T10:00:00Z'},
+  {title:'Intermediate Platform Engineer',company:'Fixture Platform',location:'Worldwide',experience:'2 Years',source:'Himalayas',url:'https://careers.fixture-platform.dev/jobs/platform',skills:['Docker'],workMode:'Remote',jobType:'Full-time',discoveredAt:'2026-08-23T10:00:00Z'}
+]
+beforeEach(()=>{localStorage.clear();localStorage.setItem('jobpilot.manual-jobs.v2',JSON.stringify(fixtures))})
+afterEach(()=>{cleanup();localStorage.clear()})
 
 describe('Jobs indexed search', () => {
   it('filters discovered jobs immediately and case-insensitively by title and location', () => {

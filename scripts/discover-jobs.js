@@ -8,6 +8,8 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const readJson = async file => JSON.parse(await fs.readFile(path.join(root, file), 'utf8'))
 const sources = await readJson('src/data/sources.json')
 const existing = await readJson('src/data/jobs.json')
+let previousScan = {}
+try { previousScan = await readJson('src/data/scan-status.json') } catch {}
 const now = new Date()
 const today = now.toISOString().slice(0, 10)
 const stripHtml = value => String(value || '').replace(/<[^>]*>/g, ' ').replace(/&(?:amp|#038);/gi, '&').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g, ' ').trim()
@@ -49,7 +51,7 @@ function adaptJobicy(row, source) {
 }
 const adapters = { remotive: adaptRemotive, himalayas: adaptHimalayas, jobicy: adaptJobicy }
 async function fetchSource(source) {
-  const stats = { name: source.name, requests: 0, httpStatus: [], rawJobs: 0, normalizedJobs: 0, invalidRejected: 0, unrelatedRejected: 0, seniorRejected: 0, experienceRejected: 0, duplicatesRemoved: 0, eligibleJobs: 0, errors: [] }
+  const stats = { name: source.name, status: 'OK', requests: 0, httpStatus: [], rawJobs: 0, normalizedJobs: 0, invalidRejected: 0, unrelatedRejected: 0, seniorRejected: 0, experienceRejected: 0, duplicatesRemoved: 0, eligibleJobs: 0, errors: [] }
   const rows = []
   const endpoints = [source.endpoint, ...(source.additionalEndpoints || [])]
   for (const endpoint of endpoints) {
@@ -68,7 +70,7 @@ async function fetchSource(source) {
       if (!Array.isArray(payload.jobs)) throw new Error('Response schema has no jobs array')
       stats.rawJobs += payload.jobs.length
       rows.push(...payload.jobs.map(row => adapters[source.type](row, source)))
-    } catch (error) { stats.errors.push(error.message) }
+    } catch (error) { stats.errors.push(error.message); stats.status = 'Failed' }
   }
   return { rows, stats }
 }
@@ -124,8 +126,12 @@ const tracked = eligible.map(job => {
 const merged = deduplicateJobs([...tracked, ...manualExisting])
 const newJobs = tracked.filter(job => !existingMap.has(duplicateKey(job))).length
 const errors = sourceStats.flatMap(source => source.errors.map(error => `${source.name}: ${error}`))
+const allFailed = enabled.length > 0 && sourceStats.every(source => source.status === 'Failed')
+const successfulScan = !allFailed
 const scan = {
-  status: errors.length === sourceStats.length ? 'Error' : errors.length ? 'Completed with warnings' : 'Completed',
+  status: allFailed ? 'Failed' : 'Active', automationStatus: allFailed ? 'Failed' : 'Active',
+  lastSuccessfulScan: successfulScan ? now.toISOString() : previousScan.lastSuccessfulScan || '',
+  lastFailedScan: errors.length ? now.toISOString() : previousScan.lastFailedScan || '',
   lastScan: now.toISOString(), nextScan: new Date(now.getTime() + 6 * 60 * 60 * 1000).toISOString(), sourcesChecked: enabled.length,
   sourceStats, jobsFetched: discovered.length, invalidRejected: rejectionCounts.invalid, unrelatedRejected: rejectionCounts.unrelated,
   seniorRejected: rejectionCounts.senior, experienceRejected: rejectionCounts.experience, locationRejected: rejectionCounts.location,
@@ -135,6 +141,9 @@ const scan = {
 }
 await fs.writeFile(path.join(root, 'src/data/jobs.json'), `${JSON.stringify(merged, null, 2)}\n`)
 await fs.writeFile(path.join(root, 'src/data/scan-status.json'), `${JSON.stringify(scan, null, 2)}\n`)
+await fs.mkdir(path.join(root, 'public/data'), { recursive: true })
+await fs.writeFile(path.join(root, 'public/data/jobs.json'), `${JSON.stringify(merged, null, 2)}\n`)
+await fs.writeFile(path.join(root, 'public/data/scan-status.json'), `${JSON.stringify(scan, null, 2)}\n`)
 for (const source of sourceStats) console.log(`${source.name}: HTTP ${source.httpStatus.join(", ") || "none"}; ${source.rawJobs} fetched; ${source.invalidRejected} invalid; ${source.unrelatedRejected} unrelated; ${source.seniorRejected} senior; ${source.experienceRejected} experience; ${source.duplicatesRemoved} duplicates; ${source.eligibleJobs} eligible${source.errors.length ? `; errors: ${source.errors.join("; ")}` : ""}`)
 console.log(`Total fetched: ${discovered.length}`)
 console.log(`Invalid: ${rejectionCounts.invalid}`)

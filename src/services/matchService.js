@@ -19,22 +19,24 @@ export function calculateMatchDetails(job, prefs = preferences) {
   const matchedSkills = prefs.skills.filter(skill => containsTerm(searchable, skill))
   const roleHit = prefs.roles.some(role => lower(job.title).includes(lower(role))) || relatedRole(job.title)
   const expText = `${job.title || ''} ${job.experience || ''}`
+  const requirementText = `${job.experience || ''} ${job.descriptionSummary || ''}`
   const excluded = excludedExperience(job)
   const preferred = /\b(?:junior|entry.?level)\b|\b0\s*[–-]\s*[12]\s*years?\b|\b1\s*(?:\+|[–-]\s*2)?\s*years?\b/i.test(expText)
+  const mandatoryTwoPlus = /\b(?:minimum|required|requires?|at least|must have|need(?:ed)?)\s+(?:of\s+)?2\+?\s*years?\b/i.test(requirementText)
   const twoYears = /\b2\s*\+?\s*years?\b/i.test(expText)
   const unspecified = /not specified/i.test(job.experience || '')
   const locationHit = prefs.locations.some(location => lower(job.location).includes(lower(location))) || /\b(worldwide|anywhere|global|asia)\b/i.test(job.location || '')
   const remoteHit = lower(job.workMode) === 'remote' || lower(job.location).includes('remote')
   const typeHit = prefs.jobTypes.some(type => lower(job.jobType).includes(lower(type)))
   const skills = Math.min(100, Math.round(matchedSkills.length / 4 * 100))
-  const experience = excluded ? 0 : preferred ? 100 : twoYears && skills >= 70 ? 70 : twoYears ? 45 : unspecified ? 60 : 35
-  const details = { role: roleHit ? 100 : 0, skills, experience, location: locationHit ? 100 : 0, workMode: remoteHit ? 100 : 70, jobType: typeHit ? 100 : 50, matchedSkills, excluded }
+  const experience = excluded ? 0 : mandatoryTwoPlus ? (skills >= 75 ? 55 : 30) : preferred ? 100 : twoYears && skills >= 70 ? 70 : twoYears ? 45 : unspecified ? 60 : 35
+  const details = { role: roleHit ? 100 : 0, skills, experience, location: locationHit ? 100 : 0, workMode: remoteHit ? 100 : 70, jobType: typeHit ? 100 : 50, matchedSkills, missingSkills: prefs.skills.filter(skill => !matchedSkills.includes(skill)), excluded }
   details.overall = excluded ? 0 : Math.min(100, Math.round(details.role * .25 + details.skills * .30 + details.experience * .20 + details.location * .15 + details.workMode * .05 + details.jobType * .05))
   details.category = matchCategory(details.overall)
   details.explanation = [
     `Role ${details.role}%: ${roleHit ? 'target or related role matched' : 'target role not identified'}`,
     `Skills ${details.skills}%: ${matchedSkills.length ? matchedSkills.join(', ') : 'no CV skills identified'}`,
-    `Experience ${details.experience}%: ${excluded ? 'clearly senior role' : preferred ? 'fits 0–2 years / junior level' : twoYears ? '2-year stretch role' : unspecified ? 'not specified; ranked using other signals' : 'requirement is outside the preferred range'}`,
+    `Experience ${details.experience}%: ${excluded ? 'clearly senior role' : mandatoryTwoPlus ? 'mandatory 2+ years; reduced for a 1-year profile' : preferred ? 'fits 0–2 years / junior level' : twoYears ? '2-year stretch role' : unspecified ? 'not specified; ranked using other signals' : 'requirement is outside the preferred range'}`,
     `Location ${details.location}%: ${locationHit ? 'preferred or globally remote location' : 'outside preferred locations; kept for ranking'}`,
     `Work mode ${details.workMode}%: ${job.workMode || 'not specified'}`
   ]
