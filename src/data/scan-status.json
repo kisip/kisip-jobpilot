@@ -1,10 +1,10 @@
 {
   "status": "Active",
   "automationStatus": "Active",
-  "lastSuccessfulScan": "2026-09-01T05:18:34.308Z",
+  "lastSuccessfulScan": "2026-09-01T11:46:12.314Z",
   "lastFailedScan": "",
-  "lastScan": "2026-09-01T05:18:34.308Z",
-  "nextScan": "2026-09-01T11:18:34.308Z",
+  "lastScan": "2026-09-01T11:46:12.314Z",
+  "nextScan": "2026-09-01T17:46:12.314Z",
   "sourcesChecked": 3,
   "sourceStats": [
     {
@@ -14,11 +14,11 @@
       "httpStatus": [
         200
       ],
-      "rawJobs": 19,
-      "normalizedJobs": 19,
+      "rawJobs": 18,
+      "normalizedJobs": 18,
       "invalidRejected": 0,
       "unrelatedRejected": 6,
-      "seniorRejected": 13,
+      "seniorRejected": 12,
       "experienceRejected": 0,
       "duplicatesRemoved": 0,
       "eligibleJobs": 0,
@@ -32,14 +32,14 @@
         200,
         200
       ],
-      "rawJobs": 37,
-      "normalizedJobs": 37,
+      "rawJobs": 23,
+      "normalizedJobs": 23,
       "invalidRejected": 0,
-      "unrelatedRejected": 3,
-      "seniorRejected": 27,
-      "experienceRejected": 2,
+      "unrelatedRejected": 2,
+      "seniorRejected": 15,
+      "experienceRejected": 3,
       "duplicatesRemoved": 3,
-      "eligibleJobs": 2,
+      "eligibleJobs": 0,
       "errors": []
     },
     {
@@ -53,18 +53,18 @@
       "normalizedJobs": 100,
       "invalidRejected": 0,
       "unrelatedRejected": 5,
-      "seniorRejected": 85,
+      "seniorRejected": 83,
       "experienceRejected": 10,
       "duplicatesRemoved": 0,
-      "eligibleJobs": 0,
+      "eligibleJobs": 2,
       "errors": []
     }
   ],
-  "jobsFetched": 156,
+  "jobsFetched": 141,
   "invalidRejected": 0,
-  "unrelatedRejected": 14,
-  "seniorRejected": 125,
-  "experienceRejected": 12,
+  "unrelatedRejected": 13,
+  "seniorRejected": 110,
+  "experienceRejected": 13,
   "locationRejected": 0,
   "duplicatesRemoved": 3,
   "newJobs": 2,
@@ -72,7 +72,7 @@
   "jobsIndexed": 2,
   "highMatchJobs": 1,
   "goodMatches": 1,
-  "excellentMatchJobs": 0,
-  "excellentMatches": 0,
+  "excellentMatchJobs": 1,
+  "excellentMatches": 1,
   "errors": []
 }
