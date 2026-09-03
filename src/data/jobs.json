@@ -172,5 +172,87 @@
         "Work mode 100%: Remote"
       ]
     }
+  },
+  {
+    "title": "Cloud Engineer (Remote, Mexico)",
+    "company": "IO Connect Services",
+    "location": "Mexico",
+    "experience": "2+ years",
+    "salary": "Not provided",
+    "skills": [
+      "AWS",
+      "Apache",
+      "MySQL"
+    ],
+    "jobType": "Full-time",
+    "workMode": "Remote",
+    "source": "Himalayas",
+    "postedAt": "2026-09-03T09:59:24.000Z",
+    "datePosted": "2026-09-03",
+    "discoveredAt": "2026-09-03T11:24:12.299Z",
+    "dateDiscovered": "2026-09-03",
+    "dateFound": "2026-09-03",
+    "url": "https://himalayas.app/companies/io-connect-services/jobs/cloud-engineer-remote-mexico-737963489",
+    "applyUrl": "https://himalayas.app/companies/io-connect-services/jobs/cloud-engineer-remote-mexico-737963489",
+    "descriptionSummary": "About IO Connect Services:IO Connect Services is a fast-growing AWS Advanced Tier Services Partner and Datadog Partner that has achieved continuous success since its inception.",
+    "status": "New",
+    "notes": "Jobs by Himalayas. Final application remains manual.",
+    "resumeVersion": "",
+    "applicationStartedAt": "",
+    "applicationDate": "",
+    "followUpDate": "",
+    "id": "job-ghs3gp",
+    "matchScore": 72,
+    "matchDetails": {
+      "role": 100,
+      "skills": 75,
+      "experience": 70,
+      "location": 0,
+      "workMode": 100,
+      "jobType": 100,
+      "matchedSkills": [
+        "AWS",
+        "Apache",
+        "MySQL"
+      ],
+      "missingSkills": [
+        "Linux",
+        "Docker",
+        "Docker Compose",
+        "Terraform",
+        "Ansible",
+        "CI/CD",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Git",
+        "Nginx",
+        "PostgreSQL",
+        "Bash",
+        "Python",
+        "Server Administration",
+        "Web Hosting",
+        "DNS",
+        "SSL/TLS",
+        "Monitoring",
+        "Security Hardening",
+        "Cloud Infrastructure",
+        "cPanel/WHM",
+        "CyberPanel",
+        "PHP",
+        "Backups",
+        "Migrations",
+        "Troubleshooting"
+      ],
+      "excluded": false,
+      "overall": 72,
+      "category": "Possible Match",
+      "explanation": [
+        "Role 100%: target or related role matched",
+        "Skills 75%: AWS, Apache, MySQL",
+        "Experience 70%: 2-year stretch role",
+        "Location 0%: outside preferred locations; kept for ranking",
+        "Work mode 100%: Remote"
+      ]
+    }
   }
 ]
