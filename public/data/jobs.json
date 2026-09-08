@@ -172,5 +172,90 @@
         "Work mode 100%: Remote"
       ]
     }
+  },
+  {
+    "title": "Technical Support Engineer",
+    "company": "Kapsch Group",
+    "location": "United States",
+    "experience": "Not specified",
+    "salary": "USD 95,000 - 120,000",
+    "skills": [
+      "Linux",
+      "CI/CD",
+      "Bash",
+      "Python",
+      "Monitoring",
+      "Troubleshooting"
+    ],
+    "jobType": "Full-time",
+    "workMode": "Remote",
+    "source": "Himalayas",
+    "postedAt": "2026-09-07T23:38:10.000Z",
+    "datePosted": "2026-09-07",
+    "discoveredAt": "2026-09-08T04:48:04.683Z",
+    "dateDiscovered": "2026-09-08",
+    "dateFound": "2026-09-08",
+    "url": "https://himalayas.app/companies/kapsch-group/jobs/technical-support-engineer-9911224674",
+    "applyUrl": "https://himalayas.app/companies/kapsch-group/jobs/technical-support-engineer-9911224674",
+    "descriptionSummary": "Kapsch is one of Austria's most successful global technology companies.",
+    "status": "New",
+    "notes": "Jobs by Himalayas. Final application remains manual.",
+    "resumeVersion": "",
+    "applicationStartedAt": "",
+    "applicationDate": "",
+    "followUpDate": "",
+    "id": "job-1g9ih6c",
+    "matchScore": 77,
+    "matchDetails": {
+      "role": 100,
+      "skills": 100,
+      "experience": 60,
+      "location": 0,
+      "workMode": 100,
+      "jobType": 100,
+      "matchedSkills": [
+        "Linux",
+        "CI/CD",
+        "Bash",
+        "Python",
+        "Monitoring",
+        "Troubleshooting"
+      ],
+      "missingSkills": [
+        "AWS",
+        "Docker",
+        "Docker Compose",
+        "Terraform",
+        "Ansible",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Git",
+        "Nginx",
+        "Apache",
+        "MySQL",
+        "PostgreSQL",
+        "Server Administration",
+        "Web Hosting",
+        "DNS",
+        "SSL/TLS",
+        "Security Hardening",
+        "Cloud Infrastructure",
+        "cPanel/WHM",
+        "CyberPanel",
+        "PHP",
+        "Backups",
+        "Migrations"
+      ],
+      "excluded": false,
+      "overall": 77,
+      "category": "Possible Match",
+      "explanation": [
+        "Role 100%: target or related role matched",
+        "Skills 100%: Linux, CI/CD, Bash, Python, Monitoring, Troubleshooting",
+        "Experience 60%: not specified; ranked using other signals",
+        "Location 0%: outside preferred locations; kept for ranking",
+        "Work mode 100%: Remote"
+      ]
+    }
   }
 ]
