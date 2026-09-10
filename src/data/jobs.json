@@ -172,5 +172,89 @@
         "Work mode 100%: Remote"
       ]
     }
+  },
+  {
+    "title": "Platform Engineer (m/w/d)",
+    "company": "Interval",
+    "location": "United States",
+    "experience": "Not specified",
+    "salary": "Not provided",
+    "skills": [
+      "AWS",
+      "Terraform",
+      "CI/CD",
+      "Git",
+      "Monitoring"
+    ],
+    "jobType": "Contract",
+    "workMode": "Remote",
+    "source": "Himalayas",
+    "postedAt": "2026-09-10T10:24:16.000Z",
+    "datePosted": "2026-09-10",
+    "discoveredAt": "2026-09-10T16:30:33.603Z",
+    "dateDiscovered": "2026-09-10",
+    "dateFound": "2026-09-10",
+    "url": "https://himalayas.app/companies/interval/jobs/platform-engineer-m-w-d",
+    "applyUrl": "https://himalayas.app/companies/interval/jobs/platform-engineer-m-w-d",
+    "descriptionSummary": "This is a remote position. Als Platform Engineer (m/w/d) übernehmen Sie eine zentrale Rolle bei der Betreuung und Optimierung moderner Container-Plattformen sowie der Gewährleistung höchster IT-Sicherheitsstandards.",
+    "status": "New",
+    "notes": "Jobs by Himalayas. Final application remains manual.",
+    "resumeVersion": "",
+    "applicationStartedAt": "",
+    "applicationDate": "",
+    "followUpDate": "",
+    "id": "job-13oiz5p",
+    "matchScore": 77,
+    "matchDetails": {
+      "role": 100,
+      "skills": 100,
+      "experience": 60,
+      "location": 0,
+      "workMode": 100,
+      "jobType": 100,
+      "matchedSkills": [
+        "AWS",
+        "Terraform",
+        "CI/CD",
+        "Git",
+        "Monitoring"
+      ],
+      "missingSkills": [
+        "Linux",
+        "Docker",
+        "Docker Compose",
+        "Ansible",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Nginx",
+        "Apache",
+        "MySQL",
+        "PostgreSQL",
+        "Bash",
+        "Python",
+        "Server Administration",
+        "Web Hosting",
+        "DNS",
+        "SSL/TLS",
+        "Security Hardening",
+        "Cloud Infrastructure",
+        "cPanel/WHM",
+        "CyberPanel",
+        "PHP",
+        "Backups",
+        "Migrations",
+        "Troubleshooting"
+      ],
+      "excluded": false,
+      "overall": 77,
+      "category": "Possible Match",
+      "explanation": [
+        "Role 100%: target or related role matched",
+        "Skills 100%: AWS, Terraform, CI/CD, Git, Monitoring",
+        "Experience 60%: not specified; ranked using other signals",
+        "Location 0%: outside preferred locations; kept for ranking",
+        "Work mode 100%: Remote"
+      ]
+    }
   }
 ]
