@@ -172,5 +172,89 @@
         "Work mode 100%: Remote"
       ]
     }
+  },
+  {
+    "title": "Site Reliability Engineer",
+    "company": "SingleStore",
+    "location": "Portugal",
+    "experience": "Not specified",
+    "salary": "Not provided",
+    "skills": [
+      "AWS",
+      "Git",
+      "Python",
+      "Monitoring",
+      "Troubleshooting"
+    ],
+    "jobType": "Full-time",
+    "workMode": "Remote",
+    "source": "Himalayas",
+    "postedAt": "2026-09-14T03:34:24.000Z",
+    "datePosted": "2026-09-14",
+    "discoveredAt": "2026-09-14T05:04:51.560Z",
+    "dateDiscovered": "2026-09-14",
+    "dateFound": "2026-09-14",
+    "url": "https://himalayas.app/companies/singlestore/jobs/site-reliability-engineer",
+    "applyUrl": "https://himalayas.app/companies/singlestore/jobs/site-reliability-engineer",
+    "descriptionSummary": "Position OverviewSingleStore is seeking a Site Reliability Engineer to help optimize and scale our managed service offering across all three major cloud providers.",
+    "status": "New",
+    "notes": "Jobs by Himalayas. Final application remains manual.",
+    "resumeVersion": "",
+    "applicationStartedAt": "",
+    "applicationDate": "",
+    "followUpDate": "",
+    "id": "job-29k2fg",
+    "matchScore": 77,
+    "matchDetails": {
+      "role": 100,
+      "skills": 100,
+      "experience": 60,
+      "location": 0,
+      "workMode": 100,
+      "jobType": 100,
+      "matchedSkills": [
+        "AWS",
+        "Git",
+        "Python",
+        "Monitoring",
+        "Troubleshooting"
+      ],
+      "missingSkills": [
+        "Linux",
+        "Docker",
+        "Docker Compose",
+        "Terraform",
+        "Ansible",
+        "CI/CD",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Nginx",
+        "Apache",
+        "MySQL",
+        "PostgreSQL",
+        "Bash",
+        "Server Administration",
+        "Web Hosting",
+        "DNS",
+        "SSL/TLS",
+        "Security Hardening",
+        "Cloud Infrastructure",
+        "cPanel/WHM",
+        "CyberPanel",
+        "PHP",
+        "Backups",
+        "Migrations"
+      ],
+      "excluded": false,
+      "overall": 77,
+      "category": "Possible Match",
+      "explanation": [
+        "Role 100%: target or related role matched",
+        "Skills 100%: AWS, Git, Python, Monitoring, Troubleshooting",
+        "Experience 60%: not specified; ranked using other signals",
+        "Location 0%: outside preferred locations; kept for ranking",
+        "Work mode 100%: Remote"
+      ]
+    }
   }
 ]
