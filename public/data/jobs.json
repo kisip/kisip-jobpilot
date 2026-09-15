@@ -172,5 +172,86 @@
         "Work mode 100%: Remote"
       ]
     }
+  },
+  {
+    "title": "Site Reliability Engineer",
+    "company": "XTB",
+    "location": "Poland",
+    "experience": "Not specified",
+    "salary": "PLN 17,850 - 22,700",
+    "skills": [
+      "Ansible",
+      "Python"
+    ],
+    "jobType": "Full-time",
+    "workMode": "Remote",
+    "source": "Himalayas",
+    "postedAt": "2026-09-15T10:11:04.000Z",
+    "datePosted": "2026-09-15",
+    "discoveredAt": "2026-09-15T11:52:53.522Z",
+    "dateDiscovered": "2026-09-15",
+    "dateFound": "2026-09-15",
+    "url": "https://himalayas.app/companies/xtb/jobs/site-reliability-engineer",
+    "applyUrl": "https://himalayas.app/companies/xtb/jobs/site-reliability-engineer",
+    "descriptionSummary": "XTB is a global company from the financial industry, focusing on online trading of financial instruments.",
+    "status": "New",
+    "notes": "Jobs by Himalayas. Final application remains manual.",
+    "resumeVersion": "",
+    "applicationStartedAt": "",
+    "applicationDate": "",
+    "followUpDate": "",
+    "id": "job-1ecalx6",
+    "matchScore": 62,
+    "matchDetails": {
+      "role": 100,
+      "skills": 50,
+      "experience": 60,
+      "location": 0,
+      "workMode": 100,
+      "jobType": 100,
+      "matchedSkills": [
+        "Ansible",
+        "Python"
+      ],
+      "missingSkills": [
+        "Linux",
+        "AWS",
+        "Docker",
+        "Docker Compose",
+        "Terraform",
+        "CI/CD",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Git",
+        "Nginx",
+        "Apache",
+        "MySQL",
+        "PostgreSQL",
+        "Bash",
+        "Server Administration",
+        "Web Hosting",
+        "DNS",
+        "SSL/TLS",
+        "Monitoring",
+        "Security Hardening",
+        "Cloud Infrastructure",
+        "cPanel/WHM",
+        "CyberPanel",
+        "PHP",
+        "Backups",
+        "Migrations",
+        "Troubleshooting"
+      ],
+      "excluded": false,
+      "overall": 62,
+      "category": "Low Match",
+      "explanation": [
+        "Role 100%: target or related role matched",
+        "Skills 50%: Ansible, Python",
+        "Experience 60%: not specified; ranked using other signals",
+        "Location 0%: outside preferred locations; kept for ranking",
+        "Work mode 100%: Remote"
+      ]
+    }
   }
 ]
