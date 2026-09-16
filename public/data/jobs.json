@@ -172,5 +172,92 @@
         "Work mode 100%: Remote"
       ]
     }
+  },
+  {
+    "title": "Cloud Engineer – Mid-Level",
+    "company": "BDR Solutions, LLC",
+    "location": "United States",
+    "experience": "Not specified",
+    "salary": "USD 110,000 - 170,000",
+    "skills": [
+      "AWS",
+      "Docker",
+      "Terraform",
+      "CI/CD",
+      "GitHub Actions",
+      "Git",
+      "DNS",
+      "Monitoring"
+    ],
+    "jobType": "Full-time",
+    "workMode": "Remote",
+    "source": "Himalayas",
+    "postedAt": "2026-09-16T05:49:30.000Z",
+    "datePosted": "2026-09-16",
+    "discoveredAt": "2026-09-16T11:46:22.742Z",
+    "dateDiscovered": "2026-09-16",
+    "dateFound": "2026-09-16",
+    "url": "https://himalayas.app/companies/bdr-solutions-llc/jobs/cloud-engineer-mid-level",
+    "applyUrl": "https://himalayas.app/companies/bdr-solutions-llc/jobs/cloud-engineer-mid-level",
+    "descriptionSummary": "DescriptionAbout us:BDR Solutions, LLC, (BDR) supports the U.",
+    "status": "New",
+    "notes": "Jobs by Himalayas. Final application remains manual.",
+    "resumeVersion": "",
+    "applicationStartedAt": "",
+    "applicationDate": "",
+    "followUpDate": "",
+    "id": "job-11dc9j",
+    "matchScore": 77,
+    "matchDetails": {
+      "role": 100,
+      "skills": 100,
+      "experience": 60,
+      "location": 0,
+      "workMode": 100,
+      "jobType": 100,
+      "matchedSkills": [
+        "AWS",
+        "Docker",
+        "Terraform",
+        "CI/CD",
+        "GitHub Actions",
+        "Git",
+        "DNS",
+        "Monitoring"
+      ],
+      "missingSkills": [
+        "Linux",
+        "Docker Compose",
+        "Ansible",
+        "GitLab CI/CD",
+        "Nginx",
+        "Apache",
+        "MySQL",
+        "PostgreSQL",
+        "Bash",
+        "Python",
+        "Server Administration",
+        "Web Hosting",
+        "SSL/TLS",
+        "Security Hardening",
+        "Cloud Infrastructure",
+        "cPanel/WHM",
+        "CyberPanel",
+        "PHP",
+        "Backups",
+        "Migrations",
+        "Troubleshooting"
+      ],
+      "excluded": false,
+      "overall": 77,
+      "category": "Possible Match",
+      "explanation": [
+        "Role 100%: target or related role matched",
+        "Skills 100%: AWS, Docker, Terraform, CI/CD, GitHub Actions, Git, DNS, Monitoring",
+        "Experience 60%: not specified; ranked using other signals",
+        "Location 0%: outside preferred locations; kept for ranking",
+        "Work mode 100%: Remote"
+      ]
+    }
   }
 ]
