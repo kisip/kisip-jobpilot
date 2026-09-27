@@ -62,7 +62,7 @@ LinkedIn, Indeed, and Naukri are manual-link sources only. JobPilot never logs i
 
 ## Scheduled GitHub Actions
 
-`.github/workflows/discover-jobs.yml` runs at minute 17 every six hours and on manual dispatch. It installs locked dependencies, fetches only enabled/permitted feeds, normalizes jobs, removes duplicates, calculates scores, tests the project, scans for credential-shaped values, and commits only changed job-data and scan-status JSON files. Secrets are passed as environment variables and are never printed by the runner.
+`.github/workflows/discover-jobs.yml` runs at minute 17 every six hours and on manual dispatch. It installs locked dependencies, fetches only enabled/permitted feeds, normalizes jobs, removes duplicates, calculates scores, tests the project, scans for credential-shaped values, and commits changed job-data and scan-status JSON files (including scans with no job changes), then builds and deploys GitHub Pages directly. It verifies the deployed timestamp and dataset, avoiding reliance on bot pushes triggering another workflow. Secrets are passed as environment variables and are never printed by the runner.
 
 To add an API credential: repository **Settings → Secrets and variables → Actions → New repository secret**, name it `JOB_API_KEY`, and paste the value. Add other secret names only when a feed requires them; reference their environment-variable names in source configuration. Never add a real value to `.env.example`, source, JSON, workflow YAML, README, or a public issue.
 
@@ -99,3 +99,13 @@ Use and adapt this personal dashboard responsibly and in compliance with every s
 The Jobs page calculates **Last 24 Hours** and **Last 7 Days** from the real source `postedAt` timestamp or, when a source has no posted timestamp, the exact `discoveredAt` scan timestamp. Time, role, match, work-mode, location, and source filters can be combined. Search filters only the indexed dataset; it does not query job sites from the browser.
 
 Selecting **Apply** validates and opens the real source URL, records `Application Started`, the click time, and the active resume version in browser-local storage. When you return, JobPilot asks whether you submitted. Only **Yes, Mark Applied** records the application as Applied. JobPilot never logs in or presses a final submit button. The Applications page tracks status, dates, resume, source URL, notes, and follow-up date.
+
+## Discovery reliability
+
+A failed provider keeps its previously indexed jobs. Successful providers continue updating. Scans report `Active`, `Partial failure`, or `Failed`; only a fully successful scan advances `lastSuccessfulScan`. `npm run discover` exits nonzero for either failure status. The workflow uses `--report-only` to publish retained data and failure health before marking the run failed; fatal errors still stop publication.
+
+Both dashboard and Automation show the latest scan timestamp and health. The next scan is the next `17 */6 * * *` UTC slot. A scan more than one hour past that slot is labeled overdue, allowing for scheduled-run queue delays. The status label updates while the page is open; use “Check for Latest Jobs” or reload to fetch newly deployed data.
+
+Saved jobs and application history are retained as complete browser-local snapshots, including notes, dates, and resume version, when listings disappear. This does not sync private tracking data to GitHub. It cannot reconstruct listings already lost before snapshots existed or after browser storage is cleared. Explicitly deleting a job still removes it from view.
+
+The discovery workflow requires repository contents write, Pages write, and OIDC permissions, plus an enabled GitHub Pages Actions environment. It needs no additional personal access token. After deploying, `DASHBOARD_URL=https://<username>.github.io/kisip-jobpilot/ node scripts/verify-deployment.js` compares public jobs and scan status against local `public/data` with bounded retries for CDN propagation.

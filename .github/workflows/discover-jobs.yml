@@ -5,12 +5,18 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  pages: write
+  id-token: write
+# Share the deployment lock so a push build cannot overwrite a newer scan.
 concurrency:
-  group: job-discovery
+  group: pages
   cancel-in-progress: false
 jobs:
   discover:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
@@ -21,17 +27,33 @@ jobs:
       - name: Fetch permitted public feeds
         env:
           JOB_API_KEY: ${{ secrets.JOB_API_KEY }}
-        run: npm run discover
+        # Handled outages still publish retained jobs and health. Fatal errors stop here.
+        run: npm run discover -- --report-only
       - run: npm test
       - run: npm run check:secrets
-      - name: Commit data changes only
+      - name: Commit data and scan health
         run: |
-          if git diff --quiet -- src/data/jobs.json; then
-            echo "No job dataset changes; skipping commit."
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add src/data/jobs.json src/data/scan-status.json public/data/jobs.json public/data/scan-status.json
-          git commit -m "data: refresh permitted job feeds"
-          git push
+          if git diff --cached --quiet; then
+            echo "No data or scan health changes."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "data: refresh permitted job feeds and scan health"
+            git push
+          fi
+      - run: npm run build
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+      - name: Deploy updated jobs and scan health
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Verify published dataset
+        env:
+          DASHBOARD_URL: ${{ steps.deployment.outputs.page_url }}
+        run: node scripts/verify-deployment.js
+      - name: Report degraded scan after publishing health
+        if: ${{ !cancelled() }}
+        run: node --input-type=module -e "import fs from 'node:fs'; const scan = JSON.parse(fs.readFileSync('src/data/scan-status.json')); if (scan.status !== 'Active') { console.error(scan.status); process.exit(1) }"

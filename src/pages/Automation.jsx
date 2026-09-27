@@ -1,11 +1,12 @@
 import { CheckCircle2, Clock3, Database, ExternalLink, Radar, ShieldCheck, TriangleAlert } from 'lucide-react'
+import ScanHealth from '../components/ScanHealth'
 import sources from '../data/sources.json'
 import { useJobs } from '../context/JobContext'
 const stamp = value => value ? new Date(value).toLocaleString() : 'Not run yet'
 export default function Automation() {
   const { scanStatus: scan } = useJobs()
   const cards = [
-    ['Automation status', scan.automationStatus || scan.status, Radar], ['Last successful scan', stamp(scan.lastSuccessfulScan), Clock3], ['Last failed scan', stamp(scan.lastFailedScan), Clock3], ['Next scan', stamp(scan.nextScan), Clock3],
+    ['Automation status', <ScanHealth scan={scan}/>, Radar], ['Last scan', stamp(scan.lastScan), Clock3], ['Last successful scan', stamp(scan.lastSuccessfulScan), Clock3], ['Last failed scan', stamp(scan.lastFailedScan), Clock3], ['Next scan', stamp(scan.nextScan), Clock3],
     ['Jobs fetched', scan.jobsFetched, Database], ['Invalid rejected', scan.invalidRejected, ShieldCheck], ['Unrelated rejected', scan.unrelatedRejected, ShieldCheck],
     ['Senior rejected', scan.seniorRejected, ShieldCheck], ['3+ years rejected', scan.experienceRejected, ShieldCheck], ['Duplicates removed', scan.duplicatesRemoved, ShieldCheck],
     ['Jobs indexed', scan.jobsIndexed, CheckCircle2], ['80%+ jobs', scan.highMatchJobs, CheckCircle2], ['90%+ jobs', scan.excellentMatchJobs, CheckCircle2]

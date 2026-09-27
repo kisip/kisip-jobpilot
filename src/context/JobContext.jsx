@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useMemo, useState } from 'react'
 import seedJobs from '../data/jobs.json'
 import initialScan from '../data/scan-status.json'
 import sources from '../data/sources.json'
-import { applicationStatuses, deduplicateJobs, duplicateKey, normalizeJob, validateJob, validateJobUrl } from '../services/jobService'
+import { applicationStatuses, deduplicateJobs, duplicateKey, normalizeJob, validateJob, validateJobUrl, isTrackedJob } from '../services/jobService'
 import { storageService } from '../services/storageService'
 import { activeResume, resumeLabel } from '../services/resumeService'
 import { defaultResume, migrateResumes } from '../config/resumeProfile'
@@ -18,7 +18,9 @@ function migrateLegacy() {
   const automaticSources = new Set(sources.map(source => source.name))
   const state = { ...storageService.load('jobUserState', {}) }
   const manual = [...storageService.load('manualJobs', [])]
+  const tracked = sanitize(storageService.load('trackedJobs', []))
   for (const old of sanitize(legacy)) {
+    if (isTrackedJob(old)) tracked.push(old)
     state[old.id] = { ...state[old.id], ...pickUserState(old) }
     if (!automaticSources.has(old.source) && !manual.some(item => duplicateKey(item) === duplicateKey(old))) manual.push(old)
   }
@@ -27,12 +29,13 @@ function migrateLegacy() {
     storageService.save('manualJobs', manual)
     storageService.remove('jobs')
   }
-  return { state, manual: sanitize(manual) }
+  return { state, manual: sanitize(manual), tracked: sanitize(tracked) }
 }
 
 export function JobProvider({ children }) {
   const migrated = useMemo(migrateLegacy, [])
   const [discoveredJobs, setDiscoveredJobs] = useState(() => sanitize(seedJobs))
+  const [trackedJobs, setTrackedJobs] = useState(migrated.tracked)
   const [manualJobs, setManualJobs] = useState(migrated.manual)
   const [userState, setUserState] = useState(migrated.state)
   const [resumes, setResumes] = useState(() => migrateResumes(storageService.load('resumes', [defaultResume])))
@@ -47,13 +50,20 @@ export function JobProvider({ children }) {
   const jobs = useMemo(() => {
     const archiveDays = Number(settings.archiveDays) || 30
     const cutoff = Date.now() - archiveDays * 86400000
-    return deduplicateJobs([...discoveredJobs, ...manualJobs]).map(job => {
-      const merged = normalizeJob({ ...job, ...(userState[job.id] || {}) })
+    return deduplicateJobs([...discoveredJobs, ...manualJobs, ...trackedJobs]).map(job => {
+      const merged = { ...normalizeJob({ ...job, ...(userState[job.id] || {}) }), hidden: userState[job.id]?.hidden }
       const activity = new Date(merged.postedAt || merged.discoveredAt || 0).getTime()
       const protectedStatus = applicationStatuses.includes(merged.status) || merged.status === 'Saved'
       return !protectedStatus && activity && activity < cutoff ? { ...merged, status: 'Stale' } : merged
     }).filter(job => !job.hidden)
-  }, [discoveredJobs, manualJobs, userState, settings.archiveDays])
+  }, [discoveredJobs, manualJobs, trackedJobs, userState, settings.archiveDays])
+
+  // Persist complete records, not just user fields, before a feed can drop them.
+  useEffect(() => {
+    const retained = jobs.filter(isTrackedJob)
+    storageService.save('trackedJobs', retained)
+    setTrackedJobs(current => JSON.stringify(current) === JSON.stringify(retained) ? current : retained)
+  }, [jobs])
 
   const refreshDataset = async () => {
     if (typeof fetch !== 'function') return { ok: false, message: 'Refresh is unavailable in this browser.' }
@@ -66,9 +76,13 @@ export function JobProvider({ children }) {
         fetch(`${base}data/scan-status.json?v=${version}`, { cache: 'no-store' })
       ])
       if (!jobResponse.ok) throw new Error(`Jobs feed returned HTTP ${jobResponse.status}`)
-      const fresh = sanitize(await jobResponse.json())
+      if (!scanResponse.ok) throw new Error(`Scan status returned HTTP ${scanResponse.status}`)
+      const payload = await jobResponse.json()
+      const scan = await scanResponse.json()
+      if (!Array.isArray(payload) || !scan || !Number.isFinite(Date.parse(scan.lastScan))) throw new Error('Invalid discovery dataset')
+      const fresh = sanitize(payload)
       setDiscoveredJobs(fresh)
-      if (scanResponse.ok) setScanStatus(await scanResponse.json())
+      setScanStatus(scan)
       const lastRefresh = new Date().toISOString()
       setRefreshState({ refreshing: false, lastRefresh, error: '' })
       return { ok: true, count: fresh.length }
@@ -116,7 +130,7 @@ export function JobProvider({ children }) {
     },
     deleteJob(id) {
       if (manualJobs.some(job => job.id === id)) setManualJobs(current => current.filter(job => job.id !== id))
-      else patchState(id, { hidden: true })
+      patchState(id, { hidden: true })
     },
     updateSettings(updates) { setSettings(current => ({ ...current, ...updates })) }
   }), [jobs, manualJobs, resumes])
