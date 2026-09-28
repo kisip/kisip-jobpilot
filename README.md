@@ -17,14 +17,14 @@ The initial frontend stores job status, notes, resume metadata, and user setting
 - Immediate case-insensitive search across the indexed title, company, skills, and location fields; status/work-mode filters; and match/date sorting
 - Manual URL entry for company, LinkedIn, Indeed, and Naukri postings
 - Save, applied, interview, rejected, offer, edit, delete, and safe external-view actions
-- Duplicate detection using normalized company, title, location, and URL
+- Conservative duplicate detection using company/title/location plus canonical listing or application URLs, or a shared employer requisition ID
 - Resume names, versions, private links, skill tags, and application association
 - In-app new/high-match/remote notification summary
 - Responsive, accessible dark UI with GitHub Pages-safe hash routing
 
 ## Matching
 
-The candidate baseline is **1 year of professional DevOps / Linux / Server Administration experience**, targeting junior and entry-level roles in the 0–2 year range. `src/services/matchService.js` returns a 0–100 score using role (25), skills (30), experience (20), location (15), remote (5), and job type (5). Preferred 1-year ranges receive full experience credit. Two-year and 2+ year roles remain eligible when skills match strongly. Senior, Lead, Principal, Manager, Architect, Staff Engineer, and 3+ year roles are suppressed. Adjust the editable profile in `src/config/jobPreferences.js`; never put credentials there.
+The candidate baseline is **1 year of professional DevOps / Linux / Server Administration experience**, targeting junior and entry-level roles in the 0–2 year range. `src/services/matchService.js` returns a 0–100 score using role (25), skills (30), experience (20), location (15), remote (5), and job type (5). Preferred 1-year ranges receive full experience credit. Two-year and 2+ year roles remain eligible when skills match strongly. Senior, Lead, Principal, Manager, Architect, Staff Engineer, and mandatory 3+ year roles are suppressed. Experience requirements are read from full descriptions, including text beyond the displayed summary; preferred qualifications and company history are not mandatory experience. Adjust the editable profile in `src/config/jobPreferences.js`; never put credentials there.
 
 ## Install and run
 
@@ -55,7 +55,7 @@ Sources are declared in `src/data/sources.json` and are fetched only when both `
 Run `npm run discover` locally. The pipeline is:
 
 ```text
-permitted API → basic HTTPS validation → normalize → deduplicate → hard-reject only invalid, unrelated, senior, or mandatory 3+ year roles → CV score → rank → src/data/jobs.json
+permitted API → basic HTTPS validation → normalize → deduplicate → hard-reject invalid, unrelated, senior, mandatory 3+ year, or country-ineligible remote roles → CV score → rank → src/data/jobs.json
 ```
 
 LinkedIn, Indeed, and Naukri are manual-link sources only. JobPilot never logs in, scrapes their sites, bypasses CAPTCHA, or submits an application.
@@ -96,7 +96,7 @@ Use and adapt this personal dashboard responsibly and in compliance with every s
 
 ## Freshness filters and manual application workflow
 
-The Jobs page calculates **Last 24 Hours** and **Last 7 Days** from the real source `postedAt` timestamp or, when a source has no posted timestamp, the exact `discoveredAt` scan timestamp. Time, role, match, work-mode, location, and source filters can be combined. Search filters only the indexed dataset; it does not query job sites from the browser.
+The Jobs page and dashboard show **Newly posted** and **Newly discovered** separately, each with 24-hour and 7-day windows. Posted filters use only the real source `postedAt`; discovered filters use the first `discoveredAt`. A missing posting date stays unknown and never counts as newly posted. Each date can be sorted independently; the two filter groups can be combined. Time, role, match, work-mode, location, and source filters can be combined. Search filters only the indexed dataset; it does not query job sites from the browser.
 
 Selecting **Apply** validates and opens the real source URL, records `Application Started`, the click time, and the active resume version in browser-local storage. When you return, JobPilot asks whether you submitted. Only **Yes, Mark Applied** records the application as Applied. JobPilot never logs in or presses a final submit button. The Applications page tracks status, dates, resume, source URL, notes, and follow-up date.
 
@@ -109,3 +109,11 @@ Both dashboard and Automation show the latest scan timestamp and health. The nex
 Saved jobs and application history are retained as complete browser-local snapshots, including notes, dates, and resume version, when listings disappear. This does not sync private tracking data to GitHub. It cannot reconstruct listings already lost before snapshots existed or after browser storage is cleared. Explicitly deleting a job still removes it from view.
 
 The discovery workflow requires repository contents write, Pages write, and OIDC permissions, plus an enabled GitHub Pages Actions environment. It needs no additional personal access token. After deploying, `DASHBOARD_URL=https://<username>.github.io/kisip-jobpilot/ node scripts/verify-deployment.js` compares public jobs and scan status against local `public/data` with bounded retries for CDN propagation.
+
+## Matching and eligibility
+
+`candidateCountry` in `src/config/jobPreferences.js` defaults to `IN` (India). Remote country lists, recognized regions, and explicit residency/work-authorization restrictions in full descriptions are checked against it. Known exclusions are rejected by discovery and counted under country rejections. Unknown restrictions remain visible with a confirmation message and no location-score credit. Being remote does not imply worldwide eligibility. Saved/application records and manual entries are retained even if now ineligible, with the reason visible.
+
+Duplicate matching requires the same normalized company, title, and location, plus a shared specific listing/application URL or employer requisition ID. Tracking parameters are removed, but job IDs and URL path case are preserved. Conflicting requisitions, locations, or structured country restrictions stay separate. Generic career homepages and similar titles/descriptions alone are insufficient evidence. Merged records retain source names and source URLs; prior job IDs and first-discovery timestamps survive a source change. This deliberately leaves uncertain duplicate candidates separate rather than risking lost distinct opportunities.
+
+These parsers use explicit text patterns rather than inferring every possible wording. Review source requirements before applying; unsupported language or ambiguous restrictions may still need manual confirmation.

@@ -26,12 +26,12 @@ describe('automatic discovery services', () => {
 
 describe('discovery eligibility versus ranking', () => {
   it.each(['Cloud Engineer', 'Platform Engineer', 'Infrastructure Engineer', 'Production Support Engineer', 'Technical Support Engineer', 'Linux Engineer', 'Operations Engineer'])("keeps related title %s", title => {
-    expect(isEligibleDiscoveredJob(normalizeJob({ ...target, title, experience: 'Not specified', location: 'Mexico' }))).toBe(true)
+    expect(isEligibleDiscoveredJob(normalizeJob({ ...target, title, experience: 'Not specified', location: 'Worldwide' }))).toBe(true)
   })
-  it('keeps unknown experience and a non-preferred remote location for lower-score ranking', () => {
+  it('rejects remote countries that exclude the candidate', () => {
     const job = normalizeJob({ ...target, title: 'Cloud Engineer', experience: 'Not specified', location: 'United States' })
-    expect(rejectionReason(job)).toBeNull()
-    expect(job.matchDetails.experience).toBe(60)
+    expect(rejectionReason(job)).toBe('location')
+    expect(job.matchDetails.overall).toBe(0)
     expect(job.matchDetails.location).toBe(0)
   })
   it.each(['Senior Platform Engineer', 'Lead DevOps Engineer', 'Engineering Manager'])("hard-rejects senior title %s", title => {

@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useMemo, useState } from 'react'
 import seedJobs from '../data/jobs.json'
 import initialScan from '../data/scan-status.json'
 import sources from '../data/sources.json'
-import { applicationStatuses, deduplicateJobs, duplicateKey, normalizeJob, validateJob, validateJobUrl, isTrackedJob } from '../services/jobService'
+import { applicationStatuses, deduplicateJobs, sameListing, normalizeJob, validateJob, validateJobUrl, isTrackedJob } from '../services/jobService'
 import { storageService } from '../services/storageService'
 import { activeResume, resumeLabel } from '../services/resumeService'
 import { defaultResume, migrateResumes } from '../config/resumeProfile'
@@ -22,7 +22,7 @@ function migrateLegacy() {
   for (const old of sanitize(legacy)) {
     if (isTrackedJob(old)) tracked.push(old)
     state[old.id] = { ...state[old.id], ...pickUserState(old) }
-    if (!automaticSources.has(old.source) && !manual.some(item => duplicateKey(item) === duplicateKey(old))) manual.push(old)
+    if (!automaticSources.has(old.source) && !manual.some(item => sameListing(item, old))) manual.push(old)
   }
   if (legacy.length) {
     storageService.save('jobUserState', state)
@@ -50,7 +50,7 @@ export function JobProvider({ children }) {
   const jobs = useMemo(() => {
     const archiveDays = Number(settings.archiveDays) || 30
     const cutoff = Date.now() - archiveDays * 86400000
-    return deduplicateJobs([...discoveredJobs, ...manualJobs, ...trackedJobs]).map(job => {
+    return deduplicateJobs([...discoveredJobs, ...manualJobs, ...trackedJobs].map(job => ({ ...job, ...(userState[job.id] || {}) }))).map(job => {
       const merged = { ...normalizeJob({ ...job, ...(userState[job.id] || {}) }), hidden: userState[job.id]?.hidden }
       const activity = new Date(merged.postedAt || merged.discoveredAt || 0).getTime()
       const protectedStatus = applicationStatuses.includes(merged.status) || merged.status === 'Saved'
@@ -98,7 +98,7 @@ export function JobProvider({ children }) {
     addJob(job) {
       const next = normalizeJob(job), validation = validateJob(next)
       if (!validation.valid) return { ok: false, message: validation.reason }
-      if (jobs.some(item => duplicateKey(item) === duplicateKey(next))) return { ok: false, message: 'This job is already tracked.' }
+      if (jobs.some(item => sameListing(item, next))) return { ok: false, message: 'This job is already tracked.' }
       setManualJobs(current => [next, ...current]); return { ok: true }
     },
     updateJob(id, updates) {

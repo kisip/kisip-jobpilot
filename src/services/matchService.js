@@ -1,3 +1,5 @@
+import { experienceRequirements } from './experienceService.js'
+import { remoteEligibility } from './locationService.js'
 import preferences from '../config/jobPreferences.js'
 
 const lower = value => String(value || '').toLowerCase()
@@ -20,12 +22,14 @@ export function calculateMatchDetails(job, prefs = preferences) {
   const roleHit = prefs.roles.some(role => lower(job.title).includes(lower(role))) || relatedRole(job.title)
   const expText = `${job.title || ''} ${job.experience || ''}`
   const requirementText = `${job.experience || ''} ${job.descriptionSummary || ''}`
-  const excluded = excludedExperience(job)
+  const requirement = experienceRequirements(job)
+  const eligibility = remoteEligibility(job, prefs.candidateCountry || 'IN')
+  const excluded = excludedExperience(job) || requirement.minimum >= 3 || eligibility.status === 'ineligible'
   const preferred = /\b(?:junior|entry.?level)\b|\b0\s*[–-]\s*[12]\s*years?\b|\b1\s*(?:\+|[–-]\s*2)?\s*years?\b/i.test(expText)
-  const mandatoryTwoPlus = /\b(?:minimum|required|requires?|at least|must have|need(?:ed)?)\s+(?:of\s+)?2\+?\s*years?\b/i.test(requirementText)
+  const mandatoryTwoPlus = experienceRequirements({ description: job.description }).minimum === 2 || /\b(?:minimum|required|requires?|at least|must have|need(?:ed)?)\s+(?:of\s+)?2\+?\s*years?\b/i.test(requirementText)
   const twoYears = /\b2\s*\+?\s*years?\b/i.test(expText)
   const unspecified = /not specified/i.test(job.experience || '')
-  const locationHit = prefs.locations.some(location => lower(job.location).includes(lower(location))) || /\b(worldwide|anywhere|global|asia)\b/i.test(job.location || '')
+  const locationHit = eligibility.status === 'eligible' || (eligibility.status === 'not-applicable' && (prefs.locations.some(location => lower(job.location).includes(lower(location))) || /\b(worldwide|anywhere|global|asia)\b/i.test(job.location || '')))
   const remoteHit = lower(job.workMode) === 'remote' || lower(job.location).includes('remote')
   const typeHit = prefs.jobTypes.some(type => lower(job.jobType).includes(lower(type)))
   const skills = Math.min(100, Math.round(matchedSkills.length / 4 * 100))
@@ -36,8 +40,8 @@ export function calculateMatchDetails(job, prefs = preferences) {
   details.explanation = [
     `Role ${details.role}%: ${roleHit ? 'target or related role matched' : 'target role not identified'}`,
     `Skills ${details.skills}%: ${matchedSkills.length ? matchedSkills.join(', ') : 'no CV skills identified'}`,
-    `Experience ${details.experience}%: ${excluded ? 'clearly senior role' : mandatoryTwoPlus ? 'mandatory 2+ years; reduced for a 1-year profile' : preferred ? 'fits 0–2 years / junior level' : twoYears ? '2-year stretch role' : unspecified ? 'not specified; ranked using other signals' : 'requirement is outside the preferred range'}`,
-    `Location ${details.location}%: ${locationHit ? 'preferred or globally remote location' : 'outside preferred locations; kept for ranking'}`,
+    `Experience ${details.experience}%: ${excluded ? 'outside experience or country requirements' : mandatoryTwoPlus ? 'mandatory 2+ years; reduced for a 1-year profile' : preferred ? 'fits 0–2 years / junior level' : twoYears ? '2-year stretch role' : unspecified ? 'not specified; ranked using other signals' : 'requirement is outside the preferred range'}`,
+    `Location ${details.location}%: ${eligibility.status !== 'not-applicable' ? eligibility.reason : locationHit ? 'preferred location' : 'outside preferred locations'}`,
     `Work mode ${details.workMode}%: ${job.workMode || 'not specified'}`
   ]
   return details

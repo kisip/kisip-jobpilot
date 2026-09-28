@@ -45,3 +45,15 @@ it('keeps the last dataset and reports an error when scan metadata cannot be fet
   expect(result.current.jobs.some(j => j.id === fixture.id)).toBe(true)
   expect(result.current.scanStatus.lastScan).toBe(scan.lastScan)
 })
+it('keeps a saved snapshot and its user state when another source supplies the same listing', async () => {
+  const applyUrl = 'https://careers.fixture.dev/positions/123'
+  const saved = normalizeJob({ ...fixture, id: 'saved-cross-source', source: 'Himalayas', url: 'https://himalayas.app/jobs/123', applyUrl, status: 'Saved', notes: 'Do not lose this note' })
+  localStorage.setItem('jobpilot.tracked-jobs.v1', JSON.stringify([saved]))
+  localStorage.setItem('jobpilot.job-user-state.v2', JSON.stringify({ [saved.id]: { status: 'Saved', notes: saved.notes } }))
+  feed([{ ...fixture, applyUrl }])
+  const { result } = renderHook(() => useJobs(), { wrapper: JobProvider })
+  await waitFor(() => expect(result.current.lastRefresh).not.toBe(''))
+  const matching = result.current.jobs.filter(job => job.applyUrl === applyUrl)
+  expect(matching).toHaveLength(1)
+  expect(matching[0]).toMatchObject({ id: saved.id, status: 'Saved', notes: saved.notes })
+})

@@ -38,8 +38,10 @@ describe('Jobs location and source controls', () => {
   })
   it('shows counted time filters and a mobile Filters control', () => {
     render(<JobProvider><Jobs/></JobProvider>)
-    expect(screen.getByRole('button', { name: /Last 24 Hours \(\d+\)/ })).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: /Last 7 Days \(\d+\)/ })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /Newly posted · 24h \(\d+\)/ })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /Newly posted · 7d \(\d+\)/ })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /Newly discovered · 24h/ })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /Newly discovered · 7d/ })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: /Filters/ })).toBeInTheDocument()
   })
 })

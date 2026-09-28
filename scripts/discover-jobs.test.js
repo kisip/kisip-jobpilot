@@ -69,3 +69,44 @@ describe('discovery reliability', () => {
     expect(result.jobs).toHaveLength(1)
   })
 })
+
+describe('matching through source adapters', () => {
+  it('rejects experience requirements beyond the displayed summary and foreign remote restrictions', async () => {
+    const root = await fixture([source('A')])
+    const result = await run(root, async () => response([
+      { ...row, url: 'https://careers.fixture.dev/jobs/senior', description: `${'About our team. '.repeat(100)}<p>Minimum of five years of professional experience required.</p>` },
+      { ...row, url: 'https://careers.fixture.dev/jobs/us', candidate_required_location: 'Worldwide', description: `${'About our team. '.repeat(100)}<p>Applicants must reside in the United States.</p>` },
+      { ...row, url: 'https://careers.fixture.dev/jobs/eligible', description: '<h2>Preferred qualifications</h2><p>Five years of experience</p>' }
+    ]))
+    expect(result.jobs).toHaveLength(1)
+    expect(result.jobs[0].url).toContain('eligible')
+    expect(result.scan).toMatchObject({ experienceRejected: 1, locationRejected: 1 })
+    expect(result.scan.sourceStats[0].locationRejected).toBe(1)
+  })
+  it('merges cross-source application links and retains first discovery and tracking when the source changes', async () => {
+    const old = job('A', { id: 'legacy-id', status: 'Saved', notes: 'Keep this', applyUrl: 'https://careers.fixture.dev/positions/req1' })
+    const root = await fixture([source('A'), source('B')], [old])
+    const fresh = { ...row, url: 'https://other.fixture.dev/jobs/456', application_url: old.applyUrl }
+    const result = await run(root, async url => response(url.endsWith('/A') ? [] : [fresh]))
+    expect(result.jobs).toHaveLength(1)
+    expect(result.jobs[0]).toMatchObject({ id: 'legacy-id', status: 'Saved', notes: 'Keep this', discoveredAt: old.discoveredAt })
+    expect(result.scan.newJobs).toBe(0)
+  })
+  it('merges copies across sources while keeping distinct query-string job IDs', async () => {
+    const root = await fixture([source('A'), source('B')])
+    const result = await run(root, async url => response([
+      { ...row, url: `https://feed.fixture.dev/${url.endsWith('/A') ? 'a' : 'b'}`, application_url: 'https://careers.fixture.dev/job?id=1' },
+      { ...row, url: `https://feed.fixture.dev/${url.endsWith('/A') ? 'c' : 'd'}`, application_url: 'https://careers.fixture.dev/job?id=2' }
+    ]))
+    expect(result.jobs).toHaveLength(2)
+    expect(result.scan.duplicatesRemoved).toBe(2)
+    expect(result.jobs[0].sources).toEqual(['A', 'B'])
+  })
+})
+
+it('does not refresh a legacy date-only first discovery on a later scan', async () => {
+  const root = await fixture([source('A')], [job('A', { discoveredAt: '2026-09-01' })])
+  const result = await run(root, async () => response([row]))
+  expect(result.jobs[0].discoveredAt).toBe('2026-09-01')
+  expect(result.scan.newJobs).toBe(0)
+})

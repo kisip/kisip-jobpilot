@@ -1,8 +1,9 @@
+import { experienceRequirements, plainDescription } from '../src/services/experienceService.js'
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import preferences from '../src/config/jobPreferences.js'
-import { deduplicateJobs, duplicateKey, normalizeJob, rejectionReason, validateJob, isTrackedJob } from '../src/services/jobService.js'
+import { deduplicateJobs, sameListing, normalizeJob, rejectionReason, validateJob, isTrackedJob } from '../src/services/jobService.js'
 
 import { nextScheduledScan } from '../src/services/scanStatusService.js'
 
@@ -17,7 +18,7 @@ export async function discoverJobs({ root = projectRoot, fetchImpl = globalThis.
   const stripHtml = value => String(value || '').replace(/<[^>]*>/g, ' ').replace(/&(?:amp|#038);/gi, '&').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g, ' ').trim()
   const summarize = value => stripHtml(value).slice(0, 500)
   const detectSkills = value => preferences.skills.filter(skill => String(value).toLowerCase().includes(skill.toLowerCase()))
-  const detectExperience = value => String(value).match(/\b(?:0\s*[–-]\s*2|0\s*[–-]\s*1|1\s*[–-]\s*2|1\+?|2\+?|3\+?|3\s*[–-]\s*5)\s*years?\b/i)?.[0] || String(value).match(/\b(?:junior|entry.?level|senior|lead|principal|staff|manager|director|architect)\b/i)?.[0] || 'Not specified'
+  const detectExperience = text => { const minimum = experienceRequirements({ description: text }).minimum; return minimum === null ? 'Not specified' : `${minimum}+ years` }
   const normalizeType = value => {
     const text = Array.isArray(value) ? value[0] : value
     return ({ full_time: 'Full-time', 'full-time': 'Full-time', 'full time': 'Full-time', contract: 'Contract', contractor: 'Contract', internship: 'Internship', intern: 'Internship', part_time: 'Part-time', 'part-time': 'Part-time' })[String(text || '').toLowerCase()] || 'Full-time'
@@ -34,26 +35,26 @@ export async function discoverJobs({ root = projectRoot, fetchImpl = globalThis.
   const salary = (min, max, currency = '') => min || max ? [currency, min && Number(min).toLocaleString('en-US'), max && `- ${Number(max).toLocaleString('en-US')}`].filter(Boolean).join(' ') : 'Not provided'
   const locationText = value => Array.isArray(value) ? value.map(item => typeof item === 'string' ? item : item?.name || item?.slug).filter(Boolean).join(', ') : String(value || '')
   const common = (row, source, text) => ({
-    title: row.title, company: row.company, location: locationText(row.location) || 'Worldwide', experience: row.experience || detectExperience(text),
+    title: row.title, company: row.company, location: locationText(row.location) || 'Not specified', experience: row.experience || detectExperience(text),
     salary: row.salary || 'Not provided', skills: detectSkills(text), jobType: row.jobType || 'Full-time', workMode: row.workMode || 'Remote', source: source.name,
     datePosted: dateIso(row.datePosted).slice(0, 10), postedAt: dateIso(row.datePosted), dateDiscovered: today, discoveredAt: now.toISOString(), url: row.url, applyUrl: row.applyUrl || row.url,
-    descriptionSummary: summarize(row.summary || text), status: 'New', notes: `${source.attribution}. Final application remains manual.`, resumeVersion: ''
+    description: plainDescription(row.description || text), countryRestrictions: row.countryRestrictions || [], requisitionId: row.requisitionId || text.match(/\brequisition\s*(?:id|number|#)\s*[:#-]?\s*([a-z0-9-]+)/i)?.[1] || '', descriptionSummary: summarize(row.summary || text), status: 'New', notes: `${source.attribution}. Final application remains manual.`, resumeVersion: ''
   })
   function adaptRemotive(row, source) {
-    const text = `${row.title} ${(row.tags || []).join(' ')} ${stripHtml(row.description)}`
-    return common({ title: row.title, company: row.company_name, location: row.candidate_required_location || 'Worldwide', experience: detectExperience(text), salary: row.salary, jobType: normalizeType(row.job_type), datePosted: row.publication_date, url: row.url, summary: row.description }, source, text)
+    const text = `${row.title} ${(row.tags || []).join(' ')} ${plainDescription(row.description)}`
+    return common({ title: row.title, company: row.company_name, location: row.candidate_required_location || 'Not specified', experience: detectExperience(row.description), salary: row.salary, jobType: normalizeType(row.job_type), datePosted: row.publication_date, url: row.url, applyUrl: row.application_url || row.url, description: row.description, summary: row.description }, source, text)
   }
   function adaptHimalayas(row, source) {
-    const text = `${row.title} ${(row.seniority || []).join(' ')} ${(row.categories || []).join(' ')} ${stripHtml(row.description)}`
-    return common({ title: row.title, company: row.companyName, location: row.locationRestrictions, experience: detectExperience(text), salary: salary(row.minSalary, row.maxSalary, row.currency), jobType: normalizeType(row.employmentType), datePosted: row.pubDate, url: row.applicationLink, summary: row.excerpt || row.description }, source, text)
+    const text = `${row.title} ${(row.seniority || []).join(' ')} ${(row.categories || []).join(' ')} ${plainDescription(row.description)}`
+    return common({ title: row.title, company: row.companyName, location: row.locationRestrictions, experience: detectExperience(row.description), salary: salary(row.minSalary, row.maxSalary, row.currency), jobType: normalizeType(row.employmentType), datePosted: row.pubDate, url: row.applicationLink, countryRestrictions: row.locationRestrictions, description: row.description, summary: row.excerpt || row.description }, source, text)
   }
   function adaptJobicy(row, source) {
-    const text = `${row.jobTitle} ${row.jobLevel || ''} ${(row.jobIndustry || []).join(' ')} ${stripHtml(row.jobDescription)}`
-    return common({ title: row.jobTitle, company: row.companyName, location: row.jobGeo || 'Worldwide', experience: detectExperience(text), salary: salary(row.annualSalaryMin, row.annualSalaryMax, row.salaryCurrency), jobType: normalizeType(row.jobType), datePosted: row.pubDate, url: row.url, summary: row.jobExcerpt || row.jobDescription }, source, text)
+    const text = `${row.jobTitle} ${row.jobLevel || ''} ${(row.jobIndustry || []).join(' ')} ${plainDescription(row.jobDescription)}`
+    return common({ title: row.jobTitle, company: row.companyName, location: row.jobGeo || 'Not specified', experience: detectExperience(row.jobDescription), salary: salary(row.annualSalaryMin, row.annualSalaryMax, row.salaryCurrency), jobType: normalizeType(row.jobType), datePosted: row.pubDate, url: row.url, description: row.jobDescription, summary: row.jobExcerpt || row.jobDescription }, source, text)
   }
   const adapters = { remotive: adaptRemotive, himalayas: adaptHimalayas, jobicy: adaptJobicy }
   async function fetchSource(source) {
-    const stats = { name: source.name, status: 'OK', requests: 0, httpStatus: [], rawJobs: 0, normalizedJobs: 0, invalidRejected: 0, unrelatedRejected: 0, seniorRejected: 0, experienceRejected: 0, duplicatesRemoved: 0, eligibleJobs: 0, errors: [] }
+    const stats = { name: source.name, status: 'OK', requests: 0, httpStatus: [], rawJobs: 0, normalizedJobs: 0, invalidRejected: 0, unrelatedRejected: 0, seniorRejected: 0, experienceRejected: 0, locationRejected: 0, duplicatesRemoved: 0, eligibleJobs: 0, errors: [] }
     const rows = []
     let successfulEndpoints = 0
     const endpoints = [source.endpoint, ...(source.additionalEndpoints || [])]
@@ -103,33 +104,31 @@ export async function discoverJobs({ root = projectRoot, fetchImpl = globalThis.
     normalizedValid.push(job)
   }
   const uniqueDiscovered = []
-  const seenDiscovered = new Set()
   for (const job of normalizedValid) {
-    const key = duplicateKey(job)
-    if (seenDiscovered.has(key)) { rejectionCounts.duplicates = (rejectionCounts.duplicates || 0) + 1; const source = statsBySource.get(job.source); if (source) source.duplicatesRemoved += 1; continue }
-    seenDiscovered.add(key)
+    if (uniqueDiscovered.some(previous => sameListing(previous, job))) { rejectionCounts.duplicates = (rejectionCounts.duplicates || 0) + 1; const source = statsBySource.get(job.source); if (source) source.duplicatesRemoved += 1; const previous = uniqueDiscovered.find(item => sameListing(item, job)); Object.assign(previous, deduplicateJobs([previous, job])[0]); continue }
     uniqueDiscovered.push(job)
   }
   const duplicatesRemoved = normalizedValid.length - uniqueDiscovered.length
   const eligible = []
-  for (const job of uniqueDiscovered) {
+  for (const raw of uniqueDiscovered) {
+    const job = normalizeJob(raw)
     const reason = rejectionReason(job)
     const source = statsBySource.get(job.source)
-    if (reason) { rejectionCounts[reason] += 1; const field = { invalid: "invalidRejected", unrelated: "unrelatedRejected", senior: "seniorRejected", experience: "experienceRejected" }[reason]; if (source && field) source[field] += 1 }
+    if (reason) { rejectionCounts[reason] += 1; const field = { invalid: "invalidRejected", unrelated: "unrelatedRejected", senior: "seniorRejected", experience: "experienceRejected", location: "locationRejected" }[reason]; if (source && field) source[field] += 1 }
     else { eligible.push(job); if (source) source.eligibleJobs += 1 }
   }
   eligible.sort((a, b) => b.matchScore - a.matchScore || new Date(b.datePosted || 0) - new Date(a.datePosted || 0))
 
   const allExisting = existing.map(normalizeJob).filter(job => validateJob(job).valid)
-  const existingMap = new Map(allExisting.map(job => [duplicateKey(job), job]))
+  const findPrevious = job => allExisting.find(previous => sameListing(previous, job) && isTrackedJob(previous)) || allExisting.find(previous => sameListing(previous, job))
   const automaticSources = new Set(enabled.map(source => source.name))
   const retainedExisting = allExisting.filter(job => !automaticSources.has(job.source) || statsBySource.get(job.source)?.status !== 'OK' || isTrackedJob(job))
   const tracked = eligible.map(job => {
-    const previous = existingMap.get(duplicateKey(job))
-    return previous ? { ...job, status: previous.status, notes: previous.notes || job.notes, resumeVersion: previous.resumeVersion, applicationDate: previous.applicationDate, applicationStartedAt: previous.applicationStartedAt, followUpDate: previous.followUpDate, discoveredAt: previous.discoveredAt?.includes('T') ? previous.discoveredAt : job.discoveredAt, dateDiscovered: previous.dateDiscovered, dateFound: previous.dateFound } : job
+    const previous = findPrevious(job)
+    return previous ? { ...job, id: previous.id, status: previous.status, notes: previous.notes || job.notes, resumeVersion: previous.resumeVersion, applicationDate: previous.applicationDate, applicationStartedAt: previous.applicationStartedAt, followUpDate: previous.followUpDate, discoveredAt: previous.discoveredAt || job.discoveredAt, dateDiscovered: previous.dateDiscovered, dateFound: previous.dateFound } : job
   })
   const merged = deduplicateJobs([...tracked, ...retainedExisting])
-  const newJobs = tracked.filter(job => !existingMap.has(duplicateKey(job))).length
+  const newJobs = tracked.filter(job => !findPrevious(job)).length
   const errors = sourceStats.flatMap(source => source.errors.map(error => `${source.name}: ${error}`))
   const allFailed = enabled.length > 0 && sourceStats.every(source => source.status === 'Failed')
   if (!enabled.length) errors.push('No permitted sources enabled')
@@ -154,7 +153,7 @@ export async function discoverJobs({ root = projectRoot, fetchImpl = globalThis.
       await fs.rename(`${destination}.tmp`, destination)
     }
   }
-  for (const source of sourceStats) log(`${source.name}: HTTP ${source.httpStatus.join(", ") || "none"}; ${source.rawJobs} fetched; ${source.invalidRejected} invalid; ${source.unrelatedRejected} unrelated; ${source.seniorRejected} senior; ${source.experienceRejected} experience; ${source.duplicatesRemoved} duplicates; ${source.eligibleJobs} eligible${source.errors.length ? `; errors: ${source.errors.join("; ")}` : ""}`)
+  for (const source of sourceStats) log(`${source.name}: HTTP ${source.httpStatus.join(", ") || "none"}; ${source.rawJobs} fetched; ${source.invalidRejected} invalid; ${source.unrelatedRejected} unrelated; ${source.seniorRejected} senior; ${source.experienceRejected} experience; ${source.locationRejected || 0} country; ${source.duplicatesRemoved} duplicates; ${source.eligibleJobs} eligible${source.errors.length ? `; errors: ${source.errors.join("; ")}` : ""}`)
   log(`Total fetched: ${discovered.length}`)
   log(`Invalid: ${rejectionCounts.invalid}`)
   log(`Unrelated: ${rejectionCounts.unrelated}`)

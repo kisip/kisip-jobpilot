@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { filterJobs, freshnessCounts, newestFirst } from './jobFilterService'
+import { filterJobs, freshnessCounts, newestFirst, quickMatch, locationMatch } from './jobFilterService'
 const now = new Date('2026-08-23T12:00:00Z')
 const base = { status:'New',workMode:'Remote',skills:['Linux','AWS','Docker'],experience:'0–2 Years',matchScore:85,discoveredAt:'2026-08-23T10:00:00Z' }
 const jobs = [
@@ -18,4 +18,23 @@ describe('composable jobs filters',()=>{
   it('Remotive + DevOps',()=>expect(run({source:'Remotive',quicks:['DevOps']})).toEqual(['r']))
   it('Jobicy + 0–2 Years',()=>expect(run({source:'Jobicy',quicks:['0–2 Years']})).toEqual(['j']))
   it('counts real freshness windows and sorts newest activity first',()=>{expect(freshnessCounts(jobs,now)).toMatchObject({day:2,week:3,high:3,remote:4,total:4});expect(newestFirst(jobs).map(job=>job.id)).toEqual(['h','r','j','old'])})
+})
+
+ describe('verified experience and location filters', () => {
+  it.each(['12 years', '3–5 years', 'Not specified'])('does not claim %s fits 0–2 years', experience => {
+    expect(quickMatch({ title: 'DevOps Engineer', experience }, '0–2 Years')).toBe(false)
+  })
+  it('uses full required experience over junior titles and supports numeric ranges', () => {
+    expect(quickMatch({ title: 'Junior DevOps Engineer', experience: '1 year', description: 'Minimum 5 years experience required.' }, '0–2 Years')).toBe(false)
+    expect(quickMatch({ experience: '1 to 2 years' }, '1–2 Years')).toBe(true)
+    expect(quickMatch({ experience: '2+ years' }, '0–2 Years')).toBe(true)
+  })
+  it('does not advertise restricted remote jobs as worldwide or Indiana as India', () => {
+    const job = { workMode: 'Remote', location: 'Worldwide' }
+    expect(locationMatch(job, 'Worldwide Remote')).toBe(true)
+    expect(locationMatch({ ...job, countryRestrictions: ['US'] }, 'Worldwide Remote')).toBe(false)
+    expect(locationMatch({ ...job, description: 'Candidates must reside in Canada.' }, 'Worldwide Remote')).toBe(false)
+    expect(locationMatch({ location: 'Indianapolis, Indiana' }, 'India')).toBe(false)
+    expect(locationMatch({ location: 'IN' }, 'India')).toBe(true)
+  })
 })

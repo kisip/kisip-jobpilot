@@ -1,4 +1,5 @@
 const jobPreferences = {
+  candidateCountry: 'IN',
   candidateProfile: {
     name: 'Anandha Krishnan', title: 'DevOps / Linux / System Administration / SRE', professionalTitle: 'Junior Server Administrator / DevOps Engineer',
     professionalExperience: '1 Year', preferredExperienceRange: '0–2 Years',
