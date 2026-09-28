@@ -1,5 +1,108 @@
 [
   {
+    "title": "DevOps Engineer (Intern)",
+    "company": "Mactores",
+    "location": "Anywhere",
+    "experience": "Not specified",
+    "salary": "Not provided",
+    "skills": [
+      "Linux",
+      "AWS",
+      "Git",
+      "Bash",
+      "Python",
+      "Monitoring",
+      "Migrations"
+    ],
+    "jobType": "Internship",
+    "workMode": "Remote",
+    "source": "Jobicy",
+    "postedAt": "2026-09-01T05:16:43.000Z",
+    "datePosted": "2026-09-01",
+    "discoveredAt": "2026-09-28T14:09:17.774Z",
+    "dateDiscovered": "2026-09-28",
+    "dateFound": "2026-09-28",
+    "url": "https://jobicy.com/jobs/152298-devops-engineer-intern",
+    "applyUrl": "https://jobicy.com/jobs/152298-devops-engineer-intern",
+    "description": "Mactores is the agent-native AWS modernization firm. Most modernization work doesn't ship, it stalls in pilots, slips a year, or lands at three times the budget. We exist to ship it: production systems running, legacy retired, outcomes measured. Our delivery is built on Aedeon, the agent platform built by Mactores' founders' sister company, which absorbs the repetitive 60–70% of engagement work, discovery, dependency mapping, validation, test generation, that traditional consulting bills human hours against. Forward-deployed engineers own the rest: architecture, judgment, and cutover, on dates we commit to in the contract.\n\n\n Modernization only counts when the release lands and the legacy system gets switched off and the DevOps team is where that discipline lives. As a DevOps Engineer intern, you'll join the team managing large customer deployments: Linux and Windows administration, large enterprise applications, and big data workloads. This work serves our infrastructure and application modernization pillar the migrations that move customers off dedicated hardware and onto AWS.\n\n You're here to learn the agent-native craft, not to own cutover the senior engineers carry that commitment. What you will own is real operational work: tickets, provisioning automation, release support. Automation is the core skill you'll build, because in a firm where agents absorb the repetitive majority of delivery work, the engineers who matter are the ones who automate the rest.\n\n What you will do\n\n \n Work the operations tickets and project task queue with the DevOps team.\n\n Communicate with the rest of Engineering to roll out broad changes for customers.\n\n Automate operational and server provisioning workflows using AWS CloudFormation templates.\n\n Share responsibility for deploying releases and other operations maintenance.\n\n Improve operations infrastructure — Jenkins clusters, Bitbucket, monitoring tools (Consul), and metrics tools such as Graphite and Grafana.\n\n Provide operational support for the rest of the Engineering team.\n\n Help migrate our remaining dedicated hardware infrastructure to the cloud retiring hardware, not just racking new services.\n\n \n What you need for this opportunity\n\n \n Conceptual understanding of version control systems (git), including branching and merging strategies.\n\n Conceptual understanding of cloud platforms: AWS, Azure, GCP.\n\n Conceptual understanding of Snowflake.\n\n Conceptual understanding of or exposure to software build tools (Maven, Gradle) and continuous integration tools (Jenkins); must have supported Java-based applications in a production environment.\n\n Conceptual understanding of Linux environments and scripting languages — bash, Python, Groovy.\n\n \n How we work?\n\n Mactores delivers through agents plus forward-deployed engineers. Aedeon, the agent platform we deploy, handles the repetitive majority of engagement work discovery, mapping, validation, test generation and engineers handle the judgment calls and the cutover itself. We commit to fixed delivery dates, so operational discipline isn't optional here. As an intern you'll learn that discipline where it's most visible: in the release pipeline, the monitoring stack, and the automation that keeps both honest. \n\n Compensation\n\n Additional Information\n\n Life at Mactores \n\n We care about creating a culture that makes a real difference in the lives of every Mactorian. Our 10 Core Leadership Principles that honor Decision-making, Leadership, Collaboration, and Curiosity drive how we work.\n\n 1. Be one step ahead\n\n 2. Deliver the best\n\n 3. Be bold\n\n 4. Pay attention to the detail\n\n 5. Enjoy the challenge\n\n 6. Be curious and take action\n\n 7. Take leadership\n\n 8. Own it\n\n 9. Deliver value\n\n 10. Be collaborative\n\n We would like you to read more details about the work culture on https://mactores.com/careers \n\n The Path to Joining the Mactores Team \n\n At Mactores, our recruitment process is structured around three distinct stages:\n\n Pre-Employment Assessment: \n\n A series of evaluations of your technical proficiency and suitability for the role.\n\n Managerial Interview: The hiring manager engages with you in multiple discussions, 30 minutes to an hour each, covering technical skills, hands-on experience, leadership potential, and communication. \n\n HR Discussion: During this 30-minute session, you'll have the opportunity to discuss the offer and next steps with a member of the HR team.\n\n Mactores provides equal opportunities in all employment practices. We don't discriminate based on race, religion, gender, national origin, age, disability, marital status, military status, genetic information, or any other category protected by federal, state, and local laws. This applies to every part of the employment relationship, recruitment, compensation, promotions, transfers, disciplinary action, layoff, training, and social and recreational programs.\n\n Note: Please answer as many questions as possible with this application to accelerate the hiring process.",
+    "countryRestrictions": [],
+    "requisitionId": "",
+    "sources": [
+      "Jobicy"
+    ],
+    "sourceUrls": [
+      "https://jobicy.com/jobs/152298-devops-engineer-intern"
+    ],
+    "descriptionSummary": "Mactores is the agent-native AWS modernization firm. Most modernization work doesn't ship, it stalls in pilots, slips a year, or lands at three times the budget. We exist to ship it: production systems running, legacy retired, outcomes measured. Our delivery is built on Aedeon, the agent platform built by Mactores' founders' sister company, which absorbs",
+    "status": "New",
+    "notes": "Jobs by Jobicy. Final application remains manual.",
+    "resumeVersion": "",
+    "applicationStartedAt": "",
+    "applicationDate": "",
+    "followUpDate": "",
+    "id": "job-yui5n4",
+    "experienceRequirement": {
+      "minimum": null,
+      "requirements": []
+    },
+    "remoteEligibility": {
+      "status": "eligible",
+      "reason": "Remote location includes India"
+    },
+    "matchScore": 92,
+    "matchDetails": {
+      "role": 100,
+      "skills": 100,
+      "experience": 60,
+      "location": 100,
+      "workMode": 100,
+      "jobType": 100,
+      "matchedSkills": [
+        "Linux",
+        "AWS",
+        "CI/CD",
+        "Git",
+        "Bash",
+        "Python",
+        "Monitoring",
+        "Migrations"
+      ],
+      "missingSkills": [
+        "Docker",
+        "Docker Compose",
+        "Terraform",
+        "Ansible",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Nginx",
+        "Apache",
+        "MySQL",
+        "PostgreSQL",
+        "Server Administration",
+        "Web Hosting",
+        "DNS",
+        "SSL/TLS",
+        "Security Hardening",
+        "Cloud Infrastructure",
+        "cPanel/WHM",
+        "CyberPanel",
+        "PHP",
+        "Backups",
+        "Troubleshooting"
+      ],
+      "excluded": false,
+      "overall": 92,
+      "category": "Excellent Match",
+      "explanation": [
+        "Role 100%: target or related role matched",
+        "Skills 100%: Linux, AWS, CI/CD, Git, Bash, Python, Monitoring, Migrations",
+        "Experience 60%: not specified; ranked using other signals",
+        "Location 100%: Remote location includes India",
+        "Work mode 100%: Remote"
+      ]
+    }
+  },
+  {
     "title": "AWS DevOps Engineer (Associate)",
     "company": "Mactores",
     "location": "Anywhere",
@@ -26,6 +129,15 @@
     "dateFound": "2026-09-01",
     "url": "https://jobicy.com/jobs/152276-aws-devops-engineer-associate",
     "applyUrl": "https://jobicy.com/jobs/152276-aws-devops-engineer-associate",
+    "description": "Mactores is the agent-native AWS modernization firm. Most modernization work doesn't ship, it stalls in pilots, slips a year, or lands at three times the budget. We exist to ship it: production systems running, legacy retired, outcomes measured. Our delivery is built on Aedeon, the agent platform built by Mactores' founders' sister company, which absorbs the repetitive 60–70% of engagement work, discovery, dependency mapping, validation, test generation, that traditional consulting bills human hours against. Forward-deployed engineers own the rest: architecture, judgment, and cutover, on dates we commit to in the contract.\n\n\n This role sits in our Application & Database Modernization pillar: moving legacy applications, databases, and infrastructure from on-premises to cloud-native AWS on committed dates. Customers come to us with dedicated hardware that costs more every year, deployments that depend on one person's memory, and enterprise workloads- Linux, Windows, big data that nobody wants to touch.\n\n You'll join the DevOps team that lands these migrations. Aedeon handles the discovery and dependency-mapping grind; you build the automation, monitoring, and CI infrastructure that makes each cutover repeatable and safe. This is a client-facing engineering role: you'll set customer expectations, meet them, and see your infrastructure work carry production traffic.\n\n What you will do?\n\n \n Deliver application migration projects from on-premises to AWS.\n\n Deliver database migration projects RDBMS, NoSQL, DW, Hadoop from on-premises to AWS.\n\n Automate operational and server provisioning workflows using AWS CFT on AWS.\n\n Share responsibility for deploying releases and running operations maintenance.\n\n Improve operations infrastructure: Jenkins clusters, Bitbucket, monitoring tools (Consul), and metrics tools such as Graphite and Grafana.\n\n Provide operational support for the rest of the engineering team.\n\n Help migrate our remaining dedicated hardware infrastructure to the cloud retire the legacy, don't babysit it.\n\n Establish and maintain operational best practices, and implement monitoring for automated system health checks.\n\n Build our CI pipeline, and train and guide the team in DevOps practices.\n\n \n What do you have?\n\n \n 2+ years of experience using Terraform for IaaC.\n\n 2+ years of configuration management and engineering for large-scale customers, ideally supporting an Agile development process.\n\n 2+ years of Linux administration experience.\n\n Deep understanding of version control systems (git), including branching and merging strategies.\n\n Experience with cloud platforms (AWS/EC2/ECS/RDS/CloudFormation, CloudWatch, etc.) and cloud automation tools (Ansible, Chef).\n\n Experience with software build tools (Maven, Gradle) and continuous integration tools (Jenkins).\n\n Production support experience with Java-based applications — this one's a must.\n\n Experience with Linux environments and scripting languages: bash, Python, Groovy.\n\n Experience supporting Node.js in production is a plus.\n\n Knowledge of service discovery tools such as Consul is a plus.\n\n Comfort working late evening hours, which is when most patching occurs.\n\n A proactive eye for what can be made more reliable — and the follow-through to make it so.\n\n \n You will be preferred if\n\n \n You are AWS DevOps Pro or AWS SA Pro Certified\n\n \n How we work?\n\n We run a forward-deployed model. Engineers embed with the customer's team, own outcomes from discovery through production, and carry the delivery commitment personally. Aedeon absorbs scale; engineers absorb judgment; the contract absorbs risk. As an associate, that structure works in your favor: the repetitive discovery work is largely absorbed by agents, so your hours go to automation, infrastructure, and learning cutover discipline from senior engineers. The culture is casual and steers clear of rigid corporate habits. We care about what ships.\n\n Compensation\n\n Additional Information\n\n Life at Mactores \n\n We care about creating a culture that makes a real difference in the lives of every Mactorian. Our 10 Core Leadership Principles that honor Decision-making, Leadership, Collaboration, and Curiosity drive how we work.\n\n 1. Be one step ahead\n\n 2. Deliver the best\n\n 3. Be bold\n\n 4. Pay attention to the detail\n\n 5. Enjoy the challenge\n\n 6. Be curious and take action\n\n 7. Take leadership\n\n 8. Own it\n\n 9. Deliver value\n\n 10. Be collaborative\n\n We would like you to read more details about the work culture on https://mactores.com/careers \n\n The Path to Joining the Mactores Team \n\n At Mactores, our recruitment process is structured around three distinct stages:\n\n Pre-Employment Assessment: \n\n A series of evaluations of your technical proficiency and suitability for the role.\n\n Managerial Interview: The hiring manager engages with you in multiple discussions, 30 minutes to an hour each, covering technical skills, hands-on experience, leadership potential, and communication. \n\n HR Discussion: During this 30-minute session, you'll have the opportunity to discuss the offer and next steps with a member of the HR team.\n\n Mactores provides equal opportunities in all employment practices. We don't discriminate based on race, religion, gender, national origin, age, disability, marital status, military status, genetic information, or any other category protected by federal, state, and local laws. This applies to every part of the employment relationship, recruitment, compensation, promotions, transfers, disciplinary action, layoff, training, and social and recreational programs.\n\n Note: Please answer as many questions as possible with this application to accelerate the hiring process.",
+    "countryRestrictions": [],
+    "requisitionId": "",
+    "sources": [
+      "Jobicy"
+    ],
+    "sourceUrls": [
+      "https://jobicy.com/jobs/152276-aws-devops-engineer-associate"
+    ],
     "descriptionSummary": "Mactores is the agent-native AWS modernization firm. Most modernization work doesn't ship, it stalls in pilots, slips a year, or lands at three times the budget. We exist to ship it: production systems running, legacy retired, outcomes measured. Our delivery is built on Aedeon, the agent platform built by Mactores' founders' sister company, which absorbs",
     "status": "New",
     "notes": "Jobs by Jobicy. Final application remains manual.",
@@ -34,11 +146,35 @@
     "applicationDate": "",
     "followUpDate": "",
     "id": "job-dfqlfq",
-    "matchScore": 94,
+    "experienceRequirement": {
+      "minimum": 2,
+      "requirements": [
+        {
+          "minimum": 2,
+          "preferred": false,
+          "evidence": "2+ years"
+        },
+        {
+          "minimum": 2,
+          "preferred": false,
+          "evidence": "2+ years of experience using terraform for iaac"
+        },
+        {
+          "minimum": 2,
+          "preferred": false,
+          "evidence": "2+ years of linux administration experience"
+        }
+      ]
+    },
+    "remoteEligibility": {
+      "status": "eligible",
+      "reason": "Remote location includes India"
+    },
+    "matchScore": 91,
     "matchDetails": {
       "role": 100,
       "skills": 100,
-      "experience": 70,
+      "experience": 55,
       "location": 100,
       "workMode": 100,
       "jobType": 100,
@@ -47,6 +183,7 @@
         "AWS",
         "Terraform",
         "Ansible",
+        "CI/CD",
         "Git",
         "Bash",
         "Python",
@@ -56,7 +193,6 @@
       "missingSkills": [
         "Docker",
         "Docker Compose",
-        "CI/CD",
         "GitHub Actions",
         "GitLab CI/CD",
         "Nginx",
@@ -76,139 +212,76 @@
         "Troubleshooting"
       ],
       "excluded": false,
-      "overall": 94,
+      "overall": 91,
       "category": "Excellent Match",
       "explanation": [
         "Role 100%: target or related role matched",
-        "Skills 100%: Linux, AWS, Terraform, Ansible, Git, Bash, Python, Monitoring, Migrations",
-        "Experience 70%: 2-year stretch role",
-        "Location 100%: preferred or globally remote location",
-        "Work mode 100%: Remote"
-      ]
-    }
-  },
-  {
-    "title": "AWS DevOps Engineer (Freelancer)",
-    "company": "Mactores",
-    "location": "USA",
-    "experience": "2+ years",
-    "salary": "Not provided",
-    "skills": [
-      "Linux",
-      "AWS",
-      "Terraform",
-      "Ansible",
-      "CI/CD",
-      "Git",
-      "Monitoring"
-    ],
-    "jobType": "Contract",
-    "workMode": "Remote",
-    "source": "Jobicy",
-    "postedAt": "2026-09-01T05:11:03.000Z",
-    "datePosted": "2026-09-01",
-    "discoveredAt": "2026-09-01T11:46:12.314Z",
-    "dateDiscovered": "2026-09-01",
-    "dateFound": "2026-09-01",
-    "url": "https://jobicy.com/jobs/152278-aws-devops-engineer-freelancer",
-    "applyUrl": "https://jobicy.com/jobs/152278-aws-devops-engineer-freelancer",
-    "descriptionSummary": "Mactores is the agent-native AWS modernization firm. Most modernization work doesn't ship, it stalls in pilots, slips a year, or lands at three times the budget. We exist to ship it: production systems running, legacy retired, outcomes measured. Our delivery is built on Aedeon, the agent platform built by Mactores' founders' sister company, which absorbs",
-    "status": "New",
-    "notes": "Jobs by Jobicy. Final application remains manual.",
-    "resumeVersion": "",
-    "applicationStartedAt": "",
-    "applicationDate": "",
-    "followUpDate": "",
-    "id": "job-rbj85s",
-    "matchScore": 79,
-    "matchDetails": {
-      "role": 100,
-      "skills": 100,
-      "experience": 70,
-      "location": 0,
-      "workMode": 100,
-      "jobType": 100,
-      "matchedSkills": [
-        "Linux",
-        "AWS",
-        "Terraform",
-        "Ansible",
-        "CI/CD",
-        "Git",
-        "Monitoring"
-      ],
-      "missingSkills": [
-        "Docker",
-        "Docker Compose",
-        "GitHub Actions",
-        "GitLab CI/CD",
-        "Nginx",
-        "Apache",
-        "MySQL",
-        "PostgreSQL",
-        "Bash",
-        "Python",
-        "Server Administration",
-        "Web Hosting",
-        "DNS",
-        "SSL/TLS",
-        "Security Hardening",
-        "Cloud Infrastructure",
-        "cPanel/WHM",
-        "CyberPanel",
-        "PHP",
-        "Backups",
-        "Migrations",
-        "Troubleshooting"
-      ],
-      "excluded": false,
-      "overall": 79,
-      "category": "Possible Match",
-      "explanation": [
-        "Role 100%: target or related role matched",
-        "Skills 100%: Linux, AWS, Terraform, Ansible, CI/CD, Git, Monitoring",
-        "Experience 70%: 2-year stretch role",
-        "Location 0%: outside preferred locations; kept for ranking",
+        "Skills 100%: Linux, AWS, Terraform, Ansible, CI/CD, Git, Bash, Python, Monitoring, Migrations",
+        "Experience 55%: mandatory 2+ years; reduced for a 1-year profile",
+        "Location 100%: Remote location includes India",
         "Work mode 100%: Remote"
       ]
     }
   },
   {
     "title": "Site Reliability Engineer",
-    "company": "MaintainX",
-    "location": "Canada",
+    "company": "Canonical",
+    "location": "Anywhere",
     "experience": "Not specified",
     "salary": "Not provided",
-    "skills": [],
+    "skills": [
+      "Linux",
+      "Python"
+    ],
     "jobType": "Full-time",
     "workMode": "Remote",
     "source": "Jobicy",
-    "postedAt": "2026-09-18T12:05:31.000Z",
-    "datePosted": "2026-09-18",
-    "discoveredAt": "2026-09-18T16:31:32.179Z",
-    "dateDiscovered": "2026-09-18",
-    "dateFound": "2026-09-18",
-    "url": "https://jobicy.com/jobs/153549-site-reliability-engineer-3",
-    "applyUrl": "https://jobicy.com/jobs/153549-site-reliability-engineer-3",
-    "descriptionSummary": "MaintainX is a leading mobile-first work execution platform for industrial and frontline teams. More than 13,000 customers, including Duracell, McDonald's, Shell, DHL and Volvo, use MaintainX to cut unplanned downtime and run better operations, across 13.9 million managed assets and 79.5 million completed work orders. In August 2026 MaintainX became part of Autodesk, joining Autodesk",
+    "postedAt": "2026-09-23T03:45:10.000Z",
+    "datePosted": "2026-09-23",
+    "discoveredAt": "2026-09-28T14:09:17.774Z",
+    "dateDiscovered": "2026-09-28",
+    "dateFound": "2026-09-28",
+    "url": "https://jobicy.com/jobs/149547-site-reliability-engineer",
+    "applyUrl": "https://jobicy.com/jobs/149547-site-reliability-engineer",
+    "description": "Canonical is a leading provider of open source software and operating systems to the global enterprise and technology markets. Our platform, Ubuntu, is widely used in breakthrough enterprise initiatives such as public cloud, data science, AI, engineering innovation, and IoT. Our customers include the world's leading public cloud and silicon providers, and industry leaders in many sectors. The company is a pioneer of globally distributed collaboration, with 1200+ colleagues in 75+ countries and very few office-based roles. Teams meet two to four times yearly in person, in interesting locations around the world, to align on strategy and execution.\n The company is founder-led, profitable, and growing.\n We are hiring a Site Reliability Engineer \n Our goal is to perfect enterprise infrastructure DevOps practices, raising the bar on what's possible with automation by embracing a model-driven approach, whether on-premise or on public clouds.\n We run hundreds of private cloud, Kubernetes clusters, and applications for customers across both physical and public cloud estates. We identify and address incidents, monitor and observe applications, anticipate potential issues, and enable product refinement to ultimately achieve high-quality standards in our open source portfolio.\n To succeed in this role, you need to have a strong background in Linux, Python, networking, and knowledge of how clouds work. Your work will encompass the entire stack, from bare-metal networking and kernel up to Kubernetes and open source applications. You can expect to be trained in our core technologies like OpenStack, Kubernetes, security standards, open source products like Kubeflow, Kafka, OpenSearch, databases, and many others.\n Automation for us is a software engineering problem that we approach with a scientific mindset to bring operations at scale, driven by metrics and code.\n Location: Globally remote role\n The role \n We deploy and run OpenStack, Kubernetes, storage solutions, and open source applications, applying DevOps practices.\n To become a member of our team, you need to be a software engineer fluent in Python, you need a genuine interest in the full open source infrastructure stack from bare metal to containers, and you need the ability to work in operations with mission-critical services for global brand-name customers.\n As a member of the team, you will gain experience in a broad range of cloud technologies. We evolve our offerings as the state of the art improves, so you get to stay current with the latest capabilities in open source infrastructure.\n What we are looking for in you \n \n Degree in software engineering or computer science\n\n Python software development experience\n\n Operational experience in Linux environments\n\n Experience with Kubernetes deployment or operations\n\n Excellent interpersonal skills, curiosity, flexibility, and accountability\n\n Ability to travel internationally twice a year, for company events up to two weeks long\n\n Bonus skills \n \n Familiarity with OpenStack deployment or operations\n\n Familiarity with public cloud deployment or operations\n\n Familiarity with private cloud management\n\n What we offer colleagues \n We consider geographical location, experience, and performance in shaping compensation worldwide. We adjust compensation every 6 months to ensure we recognize outstanding performance, and in addition to base pay, we offer annual bonuses. We provide all team members with additional benefits, which reflect our values and ideals. We balance our programs to meet local needs and ensure fairness globally.\n \n Distributed work environment with twice-yearly team sprints in person\n\n Personal learning and development budget of USD 2,000 per year\n\n Every 6 months compensation review\n\n Recognition rewards\n\n Annual holiday leave\n\n Maternity and paternity leave\n\n Employee Assistance Programs\n\n Opportunity to travel to new locations to meet your colleagues\n\n Priority Pass and travel upgrades for long-haul company events\n\n About Canonical \n Canonical is a pioneering tech firm at the forefront of the global move to open source. As the company that publishes Ubuntu, one of the most important open source projects and the platform for AI, IoT, and the cloud, we are changing the world of software. We recruit on a global basis and set a very high standard for people joining the company. We expect excellence - in order to succeed, we need to be the best at what we do. Most colleagues at Canonical have worked from home since its inception in 2004.​ Working here is a step into the future, and will challenge you to think differently, work smarter, learn new skills, and raise your game.\n Canonical is an equal opportunity employer \n We are proud to foster a workplace free from discrimination. Diversity of experience, perspectives, and background creates a better work environment and better products. Whatever your identity, we will give your application fair consideration. \n  #LI-Remote",
+    "countryRestrictions": [],
+    "requisitionId": "",
+    "sources": [
+      "Jobicy"
+    ],
+    "sourceUrls": [
+      "https://jobicy.com/jobs/149547-site-reliability-engineer"
+    ],
+    "descriptionSummary": "Canonical is a leading provider of open source software and operating systems to the global enterprise and technology markets. Our platform, Ubuntu, is widely used in breakthrough enterprise initiatives such as public cloud, data science, AI, engineering innovation, and IoT. Our customers include the world's leading public cloud and silicon providers, and industry leaders in",
     "status": "New",
     "notes": "Jobs by Jobicy. Final application remains manual.",
     "resumeVersion": "",
     "applicationStartedAt": "",
     "applicationDate": "",
     "followUpDate": "",
-    "id": "job-1fivgvd",
-    "matchScore": 47,
+    "id": "job-1wf7s21",
+    "experienceRequirement": {
+      "minimum": null,
+      "requirements": []
+    },
+    "remoteEligibility": {
+      "status": "eligible",
+      "reason": "Remote location includes India"
+    },
+    "matchScore": 85,
     "matchDetails": {
       "role": 100,
-      "skills": 0,
+      "skills": 75,
       "experience": 60,
-      "location": 0,
+      "location": 100,
       "workMode": 100,
       "jobType": 100,
-      "matchedSkills": [],
-      "missingSkills": [
+      "matchedSkills": [
         "Linux",
+        "Python",
+        "Security Hardening"
+      ],
+      "missingSkills": [
         "AWS",
         "Docker",
         "Docker Compose",
@@ -223,13 +296,11 @@
         "MySQL",
         "PostgreSQL",
         "Bash",
-        "Python",
         "Server Administration",
         "Web Hosting",
         "DNS",
         "SSL/TLS",
         "Monitoring",
-        "Security Hardening",
         "Cloud Infrastructure",
         "cPanel/WHM",
         "CyberPanel",
@@ -239,13 +310,13 @@
         "Troubleshooting"
       ],
       "excluded": false,
-      "overall": 47,
-      "category": "Low Match",
+      "overall": 85,
+      "category": "Good Match",
       "explanation": [
         "Role 100%: target or related role matched",
-        "Skills 0%: no CV skills identified",
+        "Skills 75%: Linux, Python, Security Hardening",
         "Experience 60%: not specified; ranked using other signals",
-        "Location 0%: outside preferred locations; kept for ranking",
+        "Location 100%: Remote location includes India",
         "Work mode 100%: Remote"
       ]
     }
