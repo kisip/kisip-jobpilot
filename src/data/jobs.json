@@ -320,5 +320,213 @@
         "Work mode 100%: Remote"
       ]
     }
+  },
+  {
+    "title": "DevOps Engineer",
+    "company": "Colonist",
+    "location": "Not specified",
+    "experience": "Not specified",
+    "salary": "Not provided",
+    "skills": [
+      "Linux",
+      "AWS",
+      "Docker",
+      "Terraform",
+      "Git",
+      "PostgreSQL",
+      "Monitoring",
+      "Migrations"
+    ],
+    "jobType": "Full-time",
+    "workMode": "Remote",
+    "source": "Himalayas",
+    "postedAt": "2026-09-30T02:14:14.000Z",
+    "datePosted": "2026-09-30",
+    "discoveredAt": "2026-09-30T05:41:13.402Z",
+    "dateDiscovered": "2026-09-30",
+    "dateFound": "2026-09-30",
+    "url": "https://himalayas.app/companies/colonist/jobs/devops-engineer",
+    "applyUrl": "https://himalayas.app/companies/colonist/jobs/devops-engineer",
+    "description": "Wanted: Colonist DevOps Engineer\n Working Hours: We work asynchronously and value outcomes over hours\n Location: Fully Remote\n Compensation: Paid in USD. Negotiable based on experience and location\n About Colonist \n\n We're building the biggest digital board game platform on the internet. Players start 250k games every day. Last year: 60M games, 3,037 years of play. We're a fully remote, asynchronous team spread across multiple continents, focused on crafting extremely polished digital board games that people truly love.\n About The Role\n Most apps scale by splitting users apart. We can't. Players share one live game state. Every lag spike is felt mid-game. One viral video can 10x our traffic overnight. Your job: absorb 50k CCU without dropping a single game. \n You will own the infrastructure behind every game session: clusters, deploys, databases, the edge, and the path from merge to production. You will make our infra knowledge shared, so no system depends on one person.\n What You'll Do\n \n Own the stack behind every game: game, matchmaking and lobby servers on Kubernetes\n\n\n Manage cluster and cloud resources as code in Terraform\n\n\n Scale servers up and down with live traffic. Pay for players, not idle machines\n\n\n Ship updates often, without kicking players out of live games\n\n\n Keep terabytes of game data and replays fast and cheap. PostgreSQL, Redis, NATS under real load\n\n\n Defend the edge from bots and attacks. Cloudflare, rate limiting, Turnstile, R2.\n\n\n Own observability across Sentry and New Relic. Consolidate monitoring and close the gaps\n\n\n Document everything: systems, decisions, runbooks, so infrastructure knowledge lives in the team\n\n\n Build self-service paths so other engineers use infrastructure confidently.\n\n\n When something breaks, thousands notice in seconds. Find the root cause. Make it never recur\n\n\n Requirements\n \n You love hard technical problems. Scale, latency and cost excite you\n\n\n You have senior-level experience in DevOps\n\n\n You have run Kubernetes in production: rollouts, autoscaling, networking, load balancers, and debugging a bad deploy\n\n\n You run infra lean. You optimize before adding hardware\n\n\n You document as you go. Runbooks and decisions are natural outputs of your work.\n\n\n You are comfortable with Linux, Docker, and a CI system you did not build\n\n\n You have operated PostgreSQL and Redis under real traffic: slow queries, connection limits, and schema migrations without downtime\n\n\n You have run a message broker in production; we use NATS, but equivalent experience transfers\n\n\n You have put Cloudflare, or a similar edge, in front of a public service\n\n\n You can debug a live incident across app logs, metrics, the database, and the edge\n\n\n AI-forward mindset. We see AI fluency as a real multiplier\n\n\n Deeply independent. You learn a system from its code, configs and monitoring.\n\n\n Strong written communication. You explain complex systems clearly in async settings, to technical and non-technical audiences alike\n\n\n Collaborative by default. You share context proactively, help other engineers understand infrastructure, and never operate as a silo\n\n\n Nice to Have\n \n Experience structuring documentation for AI consumption: machine-readable runbooks, structured architecture notes, agent-readable formats\n\n\n Experience building self-service infrastructure paths for other engineers: golden paths, templates, or internal tooling\n\n\n Security depth beyond the basics: threat modelling, access control, audit practices, governance guardrails\n\n\n You've run real-time or multiplayer systems where shared state matters.\n\n\n Previous experience as a solo or near-solo infrastructure engineer at a small company\n\n\n Our Values at Colonist \n\n We strongly adhere to these values in our team - if these resonate, then you'll love working here!\n Dependability\n We're self-driven players who deliver without needing supervision. When we commit to something, we make it happen.\n Ownership\n We take full responsibility and go beyond our roles to improve Colonist .\n Clear Communication\n In our remote environment, written communication is key. We're direct, structured, and always keep our team in the loop.\n Efficient Execution\n We move fast and focus on impact. Instead of getting stuck on perfect solutions, we find practical ways forward and get things done.\n Continuous Learning\n We're curious problem solvers who love a challenge. We constantly seek new ideas, embrace feedback, and aren't afraid to change our minds when we're wrong.\n Why Colonist \n\n \n Your work ships to 3,6M+ yearly active players\n\n\n We have hard problems, most engineers only read about: live shared state, viral spikes, lean scale\n\n\n \n Async culture; deep work, no performative meetings\n\n\n Unlimited vacation, yearly team offsite, full work equipment\n\n\n Budget to experiment with any AI tool you want\n\n\n Access to all company metrics and internal discussions\n\n\n Originally posted on Himalayas",
+    "countryRestrictions": [],
+    "requisitionId": "",
+    "sources": [
+      "Himalayas"
+    ],
+    "sourceUrls": [
+      "https://himalayas.app/companies/colonist/jobs/devops-engineer"
+    ],
+    "descriptionSummary": "Wanted: Colonist DevOps Engineer Working Hours: We work asynchronously and value outcomes over hours Location: Fully Remote Compensation: Paid in USD.",
+    "status": "New",
+    "notes": "Jobs by Himalayas. Final application remains manual.",
+    "resumeVersion": "",
+    "applicationStartedAt": "",
+    "applicationDate": "",
+    "followUpDate": "",
+    "id": "job-ken7e3",
+    "experienceRequirement": {
+      "minimum": null,
+      "requirements": []
+    },
+    "remoteEligibility": {
+      "status": "unknown",
+      "reason": "Country eligibility not specified; confirm India is allowed"
+    },
+    "matchScore": 77,
+    "matchDetails": {
+      "role": 100,
+      "skills": 100,
+      "experience": 60,
+      "location": 0,
+      "workMode": 100,
+      "jobType": 100,
+      "matchedSkills": [
+        "Linux",
+        "AWS",
+        "Docker",
+        "Terraform",
+        "Git",
+        "PostgreSQL",
+        "Monitoring",
+        "Security Hardening",
+        "Migrations"
+      ],
+      "missingSkills": [
+        "Docker Compose",
+        "Ansible",
+        "CI/CD",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Nginx",
+        "Apache",
+        "MySQL",
+        "Bash",
+        "Python",
+        "Server Administration",
+        "Web Hosting",
+        "DNS",
+        "SSL/TLS",
+        "Cloud Infrastructure",
+        "cPanel/WHM",
+        "CyberPanel",
+        "PHP",
+        "Backups",
+        "Troubleshooting"
+      ],
+      "excluded": false,
+      "overall": 77,
+      "category": "Possible Match",
+      "explanation": [
+        "Role 100%: target or related role matched",
+        "Skills 100%: Linux, AWS, Docker, Terraform, Git, PostgreSQL, Monitoring, Security Hardening, Migrations",
+        "Experience 60%: not specified; ranked using other signals",
+        "Location 0%: Country eligibility not specified; confirm India is allowed",
+        "Work mode 100%: Remote"
+      ]
+    }
+  },
+  {
+    "title": "DevSecOps Engineer",
+    "company": "Bjak",
+    "location": "Not specified",
+    "experience": "Not specified",
+    "salary": "Not provided",
+    "skills": [
+      "AWS",
+      "Docker",
+      "CI/CD",
+      "GitHub Actions",
+      "Git",
+      "Bash",
+      "Python",
+      "Monitoring"
+    ],
+    "jobType": "Full-time",
+    "workMode": "Remote",
+    "source": "Himalayas",
+    "postedAt": "2026-09-30T01:33:32.000Z",
+    "datePosted": "2026-09-30",
+    "discoveredAt": "2026-09-30T05:41:13.402Z",
+    "dateDiscovered": "2026-09-30",
+    "dateFound": "2026-09-30",
+    "url": "https://himalayas.app/companies/bjak/jobs/devsecops-engineer",
+    "applyUrl": "https://himalayas.app/companies/bjak/jobs/devsecops-engineer",
+    "description": "About BJAK \n The original mission of BJAK is we believe people deserve smarter ways to plan, save and grow their money. This is the origin of our name.\n Started in 2019, we built the first mobile-first, insurance platform, enabling insurance to be accessible online by millions in the region. Today, its the leading insurance platform in Southeast Asia.\n Today, we are expanding ways to help people in the region — this includes spending, saving, investing, exchanging, travelling, and more. Our mission is help people get more from their money every day.\n We have teams working around the world, with over 20 nationalities from our offices and remotely, who truly enjoys their work. We are looking for the most talented and driven people we can find. We are looking for people who work for their passion, not counting hours. Who loves building great next-generation products, not status quo. Who cares about redefining how everyone around us can get the best financial applications, not for an exclusive few.\n If you're this person, we'd love to talk to you.\n The Role\n Integrate security into BJAK's software delivery and infrastructure workflows. Work with Platform, Cloud, and Engineering to automate controls and support secure delivery across AWS and GCP.\n What You Will Build \n \n Embed code, dependency, container, infrastructure-as-code, and secrets scanning into CI/CD pipelines.\n\n\n Maintain security guardrails for builds, releases, artifacts, deployment identities, and infrastructure changes.\n\n\n Secure containerized workloads, orchestration platforms, and deployment environments across AWS and GCP.\n\n\n Implement least-privilege access, secrets management, artifact integrity, and secure configuration practices.\n\n\n Own DevSecOps implementation for SC TRM and BNM RMiT, including evidence, testing, remediation, and audit support.\n\n\n Partner with teams using TypeScript/Node.js, Python, Swift, and Kotlin to integrate security checks into delivery workflows.\n\n\n Improve monitoring, vulnerability reporting, incident readiness, and secure delivery guidance.\n\n\n What We Look For \n \n Degree in Computer Science, Information Security, or related field, or equivalent experience.\n\n\n 3+ years in DevOps, platform engineering, cloud security, or DevSecOps.\n\n\n Experience implementing and owning SC TRM and BNM RMiT controls for technology operations, change management, and secure delivery.\n\n\n Hands-on with GitHub Actions, GitLab CI, Jenkins, or similar CI/CD tools.\n\n\n Experience with AWS, GCP, Docker, Kubernetes, infrastructure as code, and cloud security controls.\n\n\n Knowledge of security scanning, software supply chain security, secrets management, IAM, logging, and monitoring.\n\n\n Scripting or programming skills in Python, TypeScript/Node.js, Bash, or Go and ability to collaborate across teams.\n\n\n Language \n English is our main working language across global teams. Strong English communication is required.\n Originally posted on Himalayas",
+    "countryRestrictions": [],
+    "requisitionId": "",
+    "sources": [
+      "Himalayas"
+    ],
+    "sourceUrls": [
+      "https://himalayas.app/companies/bjak/jobs/devsecops-engineer"
+    ],
+    "descriptionSummary": "About BJAKThe original mission of BJAK is we believe people deserve smarter ways to plan, save and grow their money.",
+    "status": "New",
+    "notes": "Jobs by Himalayas. Final application remains manual.",
+    "resumeVersion": "",
+    "applicationStartedAt": "",
+    "applicationDate": "",
+    "followUpDate": "",
+    "id": "job-1yrqz35",
+    "experienceRequirement": {
+      "minimum": null,
+      "requirements": []
+    },
+    "remoteEligibility": {
+      "status": "unknown",
+      "reason": "Country eligibility not specified; confirm India is allowed"
+    },
+    "matchScore": 77,
+    "matchDetails": {
+      "role": 100,
+      "skills": 100,
+      "experience": 60,
+      "location": 0,
+      "workMode": 100,
+      "jobType": 100,
+      "matchedSkills": [
+        "AWS",
+        "Docker",
+        "CI/CD",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Git",
+        "Bash",
+        "Python",
+        "Monitoring",
+        "Security Hardening"
+      ],
+      "missingSkills": [
+        "Linux",
+        "Docker Compose",
+        "Terraform",
+        "Ansible",
+        "Nginx",
+        "Apache",
+        "MySQL",
+        "PostgreSQL",
+        "Server Administration",
+        "Web Hosting",
+        "DNS",
+        "SSL/TLS",
+        "Cloud Infrastructure",
+        "cPanel/WHM",
+        "CyberPanel",
+        "PHP",
+        "Backups",
+        "Migrations",
+        "Troubleshooting"
+      ],
+      "excluded": false,
+      "overall": 77,
+      "category": "Possible Match",
+      "explanation": [
+        "Role 100%: target or related role matched",
+        "Skills 100%: AWS, Docker, CI/CD, GitHub Actions, GitLab CI/CD, Git, Bash, Python, Monitoring, Security Hardening",
+        "Experience 60%: not specified; ranked using other signals",
+        "Location 0%: Country eligibility not specified; confirm India is allowed",
+        "Work mode 100%: Remote"
+      ]
+    }
   }
 ]
