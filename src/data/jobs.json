@@ -1,1 +1,114 @@
-[]
+[
+  {
+    "title": "QA and DevOps Engineer",
+    "company": "KloudMate",
+    "location": "India",
+    "experience": "1+ years",
+    "salary": "INR 200,000 - 400,000",
+    "skills": [
+      "AWS",
+      "Python",
+      "Monitoring"
+    ],
+    "jobType": "Full-time",
+    "workMode": "Remote",
+    "source": "Himalayas",
+    "postedAt": "2026-10-03T13:59:06.000Z",
+    "datePosted": "2026-10-03",
+    "discoveredAt": "2026-10-03T16:29:51.470Z",
+    "dateDiscovered": "2026-10-03",
+    "dateFound": "2026-10-03",
+    "url": "https://himalayas.app/companies/kloudmate/jobs/qa-and-devops-engineer",
+    "applyUrl": "https://himalayas.app/companies/kloudmate/jobs/qa-and-devops-engineer",
+    "description": "About KloudMate \n KloudMate is an Observability platform for Developers and Businesses, building applications on distributed systems.\n KloudMate detects performance bottlenecks in modern distributed applications, identifies errors and boosts developer productivity by reducing Mean-Time-To Resolve (MTTR), helping businesses improve application performance, shrink operating costs, increase customer satisfaction and grow revenues.\n Job Overview: We are looking for a motivated and detail-oriented Quality Assurance Engineer to join our growing team. As a QA Engineer at KloudMate , you will play a crucial role in ensuring the quality and reliability of our innovative observability platform. You will be responsible for designing, executing, and analyzing tests to identify defects and ensure our software meets the highest standards of quality and performance. You will collaborate closely with developers, product managers, and DevOps engineers throughout the software development lifecycle.\n Responsibilities:\n \n Develop and execute comprehensive test plans, test cases, and test scripts based on product requirements and technical specifications.\n\n\n Perform various types of testing, including functional, regression, integration, system, and performance testing.\n\n\n Identify, document, and track software defects using our bug tracking system, ensuring clear and concise reporting.\n\n\n Collaborate closely with development and product teams to understand product features and provide timely feedback on potential issues.\n\n\n Participate in agile ceremonies, including sprint planning, daily stand-ups, and retrospectives.\n\n\n Contribute to the continuous improvement of our QA processes and methodologies.\n\n\n Potentially contribute to the development and maintenance of automated test scripts (depending on experience and skills).\n\n\n Analyze test results, identify root causes of failures, and work with the development team to ensure timely resolution.\n\n\n Stay up-to-date with the latest testing tools and techniques.\n\n\n Minimum Qualifications:\n \n Bachelor’s degree in Computer Science, Engineering, or a related field.\n\n\n Minimum of 1 year of professional experience in software quality assurance.\n\n\n Solid understanding of software testing methodologies, concepts, and the software development lifecycle (SDLC).\n\n\n Experience in creating and executing test plans and test cases for web-based applications.\n\n\n Familiarity with bug tracking systems (e.g., Jira, Bugzilla).\n\n\n Strong analytical and problem-solving skills with a keen attention to detail.\n\n\n Excellent written and verbal communication skills.\n\n\n Ability to work independently and as part of a collaborative team.\n\n\n Preferred Qualifications:\n \n Experience testing observability platforms or monitoring tools.\n\n\n Exposure to cloud environments (e.g., AWS, Azure, GCP).\n\n\n Experience with performance testing tools (e.g., JMeter, LoadRunner).\n\n\n Experience with Monitoring tools (e.g. Prometheus, Grafana, Datadog, New Relic, Zabbix, Nagios)\n\n\n Experience with any cloud provider’s monitoring service (AWS CloudWatch, Azure Monitor, GCP Monitoring)\n\n\n Experience with metrics, logs, or traces in QA role\n\n\n Familiarity with OpenTelemetry, Jaeger, Zipkin\n\n\n Familiarity with test automation frameworks and tools (e.g., Selenium, Cypress, Playwright).\n\n\n Basic scripting skills (e.g., Python, JavaScript).\n\n\n Experience working in an Agile development environment.\n\n\n What We Offer Compensation: Competitive salary in the range of 2 to 4 LPA CTC annually. \n Location: Remote-first with the flexibility to work from anywhere. We have offices in Bangalore, India, and occasional visits are encouraged to foster team connections. We also host annual off-sites at beautiful locations (beaches or mountains!).\n Benefits:\n \n Comprehensive health insurance.\n\n\n Generous PTO (20 days) + National/Regional holidays + Compensation Day off.\n\n\n Remote-friendly work environment.\n\n\n Professional development opportunities.\n\n\n Fun and engaging company events.\n\n\n Strong emphasis on work-life balance (including celebrating birthdays and anniversaries!).\n\n\n Opportunity to work from home.\n\n\n Cutting-edge Technologies: Work with the latest and greatest technologies on a brand new codebase. \n Growth and Impact: As an early-stage employee, you'll have significant ownership and the chance to make a real difference. \n Healthy Work Culture: We value a 40-hour workweek and asynchronous communication. \n Investment Day: Similar to Google's 20% time, we encourage employees to dedicate Fridays to explore and develop ideas that benefit KloudMate .\n Hiring Process\n \n Quick Intro Chat (30 min): Get to know you and your QA background.\n\n\n Technical Deep Dive (2 hours): Assess your hands-on QA skills.\n\n\n Vision & Fit Talk (30 min): Chat with founders about our goals and your potential.\n\n\n Ready to join a passionate team and build the future of cloud observability? We look forward to hearing from you! \n Originally posted on Himalayas",
+    "countryRestrictions": [
+      "India"
+    ],
+    "requisitionId": "",
+    "sources": [
+      "Himalayas"
+    ],
+    "sourceUrls": [
+      "https://himalayas.app/companies/kloudmate/jobs/qa-and-devops-engineer"
+    ],
+    "descriptionSummary": "About KloudMateKloudMate is an Observability platform for Developers and Businesses, building applications on distributed systems.",
+    "status": "New",
+    "notes": "Jobs by Himalayas. Final application remains manual.",
+    "resumeVersion": "",
+    "applicationStartedAt": "",
+    "applicationDate": "",
+    "followUpDate": "",
+    "id": "job-95mkh9",
+    "experienceRequirement": {
+      "minimum": 1,
+      "requirements": [
+        {
+          "minimum": 1,
+          "preferred": false,
+          "evidence": "1+ years"
+        },
+        {
+          "minimum": 1,
+          "preferred": false,
+          "evidence": "minimum of 1 year of professional experience in software quality assurance"
+        }
+      ]
+    },
+    "remoteEligibility": {
+      "status": "eligible",
+      "reason": "Remote location includes India"
+    },
+    "matchScore": 93,
+    "matchDetails": {
+      "role": 100,
+      "skills": 75,
+      "experience": 100,
+      "location": 100,
+      "workMode": 100,
+      "jobType": 100,
+      "matchedSkills": [
+        "AWS",
+        "Python",
+        "Monitoring"
+      ],
+      "missingSkills": [
+        "Linux",
+        "Docker",
+        "Docker Compose",
+        "Terraform",
+        "Ansible",
+        "CI/CD",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Git",
+        "Nginx",
+        "Apache",
+        "MySQL",
+        "PostgreSQL",
+        "Bash",
+        "Server Administration",
+        "Web Hosting",
+        "DNS",
+        "SSL/TLS",
+        "Security Hardening",
+        "Cloud Infrastructure",
+        "cPanel/WHM",
+        "CyberPanel",
+        "PHP",
+        "Backups",
+        "Migrations",
+        "Troubleshooting"
+      ],
+      "excluded": false,
+      "overall": 93,
+      "category": "Excellent Match",
+      "explanation": [
+        "Role 100%: target or related role matched",
+        "Skills 75%: AWS, Python, Monitoring",
+        "Experience 100%: fits 0–2 years / junior level",
+        "Location 100%: Remote location includes India",
+        "Work mode 100%: Remote"
+      ]
+    }
+  }
+]
