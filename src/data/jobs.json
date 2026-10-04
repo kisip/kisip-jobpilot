@@ -1,1 +1,104 @@
-[]
+[
+  {
+    "title": "Azure Platform Engineer || Offshore",
+    "company": "Zensar",
+    "location": "India",
+    "experience": "Not specified",
+    "salary": "Not provided",
+    "skills": [
+      "Terraform",
+      "CI/CD",
+      "Git",
+      "Monitoring"
+    ],
+    "jobType": "Full-time",
+    "workMode": "Remote",
+    "source": "Himalayas",
+    "postedAt": "2026-10-04T20:18:43.000Z",
+    "datePosted": "2026-10-04",
+    "discoveredAt": "2026-10-04T21:36:47.616Z",
+    "dateDiscovered": "2026-10-04",
+    "dateFound": "2026-10-04",
+    "url": "https://himalayas.app/companies/zensar/jobs/azure-platform-engineer-offshore",
+    "applyUrl": "https://himalayas.app/companies/zensar/jobs/azure-platform-engineer-offshore",
+    "description": "Azure Platform Skills \n Strong hands-on experience with Azure PaaS services.\n\n Experience with Azure App Service, Azure SQL, Blob Storage, Key Vault, Service Bus, Application Insights, and Log Analytics.\n\n Good understanding of cloud networking, identity, security, monitoring, and scalability.\n\n \n DevOps Skills \n Strong experience with Azure DevOps pipelines.\n\n Experience in CI/CD automation, release management, deployment approvals, and rollback strategies.\n\n Knowledge of Git, branching strategy, artifact management, and pipeline governance.\n\n \n Infrastructure as Code \n Hands-on experience with Bicep, Terraform, ARM templates, or similar tools.\n\n Ability to automate environment provisioning and configuration.\n\n Experience managing multiple environments using repeatable deployment templates.\n\n \n Cloud Security & Operations \n Experience with Key Vault, Managed Identity, network security, private endpoints, and role-based access.\n\n Experience with monitoring, logging, alerting, and operational dashboards.\n\n Understanding of cloud cost, performance, resilience, and availability considerations.\n\n \n Modernization Experience \n Experience supporting legacy-to-cloud modernization programs.\n\n Understanding of .NET-based application hosting on Azure.\n\n Exposure to batch processing, data migration, integration, and platform transformation.\n\n \n AI & Agile Experience \n Exposure to AI-assisted DevOps, automation, or platform engineering.\n\n Ability to work in Agile delivery cycles.\n\n Experience supporting iterative platform builds across phased modernization waves.\n\n \n\n Originally posted on Himalayas",
+    "countryRestrictions": [
+      "India"
+    ],
+    "requisitionId": "",
+    "sources": [
+      "Himalayas"
+    ],
+    "sourceUrls": [
+      "https://himalayas.app/companies/zensar/jobs/azure-platform-engineer-offshore"
+    ],
+    "descriptionSummary": "Azure Platform Skills• Strong hands-on experience with Azure PaaS services.",
+    "status": "New",
+    "notes": "Jobs by Himalayas. Final application remains manual.",
+    "resumeVersion": "",
+    "applicationStartedAt": "",
+    "applicationDate": "",
+    "followUpDate": "",
+    "id": "job-1buylff",
+    "experienceRequirement": {
+      "minimum": null,
+      "requirements": []
+    },
+    "remoteEligibility": {
+      "status": "eligible",
+      "reason": "Remote location includes India"
+    },
+    "matchScore": 92,
+    "matchDetails": {
+      "role": 100,
+      "skills": 100,
+      "experience": 60,
+      "location": 100,
+      "workMode": 100,
+      "jobType": 100,
+      "matchedSkills": [
+        "Terraform",
+        "CI/CD",
+        "Git",
+        "Web Hosting",
+        "Monitoring",
+        "Security Hardening",
+        "Migrations"
+      ],
+      "missingSkills": [
+        "Linux",
+        "AWS",
+        "Docker",
+        "Docker Compose",
+        "Ansible",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Nginx",
+        "Apache",
+        "MySQL",
+        "PostgreSQL",
+        "Bash",
+        "Python",
+        "Server Administration",
+        "DNS",
+        "SSL/TLS",
+        "Cloud Infrastructure",
+        "cPanel/WHM",
+        "CyberPanel",
+        "PHP",
+        "Backups",
+        "Troubleshooting"
+      ],
+      "excluded": false,
+      "overall": 92,
+      "category": "Excellent Match",
+      "explanation": [
+        "Role 100%: target or related role matched",
+        "Skills 100%: Terraform, CI/CD, Git, Web Hosting, Monitoring, Security Hardening, Migrations",
+        "Experience 60%: not specified; ranked using other signals",
+        "Location 100%: Remote location includes India",
+        "Work mode 100%: Remote"
+      ]
+    }
+  }
+]
