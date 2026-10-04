@@ -1,10 +1,10 @@
 {
   "status": "Active",
   "automationStatus": "Active",
-  "lastSuccessfulScan": "2026-10-04T06:01:55.763Z",
+  "lastSuccessfulScan": "2026-10-04T12:30:45.677Z",
   "lastFailedScan": "",
-  "lastScan": "2026-10-04T06:01:55.763Z",
-  "nextScan": "2026-10-04T06:17:00.000Z",
+  "lastScan": "2026-10-04T12:30:45.677Z",
+  "nextScan": "2026-10-04T18:17:00.000Z",
   "sourcesChecked": 3,
   "sourceStats": [
     {
@@ -14,11 +14,11 @@
       "httpStatus": [
         200
       ],
-      "rawJobs": 16,
-      "normalizedJobs": 16,
+      "rawJobs": 18,
+      "normalizedJobs": 18,
       "invalidRejected": 0,
-      "unrelatedRejected": 7,
-      "seniorRejected": 8,
+      "unrelatedRejected": 8,
+      "seniorRejected": 9,
       "experienceRejected": 1,
       "locationRejected": 0,
       "duplicatesRemoved": 0,
@@ -33,14 +33,14 @@
         200,
         200
       ],
-      "rawJobs": 29,
-      "normalizedJobs": 29,
+      "rawJobs": 40,
+      "normalizedJobs": 40,
       "invalidRejected": 0,
-      "unrelatedRejected": 3,
-      "seniorRejected": 20,
+      "unrelatedRejected": 2,
+      "seniorRejected": 30,
       "experienceRejected": 3,
-      "locationRejected": 0,
-      "duplicatesRemoved": 3,
+      "locationRejected": 1,
+      "duplicatesRemoved": 4,
       "eligibleJobs": 0,
       "errors": []
     },
@@ -51,11 +51,11 @@
       "httpStatus": [
         200
       ],
-      "rawJobs": 37,
-      "normalizedJobs": 37,
+      "rawJobs": 39,
+      "normalizedJobs": 39,
       "invalidRejected": 0,
       "unrelatedRejected": 9,
-      "seniorRejected": 18,
+      "seniorRejected": 20,
       "experienceRejected": 10,
       "locationRejected": 0,
       "duplicatesRemoved": 0,
@@ -63,13 +63,13 @@
       "errors": []
     }
   ],
-  "jobsFetched": 82,
+  "jobsFetched": 97,
   "invalidRejected": 0,
   "unrelatedRejected": 19,
-  "seniorRejected": 46,
+  "seniorRejected": 59,
   "experienceRejected": 14,
-  "locationRejected": 0,
-  "duplicatesRemoved": 3,
+  "locationRejected": 1,
+  "duplicatesRemoved": 4,
   "newJobs": 0,
   "newJobsAdded": 0,
   "jobsIndexed": 0,
