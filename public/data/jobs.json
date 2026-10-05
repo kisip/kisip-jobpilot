@@ -1,1 +1,99 @@
-[]
+[
+  {
+    "title": "Site Reliability Engineer Expression of Interest Form",
+    "company": "GitLab",
+    "location": "Not specified",
+    "experience": "Not specified",
+    "salary": "Not provided",
+    "skills": [
+      "Git"
+    ],
+    "jobType": "Full-time",
+    "workMode": "Remote",
+    "source": "Himalayas",
+    "postedAt": "2026-10-05T08:39:07.000Z",
+    "datePosted": "2026-10-05",
+    "discoveredAt": "2026-10-05T14:54:33.024Z",
+    "dateDiscovered": "2026-10-05",
+    "dateFound": "2026-10-05",
+    "url": "https://himalayas.app/companies/gitlab-com/jobs/site-reliability-engineer-expression-of-interest-form",
+    "applyUrl": "https://himalayas.app/companies/gitlab-com/jobs/site-reliability-engineer-expression-of-interest-form",
+    "description": "GitLab is an open-core software company that develops the most comprehensive AI-powered DevSecOps Platform, used by more than 100,000 organizations. Our mission is to enable everyone to contribute to and co-create the software that powers our world. When everyone can contribute, consumers become contributors, significantly accelerating human progress. Our platform unites teams and organizations, breaking down barriers and redefining what's possible in software development. Thanks to products like Duo Enterprise and Duo Agent Platform, customers get AI benefits at every stage of the SDLC.\n\n The same principles built into our products are reflected in how our team works: we embrace AI as a core productivity multiplier, with all team members expected to incorporate AI into their daily workflows to drive efficiency, innovation, and impact. GitLab is where careers accelerate, innovation flourishes, and every voice is valued. Our high-performance culture is driven by our values and continuous knowledge exchange, enabling our team members to reach their full potential while collaborating with industry leaders to solve complex problems. Co-create the future with us as we build technology that transforms how the world develops software\n\n\n This is a future opportunity that may not be immediately available, but we're proactively building our pipeline of exceptional talent. At GitLab , we believe in connecting with outstanding professionals before we have an urgent need, allowing us to move quickly when the right moment arises. If you are excited about co-creating the future as we're building the most comprehensive AI-powered DevSecOps platform, we want to hear from you. We'll keep your information on file and reach out when a position becomes available that matches your skills and interests. \n \n \n Country Hiring Guidelines: GitLab hires new team members in countries around the world. All of our roles are remote, however some roles may carry specific location-based eligibility requirements. Our Talent Acquisition team can help answer any questions about location after starting the recruiting process. \n\n Privacy Policy: Please review our Recruitment Privacy Policy. Your privacy is important to us.\n\n GitLab is proud to be an equal opportunity workplace and is an affirmative action employer. GitLab ’s policies and practices relating to recruitment, employment, career development and advancement, promotion, and retirement are based solely on merit, regardless of race, color, religion, ancestry, sex (including pregnancy, lactation, sexual orientation, gender identity, or gender expression), national origin, age, citizenship, marital status, mental or physical disability, genetic information (including family medical history), discharge status from the military, protected veteran status (which includes disabled veterans, recently separated veterans, active duty wartime or campaign badge veterans, and Armed Forces service medal veterans), or any other basis protected by law. GitLab will not tolerate discrimination or harassment based on any of these characteristics. See also GitLab ’s EEO Policy and EEO is the Law. If you have a disability or special need that requires accommodation, please let us know during the recruiting process.\n\n\n Originally posted on Himalayas",
+    "countryRestrictions": [],
+    "requisitionId": "",
+    "sources": [
+      "Himalayas"
+    ],
+    "sourceUrls": [
+      "https://himalayas.app/companies/gitlab-com/jobs/site-reliability-engineer-expression-of-interest-form"
+    ],
+    "descriptionSummary": "GitLab is an open-core software company that develops the most comprehensive AI-powered DevSecOps Platform, used by more than 100,000 organizations.",
+    "status": "New",
+    "notes": "Jobs by Himalayas. Final application remains manual.",
+    "resumeVersion": "",
+    "applicationStartedAt": "",
+    "applicationDate": "",
+    "followUpDate": "",
+    "id": "job-1k6fz08",
+    "experienceRequirement": {
+      "minimum": null,
+      "requirements": []
+    },
+    "remoteEligibility": {
+      "status": "unknown",
+      "reason": "Country eligibility not specified; confirm India is allowed"
+    },
+    "matchScore": 55,
+    "matchDetails": {
+      "role": 100,
+      "skills": 25,
+      "experience": 60,
+      "location": 0,
+      "workMode": 100,
+      "jobType": 100,
+      "matchedSkills": [
+        "Git"
+      ],
+      "missingSkills": [
+        "Linux",
+        "AWS",
+        "Docker",
+        "Docker Compose",
+        "Terraform",
+        "Ansible",
+        "CI/CD",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Nginx",
+        "Apache",
+        "MySQL",
+        "PostgreSQL",
+        "Bash",
+        "Python",
+        "Server Administration",
+        "Web Hosting",
+        "DNS",
+        "SSL/TLS",
+        "Monitoring",
+        "Security Hardening",
+        "Cloud Infrastructure",
+        "cPanel/WHM",
+        "CyberPanel",
+        "PHP",
+        "Backups",
+        "Migrations",
+        "Troubleshooting"
+      ],
+      "excluded": false,
+      "overall": 55,
+      "category": "Low Match",
+      "explanation": [
+        "Role 100%: target or related role matched",
+        "Skills 25%: Git",
+        "Experience 60%: not specified; ranked using other signals",
+        "Location 0%: Country eligibility not specified; confirm India is allowed",
+        "Work mode 100%: Remote"
+      ]
+    }
+  }
+]
