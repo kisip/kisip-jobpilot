@@ -1,1 +1,112 @@
-[]
+[
+  {
+    "title": "DevOps Engineer",
+    "company": "Study Now",
+    "location": "India",
+    "experience": "Not specified",
+    "salary": "GBP 1,170 - 1,950",
+    "skills": [
+      "Linux",
+      "AWS",
+      "Docker",
+      "Terraform",
+      "Ansible",
+      "CI/CD",
+      "GitHub Actions",
+      "Git",
+      "DNS",
+      "Monitoring",
+      "Backups",
+      "Migrations"
+    ],
+    "jobType": "Full-time",
+    "workMode": "Remote",
+    "source": "Himalayas",
+    "postedAt": "2026-10-10T05:01:06.000Z",
+    "datePosted": "2026-10-10",
+    "discoveredAt": "2026-10-10T06:01:26.661Z",
+    "dateDiscovered": "2026-10-10",
+    "dateFound": "2026-10-10",
+    "url": "https://himalayas.app/companies/study-now/jobs/devops-engineer-7380204375",
+    "applyUrl": "https://himalayas.app/companies/study-now/jobs/devops-engineer-7380204375",
+    "description": "Study Now runs Global Student Pathway (GSP), a production education marketplace and student-recruitment platform used daily by counsellors, admissions officers and agent partners across nine destination markets. We have just brought the platform fully in-house, and you will be the person who makes it boringly reliable: deployed safely, monitored properly, backed up provably, and secure enough to hold student visa and identity documents.\n What you’ll do\n \n Assess and harden our estate across Linode and DigitalOcean, fronted by Cloudflare — topology, regions, MongoDB, storage — and own the resilience plan from day one, against defined targets: 99.9% uptime, 4-hour recovery from total provider failure (RTO), no more than 1 hour of data loss (RPO).\n\n Build the 3-2-1 backup regime: hourly encrypted MongoDB dumps to a second region, automatic off-provider replication, a local encrypted archive — proven by monthly restore drills, not assumed to work.\n\n Build and maintain CI/CD for our MEAN-stack application so releases ship with zero downtime — rolling restarts behind a load balancer, then blue-green — with the QA team’s automated suite wired in as a release gate.\n\n Run monitoring, alerting and incident response: uptime, error rates and performance visible at all times, with alerts reaching the right person before users notice; write and rehearse the disaster-recovery runbook.\n\n Own the security posture: secrets management, access control, Cloudflare WAF and rules, security-audit remediation, and UK GDPR alignment for the student data GSP holds (passports, visa documents, education records).\n\n Manage cloud costs across providers, report spend monthly, and evaluate consolidation or AWS-based recovery on evidence — our current position is hardened-in-place with off-provider backup.\n\n Document everything as runbooks usable by our two engineers without you on the call — a small team means no tribal knowledge.\n\n What we’re looking for\n \n 4+ years running production infrastructure for a live web application, including at least one platform you were personally accountable for.\n\n Hands-on with the pieces we run: Linux servers on Linode/DigitalOcean (or similar VPS providers), Cloudflare (DNS, caching, WAF), Docker, and CI/CD tooling (GitHub Actions, GitLab CI or similar); infrastructure-as-code (Terraform or Ansible) strongly preferred.\n\n MongoDB operations in production: replica sets, backups, restores and migrations under load.\n\n Deploying and operating Node.js applications — our stack is MEAN (MongoDB, Express, Angular, Node).\n\n Evidence of security thinking: hardening, secrets management, access reviews; experience preparing for or remediating a security audit is a strong plus.\n\n Comfortable being the only infrastructure person: pragmatic, communicative, biased to documentation and automation over heroics.\n\n Nice to have\n Experience in edtech, CRM-style platforms or other systems holding sensitive personal data; UK GDPR / Cyber Essentials familiarity; experience taking over a platform from a departing team.\n Working with us\n Remote from India, employed through an employer-of-record or as a direct contractor (agreed at offer). Company laptop provided. \nSalary: £1,170 – £1,950/Month Originally posted on Himalayas",
+    "countryRestrictions": [
+      "India"
+    ],
+    "requisitionId": "",
+    "sources": [
+      "Himalayas"
+    ],
+    "sourceUrls": [
+      "https://himalayas.app/companies/study-now/jobs/devops-engineer-7380204375"
+    ],
+    "descriptionSummary": "Study Now runs Global Student Pathway (GSP), a production education marketplace and student-recruitment platform used daily by counsellors, admissions officers and agent partners across nine destination markets.",
+    "status": "New",
+    "notes": "Jobs by Himalayas. Final application remains manual.",
+    "resumeVersion": "",
+    "applicationStartedAt": "",
+    "applicationDate": "",
+    "followUpDate": "",
+    "id": "job-adyady",
+    "experienceRequirement": {
+      "minimum": null,
+      "requirements": []
+    },
+    "remoteEligibility": {
+      "status": "eligible",
+      "reason": "Remote location includes India"
+    },
+    "matchScore": 92,
+    "matchDetails": {
+      "role": 100,
+      "skills": 100,
+      "experience": 60,
+      "location": 100,
+      "workMode": 100,
+      "jobType": 100,
+      "matchedSkills": [
+        "Linux",
+        "AWS",
+        "Docker",
+        "Terraform",
+        "Ansible",
+        "CI/CD",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Git",
+        "DNS",
+        "Monitoring",
+        "Security Hardening",
+        "Backups",
+        "Migrations"
+      ],
+      "missingSkills": [
+        "Docker Compose",
+        "Nginx",
+        "Apache",
+        "MySQL",
+        "PostgreSQL",
+        "Bash",
+        "Python",
+        "Server Administration",
+        "Web Hosting",
+        "SSL/TLS",
+        "Cloud Infrastructure",
+        "cPanel/WHM",
+        "CyberPanel",
+        "PHP",
+        "Troubleshooting"
+      ],
+      "excluded": false,
+      "overall": 92,
+      "category": "Excellent Match",
+      "explanation": [
+        "Role 100%: target or related role matched",
+        "Skills 100%: Linux, AWS, Docker, Terraform, Ansible, CI/CD, GitHub Actions, GitLab CI/CD, Git, DNS, Monitoring, Security Hardening, Backups, Migrations",
+        "Experience 60%: not specified; ranked using other signals",
+        "Location 100%: Remote location includes India",
+        "Work mode 100%: Remote"
+      ]
+    }
+  }
+]
