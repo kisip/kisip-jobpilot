@@ -1,1 +1,213 @@
-[]
+[
+  {
+    "title": "Site Reliability Engineer",
+    "company": "Charger Logistics Inc",
+    "location": "India",
+    "experience": "Not specified",
+    "salary": "Not provided",
+    "skills": [
+      "Linux",
+      "AWS",
+      "Docker",
+      "Terraform",
+      "CI/CD",
+      "GitHub Actions",
+      "Git",
+      "PostgreSQL",
+      "Bash",
+      "Python",
+      "DNS",
+      "Monitoring",
+      "Backups"
+    ],
+    "jobType": "Contract",
+    "workMode": "Remote",
+    "source": "Himalayas",
+    "postedAt": "2026-10-11T18:33:00.000Z",
+    "datePosted": "2026-10-11",
+    "discoveredAt": "2026-10-11T22:06:46.224Z",
+    "dateDiscovered": "2026-10-11",
+    "dateFound": "2026-10-11",
+    "url": "https://himalayas.app/companies/charger-logistics-inc/jobs/site-reliability-engineer",
+    "applyUrl": "https://himalayas.app/companies/charger-logistics-inc/jobs/site-reliability-engineer",
+    "description": "Charger Logistics Inc . is a leading asset-based transportation company with over 20 years of experience delivering innovative logistics solutions. We have evolved into a world-class transport provider and continue to expand across North America.\n We're looking for a Site Reliability Engineer to keep our platform fast, stable and always available. Our systems run 24/7 to support trucking and logistics operations across North America. They're built on more than 700 .NET Core microservices running on Kubernetes with PostgreSQL. You'll work closely with our development, DevOps and QA teams in Canada to improve reliability, automate operations and respond to production issues.\n Please note this is a Contract opportunity for potential to convert in a permanent role.. \n Responsibilities:\n \n Keep our production platform reliable, scalable and highly available.\n\n Define and track SLIs, SLOs and error budgets for critical services.\n\n Build and improve monitoring, alerting, logging and tracing using Prometheus, Grafana, Loki, Jaeger and OpenTelemetry.\n\n Manage and tune Kubernetes clusters and containerized workloads.\n\n Automate repetitive operational work using Python, Go or Bash.\n\n Build and maintain infrastructure as code with Terraform and Helm.\n\n Support and improve CI/CD pipelines for safe, frequent deployments, including blue/green and canary rollouts.\n\n Take part in an on-call rotation. Lead incident response, troubleshoot production issues and run blameless post-mortems.\n\n Monitor and tune PostgreSQL performance, backups and high availability with the development team.\n\n Plan capacity, test resilience and help reduce cloud costs.\n\n Requirements\n \n 6–8 years in SRE, DevOps or production infrastructure roles.\n\n Strong hands-on experience with Kubernetes and Docker in production.\n\n Experience with at least one major cloud platform (AWS, Azure or GCP).\n\n Hands-on with monitoring and observability tools (Prometheus, Grafana, ELK/Loki, Jaeger or similar).\n\n Infrastructure as code with Terraform, Helm or similar.\n\n Scripting or coding skills in Python, Go or Bash.\n\n Strong Linux and networking fundamentals (DNS, load balancing, TCP/IP, TLS).\n\n Experience with CI/CD tools such as GitHub Actions, GitLab CI, Jenkins or Azure DevOps.\n\n A solid understanding of microservices and distributed systems.\n\n Experience handling production incidents and writing root-cause analyses.\n\n Nice to have\n \n Service mesh experience (Istio, Consul or Linkerd)\n\n PostgreSQL administration and performance tuning\n\n Familiarity with .NET Core applications in production\n\n Messaging systems such as Kafka or RabbitMQ\n\n Certifications such as CKA, CKAD, or AWS/Azure DevOps Engineer\n\n Experience in logistics, transportation or another 24/7 operations environment is a plus\n\n Benefits\n \n Competitive Salary\n\n Healthcare Benefit Package\n\n Career Growth\n\n Originally posted on Himalayas",
+    "countryRestrictions": [
+      "India"
+    ],
+    "requisitionId": "",
+    "sources": [
+      "Himalayas"
+    ],
+    "sourceUrls": [
+      "https://himalayas.app/companies/charger-logistics-inc/jobs/site-reliability-engineer"
+    ],
+    "descriptionSummary": "Charger Logistics Inc. is a leading asset-based transportation company with over 20 years of experience delivering innovative logistics solutions.",
+    "status": "New",
+    "notes": "Jobs by Himalayas. Final application remains manual.",
+    "resumeVersion": "",
+    "applicationStartedAt": "",
+    "applicationDate": "",
+    "followUpDate": "",
+    "id": "job-1nhltcw",
+    "experienceRequirement": {
+      "minimum": null,
+      "requirements": []
+    },
+    "remoteEligibility": {
+      "status": "eligible",
+      "reason": "Remote location includes India"
+    },
+    "matchScore": 92,
+    "matchDetails": {
+      "role": 100,
+      "skills": 100,
+      "experience": 60,
+      "location": 100,
+      "workMode": 100,
+      "jobType": 100,
+      "matchedSkills": [
+        "Linux",
+        "AWS",
+        "Docker",
+        "Terraform",
+        "CI/CD",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Git",
+        "PostgreSQL",
+        "Bash",
+        "Python",
+        "DNS",
+        "SSL/TLS",
+        "Monitoring",
+        "Backups"
+      ],
+      "missingSkills": [
+        "Docker Compose",
+        "Ansible",
+        "Nginx",
+        "Apache",
+        "MySQL",
+        "Server Administration",
+        "Web Hosting",
+        "Security Hardening",
+        "Cloud Infrastructure",
+        "cPanel/WHM",
+        "CyberPanel",
+        "PHP",
+        "Migrations",
+        "Troubleshooting"
+      ],
+      "excluded": false,
+      "overall": 92,
+      "category": "Excellent Match",
+      "explanation": [
+        "Role 100%: target or related role matched",
+        "Skills 100%: Linux, AWS, Docker, Terraform, CI/CD, GitHub Actions, GitLab CI/CD, Git, PostgreSQL, Bash, Python, DNS, SSL/TLS, Monitoring, Backups",
+        "Experience 60%: not specified; ranked using other signals",
+        "Location 100%: Remote location includes India",
+        "Work mode 100%: Remote"
+      ]
+    }
+  },
+  {
+    "title": "DevOps/Cloud Engineer (m/w/d)",
+    "company": "Stackmeister Jobs",
+    "location": "Not specified",
+    "experience": "Not specified",
+    "salary": "Not provided",
+    "skills": [
+      "AWS",
+      "Docker",
+      "Terraform",
+      "Git"
+    ],
+    "jobType": "Full-time",
+    "workMode": "Remote",
+    "source": "Himalayas",
+    "postedAt": "2026-10-11T18:08:45.000Z",
+    "datePosted": "2026-10-11",
+    "discoveredAt": "2026-10-11T22:06:46.224Z",
+    "dateDiscovered": "2026-10-11",
+    "dateFound": "2026-10-11",
+    "url": "https://himalayas.app/companies/stackmeister-jobs/jobs/devops-cloud-engineer-m-w-d",
+    "applyUrl": "https://himalayas.app/companies/stackmeister-jobs/jobs/devops-cloud-engineer-m-w-d",
+    "description": "deine aufgaben\n \n \n Implementierung und Umsetzung von Software-Integrations- und -Deploymentprozessen;\n\n Wartung und Optimierung von IT-Infrastrukturen;\n\n Erstellung von (hybriden) Cloud-Architekturen (z. B. mit AWS, Azure oder Google);\n\n Erstellung von Software Releases sowie Konzipierung und Durchführung von Softwaretests;\n\n Container-Virtualisierung von Anwendungen (z. B. mit Kubernetes oder Docker);\n\n Automatisierung von Entwicklung, Test (Testautomatisierung) und Integration;\n\n Verwaltung und Freigabe von Codes und Systemressourcen in Versionen mittels Continuous Integration (CI) / Continuous Delivery (CD) (z. B. mit Jenkins oder Git).\n\n \n was du mitbringst\n \n \n Leidenschaft beim Programmieren und Lust, Deine Fähigkeiten ständig zu erweitern und zu verbessern;\n\n einen professionellen Umgang mit Kubernetes, Azure und AWS;\n\n Erfahrungen mit Terraform, CVS und CI / CD;\n\n sehr gute Deutsch- und gute Englischkenntnisse;\n\n einen akademischen (B.Sc./M.Sc.) als Informatiker:in mit Topnoten.\n\n \n du bist uns wichtig\n \n \n Communication is key: Jedes Thema ist relevant und Du entscheidest mit uns gemeinsam über Deine Projekte.\n\n Gestalte Deine Entwicklungsumgebung individuell und nutze Deine favorisierten Tools. Dein Arbeitsplatz, Dein Setup.\n\n Profitiere von Deinen individuellen Entwicklungsplänen: Mit Deinem jährlichen Weiterbildungsbudget schließt Du für Dich anerkannte Fachschulungen ab.\n\n Suchst Du Kontakt oder bist Du lieber für Dich? Bei uns kannst Du einfach Du selbst sein.\n\n Genieße Deine Freizeit: Arbeite in Deinem Rhythmus. Dein Daily ist Dein einziger Termin.\n\n Safety first - Sichere Dir einen unbefristeten Arbeitsvertrag in einem unabhängigen Unternehmen. Erhalte Dein kompetitives Gehalt, ausreichend Urlaub und Überstundenausgleich, Zuschüsse zum Job Ticket und steuerfreie Incentives.\n\n Feiere mit uns Erfolge, denn auch Teamevents dürfen bei uns nicht fehlen!\n\n \n Originally posted on Himalayas",
+    "countryRestrictions": [],
+    "requisitionId": "",
+    "sources": [
+      "Himalayas"
+    ],
+    "sourceUrls": [
+      "https://himalayas.app/companies/stackmeister-jobs/jobs/devops-cloud-engineer-m-w-d"
+    ],
+    "descriptionSummary": "deine aufgaben • Implementierung und Umsetzung von Software-Integrations- und -Deploymentprozessen; • Wartung und Optimierung von IT-Infrastrukturen; • Erstellung von (hybriden) Cloud-Architekturen (z.",
+    "status": "New",
+    "notes": "Jobs by Himalayas. Final application remains manual.",
+    "resumeVersion": "",
+    "applicationStartedAt": "",
+    "applicationDate": "",
+    "followUpDate": "",
+    "id": "job-nei64m",
+    "experienceRequirement": {
+      "minimum": null,
+      "requirements": []
+    },
+    "remoteEligibility": {
+      "status": "unknown",
+      "reason": "Country eligibility not specified; confirm India is allowed"
+    },
+    "matchScore": 77,
+    "matchDetails": {
+      "role": 100,
+      "skills": 100,
+      "experience": 60,
+      "location": 0,
+      "workMode": 100,
+      "jobType": 100,
+      "matchedSkills": [
+        "AWS",
+        "Docker",
+        "Terraform",
+        "CI/CD",
+        "Git"
+      ],
+      "missingSkills": [
+        "Linux",
+        "Docker Compose",
+        "Ansible",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Nginx",
+        "Apache",
+        "MySQL",
+        "PostgreSQL",
+        "Bash",
+        "Python",
+        "Server Administration",
+        "Web Hosting",
+        "DNS",
+        "SSL/TLS",
+        "Monitoring",
+        "Security Hardening",
+        "Cloud Infrastructure",
+        "cPanel/WHM",
+        "CyberPanel",
+        "PHP",
+        "Backups",
+        "Migrations",
+        "Troubleshooting"
+      ],
+      "excluded": false,
+      "overall": 77,
+      "category": "Possible Match",
+      "explanation": [
+        "Role 100%: target or related role matched",
+        "Skills 100%: AWS, Docker, Terraform, CI/CD, Git",
+        "Experience 60%: not specified; ranked using other signals",
+        "Location 0%: Country eligibility not specified; confirm India is allowed",
+        "Work mode 100%: Remote"
+      ]
+    }
+  }
+]
