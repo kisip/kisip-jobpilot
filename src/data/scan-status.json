@@ -1,10 +1,10 @@
 {
   "status": "Active",
   "automationStatus": "Active",
-  "lastSuccessfulScan": "2026-10-11T22:06:46.224Z",
+  "lastSuccessfulScan": "2026-10-12T06:08:50.127Z",
   "lastFailedScan": "",
-  "lastScan": "2026-10-11T22:06:46.224Z",
-  "nextScan": "2026-10-12T00:17:00.000Z",
+  "lastScan": "2026-10-12T06:08:50.127Z",
+  "nextScan": "2026-10-12T06:17:00.000Z",
   "sourcesChecked": 3,
   "sourceStats": [
     {
@@ -33,15 +33,15 @@
         200,
         200
       ],
-      "rawJobs": 38,
-      "normalizedJobs": 38,
+      "rawJobs": 40,
+      "normalizedJobs": 40,
       "invalidRejected": 0,
-      "unrelatedRejected": 7,
-      "seniorRejected": 18,
-      "experienceRejected": 7,
+      "unrelatedRejected": 3,
+      "seniorRejected": 20,
+      "experienceRejected": 8,
       "locationRejected": 2,
-      "duplicatesRemoved": 2,
-      "eligibleJobs": 2,
+      "duplicatesRemoved": 7,
+      "eligibleJobs": 0,
       "errors": []
     },
     {
@@ -51,11 +51,11 @@
       "httpStatus": [
         200
       ],
-      "rawJobs": 40,
-      "normalizedJobs": 40,
+      "rawJobs": 36,
+      "normalizedJobs": 36,
       "invalidRejected": 0,
       "unrelatedRejected": 6,
-      "seniorRejected": 26,
+      "seniorRejected": 22,
       "experienceRejected": 7,
       "locationRejected": 1,
       "duplicatesRemoved": 0,
@@ -63,19 +63,19 @@
       "errors": []
     }
   ],
-  "jobsFetched": 96,
+  "jobsFetched": 94,
   "invalidRejected": 0,
-  "unrelatedRejected": 21,
-  "seniorRejected": 53,
-  "experienceRejected": 15,
+  "unrelatedRejected": 17,
+  "seniorRejected": 51,
+  "experienceRejected": 16,
   "locationRejected": 3,
-  "duplicatesRemoved": 2,
-  "newJobs": 2,
-  "newJobsAdded": 2,
-  "jobsIndexed": 2,
-  "highMatchJobs": 1,
-  "goodMatches": 1,
-  "excellentMatchJobs": 1,
-  "excellentMatches": 1,
+  "duplicatesRemoved": 7,
+  "newJobs": 0,
+  "newJobsAdded": 0,
+  "jobsIndexed": 0,
+  "highMatchJobs": 0,
+  "goodMatches": 0,
+  "excellentMatchJobs": 0,
+  "excellentMatches": 0,
   "errors": []
 }
