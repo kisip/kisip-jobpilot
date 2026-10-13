@@ -1,1 +1,103 @@
-[]
+[
+  {
+    "title": "Site Reliability Engineer",
+    "company": "Akamai Technologies",
+    "location": "India",
+    "experience": "Not specified",
+    "salary": "Not provided",
+    "skills": [
+      "Linux",
+      "Git",
+      "DNS"
+    ],
+    "jobType": "Full-time",
+    "workMode": "Remote",
+    "source": "Himalayas",
+    "postedAt": "2026-10-13T07:58:10.000Z",
+    "datePosted": "2026-10-13",
+    "discoveredAt": "2026-10-13T14:21:50.514Z",
+    "dateDiscovered": "2026-10-13",
+    "dateFound": "2026-10-13",
+    "url": "https://himalayas.app/companies/akamai-technologies/jobs/site-reliability-engineer-5002459877",
+    "applyUrl": "https://himalayas.app/companies/akamai-technologies/jobs/site-reliability-engineer-5002459877",
+    "description": "Do you like collaborating across teams to solve complex problems? \n Do you enjoy solving large scale distributed systems problems? \n Join our SRE Edge Apps & Networking team\n The Edge Reliability Engineering (ERE) team enhances performance, availability, and resilience for Akamai's media and web delivery products. This includes optimizing core edge platform and web server technologies. The team solves complex distributed system reliability challenges, ensuring consistent and high-performing experiences for customers across the Internet.\n Partner with the best\n The ERE team acts as a technical escalation resource for global support, resolving critical issues across delivery products and platform technologies. This team operates at the crossroads of engineering, support, and operations to address customer-impacting challenges effectively.\n As a Site Reliability Engineer, you will be responsible for:\n \n Taking responsibility for assigned reliability and performance investigations across Akamai's global edge platform, media delivery, and web delivery systems.\n\n Diagnosing problems across application, platform, network, and operating-system layers utilizing logs, metrics, traces, and diagnostic tools appropriately.\n\n Collaborating with Product, Engineering, Support, Network, and senior SRE teams to determine root causes and apply lasting solutions.\n\n Utilizing telemetry, SLIs, SLOs, KPIs, dashboards, and alerts to evaluate system health, determine customer impact, and enhance reliability improvements.\n\n Analyzing platform behavior, traffic patterns, and system bottlenecks to enhance performance, scalability, and resilience effectively across systems.\n\n Creating scripts, automation, internal tools, and workflows to minimize operational effort while enhancing diagnostics and incident response efficiency.\n\n Applying AI-powered analysis and creating workflows as needed, while ensuring precision, safety, and thorough human evaluation.\n\n Do what you love\n To be successful in this role you will:\n \n Demonstrate expertise in Computer Science, Engineering, or related fields, or possess substantial industry experience in large-scale SRE roles.\n\n Evaluate technical issues, assess system behavior, and derive insights from evidence to improve understanding and problem-solving abilities.\n\n Understand foundational networking and Internet technologies, such as caching, proxies, TLS, TCP/IP, DNS, and HTTP/HTTPS architectures.\n\n Demonstrate proficiency with Linux or Unix systems, command-line utilities, and foundational diagnostic methods.\n\n Demonstrate proficiency with structured data and telemetry or exhibit foundational SQL capabilities.\n\n Read and analyze C++ code to identify and resolve issues within core server infrastructure effectively.\n\n About us\n At Akamai, we make life better for billions of people, trillions of times a day.\nWhether you're streaming live events, scrolling social media, watching your favorite series, or managing your savings, we're the engine behind the scenes. We provide the world's most distributed platform from Cloud to Edge to help the giants of the digital world work faster and stay more secure, making the internet a better experience for everyone.\n Our focus is simple:\n Cloud and Edge: Running apps closer to users for instant performance.\n Security : Neutralizing threats before they ever reach your data.\n Content Delivery : Scaling the world's biggest moments without a glitch.\n AI : Enabling our customers to build, secure, and scale AI apps on the world's most distributed cloud platform.\n\nAt Akamai, we don't just support the internet; we power and protect it, because behind every great digital experience is a massive hidden challenge. And we're the ones who solve it. When millions of people hit play or pay, Akamai ensures it just works.\n Benefits at Akamai: We support your health, well-being, finances, and life beyond work. See our benefits.\n FlexBase adapts to your job's needs\n Akamai's FlexBase program is yet another way we show our commitment to providing employees with an exceptional workplace experience. It's not about telling employees where to work; it's about supporting employees to do their best work.\n\nWe trust our incredible employees to work in ways that suit them best: at home, in an office, or a combination of both.\n \nConnect with us on social and see what life at Akamai is like! \n Originally posted on Himalayas",
+    "countryRestrictions": [
+      "India"
+    ],
+    "requisitionId": "",
+    "sources": [
+      "Himalayas"
+    ],
+    "sourceUrls": [
+      "https://himalayas.app/companies/akamai-technologies/jobs/site-reliability-engineer-5002459877"
+    ],
+    "descriptionSummary": "Do you like collaborating across teams to solve complex problems?",
+    "status": "New",
+    "notes": "Jobs by Himalayas. Final application remains manual.",
+    "resumeVersion": "",
+    "applicationStartedAt": "",
+    "applicationDate": "",
+    "followUpDate": "",
+    "id": "job-1591g4r",
+    "experienceRequirement": {
+      "minimum": null,
+      "requirements": []
+    },
+    "remoteEligibility": {
+      "status": "eligible",
+      "reason": "Remote location includes India"
+    },
+    "matchScore": 92,
+    "matchDetails": {
+      "role": 100,
+      "skills": 100,
+      "experience": 60,
+      "location": 100,
+      "workMode": 100,
+      "jobType": 100,
+      "matchedSkills": [
+        "Linux",
+        "Git",
+        "DNS",
+        "SSL/TLS",
+        "Security Hardening"
+      ],
+      "missingSkills": [
+        "AWS",
+        "Docker",
+        "Docker Compose",
+        "Terraform",
+        "Ansible",
+        "CI/CD",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Nginx",
+        "Apache",
+        "MySQL",
+        "PostgreSQL",
+        "Bash",
+        "Python",
+        "Server Administration",
+        "Web Hosting",
+        "Monitoring",
+        "Cloud Infrastructure",
+        "cPanel/WHM",
+        "CyberPanel",
+        "PHP",
+        "Backups",
+        "Migrations",
+        "Troubleshooting"
+      ],
+      "excluded": false,
+      "overall": 92,
+      "category": "Excellent Match",
+      "explanation": [
+        "Role 100%: target or related role matched",
+        "Skills 100%: Linux, Git, DNS, SSL/TLS, Security Hardening",
+        "Experience 60%: not specified; ranked using other signals",
+        "Location 100%: Remote location includes India",
+        "Work mode 100%: Remote"
+      ]
+    }
+  }
+]
