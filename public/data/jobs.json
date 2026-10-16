@@ -1,1 +1,111 @@
-[]
+[
+  {
+    "title": "Infrastructure Engineer",
+    "company": "Infovista",
+    "location": "India",
+    "experience": "Not specified",
+    "salary": "Not provided",
+    "skills": [
+      "Linux",
+      "AWS",
+      "Terraform",
+      "Ansible",
+      "CI/CD",
+      "GitHub Actions",
+      "Git",
+      "Bash",
+      "Python",
+      "DNS",
+      "Monitoring"
+    ],
+    "jobType": "Full-time",
+    "workMode": "Remote",
+    "source": "Himalayas",
+    "postedAt": "2026-10-16T03:23:22.000Z",
+    "datePosted": "2026-10-16",
+    "discoveredAt": "2026-10-16T04:41:10.486Z",
+    "dateDiscovered": "2026-10-16",
+    "dateFound": "2026-10-16",
+    "url": "https://himalayas.app/companies/infovista/jobs/infrastructure-engineer",
+    "applyUrl": "https://himalayas.app/companies/infovista/jobs/infrastructure-engineer",
+    "description": "The Role & Team:\n As an Infrastructure Engineer, you will build, operate and improve Infovista 's hybrid platform, spanning on-premises data centers and public cloud, supporting the Network Lifecycle Automation, Network Intelligence and SaaS product portfolios. Your core mission is to make automation the default way of working: replacing manual, ticket-driven processes with self-service, code-driven infrastructure that makes delivery faster, more reliable and more cost-effective across the business.\n Reporting to the Head of Infrastructure & Platforms, you will be part of a hands-on team of infrastructure, DevOps and site reliability engineers, working alongside internal network teams and the offshore third-party delivery partner. You will work closely with product engineering, security and IT operations to identify automation opportunities and help drive their adoption. Success will be measured by the proportion of infrastructure and deployments automated, reduction in manual effort and lead times, platform availability against SLAs, deployment frequency, and the adoption of self-service tooling by engineering teams.\n Key Responsibilities:\n Deliver assigned work against the hybrid platform roadmap, with guidance from senior engineers and the Head of Infrastructure & Platforms.\n \n Help build and operate a consistent hybrid estate across on-premises virtualization (VMware vSphere, Nutanix, ProxMox) and public cloud (AWS, Azure, GCP), including networking, identity and connectivity between them\n• Support enterprise storage across the hybrid estate (iSCSI, Fibre Channel, NFS/SMB and object storage), with provisioning and configuration delivered through automation\n• Help manage domain services (Active Directory, DNS, DHCP) and their integration with cloud identity, automating routine administration and changes\n• Develop and maintain Infrastructure as Code using terraform, ansible, cloud formation and similar automation stacks, so that environments are provisioned, configured and changed through version-controlled code\n• Contribute to control plane management and automation across virtualization, container and cloud platforms, keeping management layers consistent, version-controlled and recoverable\n• Automate systems lifecycle management, from build and patching through upgrades and decommissioning, so that systems remain current, supported and compliant\n• Design automation strategies that take account of existing infrastructure, integrating with and progressively modernizing legacy systems rather than relying on greenfield replacement\n• Support and operate container platforms across on-premises and cloud (Kubernetes, OpenShift, EKS/AKS) with standardized Helm charts and GitOps deployment through Argo CD or Flux\n• Build and maintain CI/CD pipelines (GitLab CI, GitHub Actions or Jenkins) that give product teams fast, secure, repeatable releases\n• Identify automation opportunities across the business and help build a pipeline of use cases with clear ROI\n• Help integrate automation with IT service management (ServiceNow) to deliver self-service provisioning, automated change and event-driven remediation\n• Build self-service automation, workflows and catalogue items that let engineering teams request, change and retire infrastructure without manual intervention\n• Implement observability using Prometheus, Grafana, the ELK/OpenSearch stack and OpenTelemetry, and apply SRE practices including SLOs, incident response and blameless post-incident reviews\n• Go beyond alerting to automated remediation, developing support-focused runbooks and automations that enhance NOC and SRE operations and reduce time to resolution\n• Support systems health and capacity management, using monitoring data and trend analysis to forecast demand, plan capacity and address issues before they impact service\n• Explore and apply AI-driven improvements, such as AIOps, anomaly detection, intelligent reporting and AI-assisted automation, to improve platform reliability and operational insight\n• Help implement automated asset discovery and documentation (ITGlue), keeping inventory, configuration and dependency records accurate and up to date\n• Contribute to metadata and tagging standards across on-premises and cloud resources, so that assets are consistently described and ready for automation\n• Build security and compliance into the platform through policy as code, secrets management (HashiCorp Vault), image scanning and automated compliance checks\n• Follow and contribute to engineering standards and reusable automation modules, and support the review of offshore partner work\n• Support FinOps practices across cloud and on-premises, using automation to right-size, schedule and decommission resources\n• Share knowledge and document solutions, helping build automation skills across the wider infrastructure organization\n\n Qualifications:\n \n 5-7 years in infrastructure, platform or DevOps engineering\n• Hands-on experience building and operating hybrid environments that span on-premises data centers as well as various cloud providers (AWS, GCP, Azure, Hetzner, OVH, etc).\n• Practical experience with Infrastructure as Code (Terraform, Ansible) and configuration management\n• Experience with Kubernetes and container platforms, GitOps and CI/CD tooling\n• Solid understanding of enterprise networking (routing, load balancing, DNS, firewalls, VPN/Direct Connect/ExpressRoute) and Linux and Windows server environments\n• Working knowledge of enterprise storage (iSCSI, Fibre Channel, SAN/NAS) and domain services (Active Directory, DNS, DHCP)\n• Scripting and development skills in Python, Bash or PowerShell, with experience provisioning and delivering reliable and secure automation solutions.\n• Experience automating manual processes, supporting the development of runbooks or similar automation tools, and a keen interest in driving wider adoption of automation\n• Exposure to systems lifecycle, capacity and health management, including automated remediation and support-focused runbooks for NOC/SRE teams\n• Familiarity with automated asset discovery and documentation tools (e.g. ITGlue) and metadata or tagging standards that support automation\n• Interest in applying AI to infrastructure operations, such as AIOps, anomaly detection or AI-assisted reporting and automation\n• Experience introducing automation into existing environments, working alongside legacy infrastructure\n• Experience working with offshore or third-party engineering teams\n• Relevant certifications (e.g. AWS Solutions Architect – Associate, Azure Administrator, CKA, HashiCorp Terraform Associate, Red Hat Ansible) are desirable\n\n Originally posted on Himalayas",
+    "countryRestrictions": [
+      "India"
+    ],
+    "requisitionId": "",
+    "sources": [
+      "Himalayas"
+    ],
+    "sourceUrls": [
+      "https://himalayas.app/companies/infovista/jobs/infrastructure-engineer"
+    ],
+    "descriptionSummary": "The Role & Team:As an Infrastructure Engineer, you will build, operate and improve Infovista's hybrid platform, spanning on-premises data centers and public cloud, supporting the Network Lifecycle Automation, Network Intelligence and SaaS product portfolios.",
+    "status": "New",
+    "notes": "Jobs by Himalayas. Final application remains manual.",
+    "resumeVersion": "",
+    "applicationStartedAt": "",
+    "applicationDate": "",
+    "followUpDate": "",
+    "id": "job-12yybwj",
+    "experienceRequirement": {
+      "minimum": null,
+      "requirements": []
+    },
+    "remoteEligibility": {
+      "status": "eligible",
+      "reason": "Remote location includes India"
+    },
+    "matchScore": 92,
+    "matchDetails": {
+      "role": 100,
+      "skills": 100,
+      "experience": 60,
+      "location": 100,
+      "workMode": 100,
+      "jobType": 100,
+      "matchedSkills": [
+        "Linux",
+        "AWS",
+        "Terraform",
+        "Ansible",
+        "CI/CD",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Git",
+        "Bash",
+        "Python",
+        "DNS",
+        "Monitoring",
+        "Security Hardening"
+      ],
+      "missingSkills": [
+        "Docker",
+        "Docker Compose",
+        "Nginx",
+        "Apache",
+        "MySQL",
+        "PostgreSQL",
+        "Server Administration",
+        "Web Hosting",
+        "SSL/TLS",
+        "Cloud Infrastructure",
+        "cPanel/WHM",
+        "CyberPanel",
+        "PHP",
+        "Backups",
+        "Migrations",
+        "Troubleshooting"
+      ],
+      "excluded": false,
+      "overall": 92,
+      "category": "Excellent Match",
+      "explanation": [
+        "Role 100%: target or related role matched",
+        "Skills 100%: Linux, AWS, Terraform, Ansible, CI/CD, GitHub Actions, GitLab CI/CD, Git, Bash, Python, DNS, Monitoring, Security Hardening",
+        "Experience 60%: not specified; ranked using other signals",
+        "Location 100%: Remote location includes India",
+        "Work mode 100%: Remote"
+      ]
+    }
+  }
+]
