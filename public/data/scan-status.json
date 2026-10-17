@@ -1,10 +1,10 @@
 {
   "status": "Active",
   "automationStatus": "Active",
-  "lastSuccessfulScan": "2026-10-17T04:38:14.979Z",
+  "lastSuccessfulScan": "2026-10-17T10:54:47.046Z",
   "lastFailedScan": "",
-  "lastScan": "2026-10-17T04:38:14.979Z",
-  "nextScan": "2026-10-17T06:17:00.000Z",
+  "lastScan": "2026-10-17T10:54:47.046Z",
+  "nextScan": "2026-10-17T12:17:00.000Z",
   "sourcesChecked": 3,
   "sourceStats": [
     {
@@ -14,11 +14,11 @@
       "httpStatus": [
         200
       ],
-      "rawJobs": 15,
-      "normalizedJobs": 15,
+      "rawJobs": 13,
+      "normalizedJobs": 13,
       "invalidRejected": 0,
       "unrelatedRejected": 5,
-      "seniorRejected": 9,
+      "seniorRejected": 7,
       "experienceRejected": 1,
       "locationRejected": 0,
       "duplicatesRemoved": 0,
@@ -33,14 +33,14 @@
         200,
         200
       ],
-      "rawJobs": 40,
-      "normalizedJobs": 40,
+      "rawJobs": 38,
+      "normalizedJobs": 38,
       "invalidRejected": 0,
-      "unrelatedRejected": 6,
+      "unrelatedRejected": 9,
       "seniorRejected": 16,
-      "experienceRejected": 12,
+      "experienceRejected": 9,
       "locationRejected": 1,
-      "duplicatesRemoved": 5,
+      "duplicatesRemoved": 3,
       "eligibleJobs": 0,
       "errors": []
     },
@@ -51,11 +51,11 @@
       "httpStatus": [
         200
       ],
-      "rawJobs": 37,
-      "normalizedJobs": 37,
+      "rawJobs": 39,
+      "normalizedJobs": 39,
       "invalidRejected": 0,
-      "unrelatedRejected": 6,
-      "seniorRejected": 24,
+      "unrelatedRejected": 7,
+      "seniorRejected": 25,
       "experienceRejected": 6,
       "locationRejected": 1,
       "duplicatesRemoved": 0,
@@ -63,13 +63,13 @@
       "errors": []
     }
   ],
-  "jobsFetched": 92,
+  "jobsFetched": 90,
   "invalidRejected": 0,
-  "unrelatedRejected": 17,
-  "seniorRejected": 49,
-  "experienceRejected": 19,
+  "unrelatedRejected": 21,
+  "seniorRejected": 48,
+  "experienceRejected": 16,
   "locationRejected": 2,
-  "duplicatesRemoved": 5,
+  "duplicatesRemoved": 3,
   "newJobs": 0,
   "newJobsAdded": 0,
   "jobsIndexed": 0,
