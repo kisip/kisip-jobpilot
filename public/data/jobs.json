@@ -1,1 +1,107 @@
-[]
+[
+  {
+    "title": "DevOps Engineer* Linux",
+    "company": "inovex GmbH",
+    "location": "Not specified",
+    "experience": "Not specified",
+    "salary": "Not provided",
+    "skills": [
+      "Linux",
+      "AWS",
+      "Terraform",
+      "Ansible",
+      "CI/CD",
+      "Git",
+      "Bash",
+      "Monitoring",
+      "Troubleshooting"
+    ],
+    "jobType": "Full-time",
+    "workMode": "Remote",
+    "source": "Himalayas",
+    "postedAt": "2026-10-18T13:11:57.000Z",
+    "datePosted": "2026-10-18",
+    "discoveredAt": "2026-10-18T15:57:48.980Z",
+    "dateDiscovered": "2026-10-18",
+    "dateFound": "2026-10-18",
+    "url": "https://himalayas.app/companies/inovex-gmbh/jobs/devops-engineer-linux",
+    "applyUrl": "https://himalayas.app/companies/inovex-gmbh/jobs/devops-engineer-linux",
+    "description": "Was du bei uns bewegen kannst\n \n Du baust die Infrastruktur, auf der Anwendungen zuverlässig laufen. Von der Konzeption bis zur Inbetriebnahme hast du den späteren hochverfügbaren und skalierbaren Betrieb im Blick.\n\n\n CI/CD-Pipelines, Deployment-Strategien und Automatisierungslösungen gestaltest du so, dass Teams schnell und sicher ausliefern können.\n\n\n Observability-Stacks baust du auf und sorgst mit Monitoring, Logging und Alerting dafür, dass Probleme sichtbar werden, bevor sie Nutzer:innen betreffen.\n\n\n Linux-basierte Systeme härtest du und automatisierst das Konfigurationsmanagement mit Terraform, Ansible oder vergleichbaren Tools. Security denkst du dabei von Anfang an mit.\n\n\n Container und Kubernetes gehören zu deinem Alltag. Du betreibst Anwendungen in containerisierten Umgebungen und verstehst die Grundlagen der Orchestrierung.\n\n\n Gemeinsam mit deinem Team entwickelst du über fachliche Grenzen und Projektphasen hinweg maßgeschneiderte Lösungen für den Kunden, wobei du die Effizienz deiner Automatisierungs-Workflows durch den gezielten Einsatz von KI-Tools konsequent steigerst.\n\n\n In unseren Projekten verwenden wir häufig folgende Technologien:\n \n Linux, Systemd, containerd, Bash\n\n\n OpenTofu, Ansible, Gitlab CI, Argo CD, Grafana Stack, Prometheus\n\n\n Kubernetes, Helm, Trivy, Falco, Go\n\n\n AWS, Azure, Google Cloud, STACKIT\n\n\n Intern wie extern kannst du dich bei uns auf vielfältige Art einbringen: Deinen anfangs gewählten technologischen Schwerpunkt kannst du jederzeit verlagern. Als Expert:in im Bereich Engineering hast du außerdem die Möglichkeit, jüngere Kolleg:innen durch Mentoring zu unterstützen.\n Requirements\n Wer gut zu uns passen würde\n Ob du ein Studium oder eine Ausbildung im IT-Bereich abgeschlossen hast, ist für uns nebensächlich – für uns zählen deine fachlichen Skills und deine Persönlichkeit: \n \n Auf der Linux-Kommandozeile fühlst du dich zu Hause. Systemd, Networking, Storage und Prozessmanagement beherrschst du sicher.\n\n\n CI/CD-Pipelines hast du bisher nicht nur genutzt, sondern selbst gebaut, optimiert und debuggt. Außerdem kannst du Infrastructure-as-Code routiniert einsetzen.\n\n\n Du verfügst über tiefe Kenntnisse in der Containerisierung sowie deren Orchestrierung und bist routiniert darin, Anwendungen in entsprechenden Umgebungen effizient zu betreiben.\n\n\n Wie Entwicklungsteams arbeiten, verstehst du und gestaltest Prozesse und Toolchains so, dass sie den Weg von der lokalen Entwicklung bis zum Production-Deployment vereinfachen.\n\n\n Du setzt Coding-Assistenten und KI-basierte Automatisierung gezielt ein, um Arbeitsabläufe zu beschleunigen. Sei es bei der effizienten Erstellung von Ansible-Playbooks oder beim automatisierten Troubleshooting von Systemfehlern.\n\n\n Du kannst ebenfalls komplexe technische Sachverhalte präzise analysieren und diese so aufbereiten, dass sie auch für nicht-technische Stakeholder verständlich und nachvollziehbar sind.\n\n\n Sehr gute Deutschkenntnisse (mind. C1) und gute Englischkenntnisse runden dein Profil ab.\n\n\n Originally posted on Himalayas",
+    "countryRestrictions": [],
+    "requisitionId": "",
+    "sources": [
+      "Himalayas"
+    ],
+    "sourceUrls": [
+      "https://himalayas.app/companies/inovex-gmbh/jobs/devops-engineer-linux"
+    ],
+    "descriptionSummary": "Was du bei uns bewegen kannst• Du baust die Infrastruktur, auf der Anwendungen zuverlässig laufen.",
+    "status": "New",
+    "notes": "Jobs by Himalayas. Final application remains manual.",
+    "resumeVersion": "",
+    "applicationStartedAt": "",
+    "applicationDate": "",
+    "followUpDate": "",
+    "id": "job-k9j5ez",
+    "experienceRequirement": {
+      "minimum": null,
+      "requirements": []
+    },
+    "remoteEligibility": {
+      "status": "unknown",
+      "reason": "Country eligibility not specified; confirm India is allowed"
+    },
+    "matchScore": 77,
+    "matchDetails": {
+      "role": 100,
+      "skills": 100,
+      "experience": 60,
+      "location": 0,
+      "workMode": 100,
+      "jobType": 100,
+      "matchedSkills": [
+        "Linux",
+        "AWS",
+        "Terraform",
+        "Ansible",
+        "CI/CD",
+        "GitLab CI/CD",
+        "Git",
+        "Bash",
+        "Monitoring",
+        "Security Hardening",
+        "Troubleshooting"
+      ],
+      "missingSkills": [
+        "Docker",
+        "Docker Compose",
+        "GitHub Actions",
+        "Nginx",
+        "Apache",
+        "MySQL",
+        "PostgreSQL",
+        "Python",
+        "Server Administration",
+        "Web Hosting",
+        "DNS",
+        "SSL/TLS",
+        "Cloud Infrastructure",
+        "cPanel/WHM",
+        "CyberPanel",
+        "PHP",
+        "Backups",
+        "Migrations"
+      ],
+      "excluded": false,
+      "overall": 77,
+      "category": "Possible Match",
+      "explanation": [
+        "Role 100%: target or related role matched",
+        "Skills 100%: Linux, AWS, Terraform, Ansible, CI/CD, GitLab CI/CD, Git, Bash, Monitoring, Security Hardening, Troubleshooting",
+        "Experience 60%: not specified; ranked using other signals",
+        "Location 0%: Country eligibility not specified; confirm India is allowed",
+        "Work mode 100%: Remote"
+      ]
+    }
+  }
+]
