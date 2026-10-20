@@ -1,1 +1,102 @@
-[]
+[
+  {
+    "title": "Consultor/a DevSecOps - AWS (sector seguros)",
+    "company": "knowmad mood",
+    "location": "Not specified",
+    "experience": "Not specified",
+    "salary": "Not provided",
+    "skills": [
+      "AWS",
+      "Terraform",
+      "CI/CD",
+      "Git"
+    ],
+    "jobType": "Full-time",
+    "workMode": "Remote",
+    "source": "Himalayas",
+    "postedAt": "2026-10-20T09:15:38.000Z",
+    "datePosted": "2026-10-20",
+    "discoveredAt": "2026-10-20T11:48:53.617Z",
+    "dateDiscovered": "2026-10-20",
+    "dateFound": "2026-10-20",
+    "url": "https://himalayas.app/companies/knowmad-mood/jobs/consultor-a-devsecops-aws-sector-seguros?utm_source=api",
+    "applyUrl": "https://himalayas.app/companies/knowmad-mood/jobs/consultor-a-devsecops-aws-sector-seguros?utm_source=api",
+    "description": "Welcome to knowmad mood !\n Somos una compañía líder en transformación digital, en constante evolución y a la vanguardia de la tecnología. Nacimos para provocar un cambio real a través de la innovación y el desarrollo sostenible, con la misión de aportar valor a los clientes e impulsar nuestro talento.\n Formado por más de 3.000 personas creativas, digitales e innovadoras conectadas a un propósito y capaces de generar conexiones con personas de todo el mundo. Un equipo responsable, flexible y con alta capacidad de adaptación a las necesidades de nuestros clientes y del mercado, a la vez que proporciona valor, visión, creatividad, expertise, profesionalidad y pasión por la tecnología en cada proyecto.\n Los valores que marcan nuestro rumbo y nos guían hacia la excelencia son la colaboración, la innovación, el compromiso, la diversión y la conﬁanza.\n ¿Quien buscamos?\n Buscamos incorporar un/a Consultor/a DevSecOps AWS para participar en un proyecto estratégico del ámbito de datos en Latinoamérica. La persona seleccionada colaborará en las iniciativas de migración y gobierno de datos que se están desarrollando en diferentes países de la región, garantizando la seguridad, la automatización y la correcta operación de los entornos cloud.\n \n DMS es una herramienta clave para acelerar la extracción y migración de datos desde las fuentes origen hacia la nube. Actualmente, la solución ya se encuentra implantada en Perú, Colombia y Brasil, mientras que República Dominicana y Honduras se encuentran en pleno proceso de migración.\n\n Es preferible la persona tenga experiencia en el sector de seguros. \n\n\n Responsabilidades\n \n Participar en las iniciativas de migración de datos en los diferentes países de LATAM.\n\n\n Administrar, configurar y optimizar servicios AWS relacionados con las plataformas de datos.\n\n\n Gestionar y mantener entornos basados en AWS DMS (Database Migration Service) para procesos de replicación e integración de datos.\n\n\n Definir e implementar buenas prácticas de seguridad cloud y DevSecOps.\n\n\n Gestionar permisos, accesos y políticas de seguridad bajo el principio de mínimo privilegio.\n\n\n Colaborar con equipos técnicos y de negocio para garantizar migraciones seguras y eficientes.\n\n\n Automatizar procesos de despliegue y operación mediante herramientas de Infraestructura como Código (IaC).\n\n\n Participar en la definición y mantenimiento de pipelines CI/CD para entornos de desarrollo y producción.\n\n\n Supervisar la monitorización y el cumplimiento de estándares de seguridad en la nube.\n\n\n Requisitos\n \n Experiencia demostrable en entornos AWS.\n\n\n Conocimientos sólidos de AWS DMS (Data Migration Service).\n\n\n Experiencia en servicios AWS como IAM, S3, EC2, CloudWatch y KMS.\n\n\n Conocimiento de seguridad cloud, gobierno de accesos y políticas de permisos.\n\n\n Experiencia en automatización de infraestructuras y despliegues mediante Terraform o CloudFormation.\n\n\n Experiencia trabajando con el mismo rol en el sector de seguros\n\n\n Conocimientos de integración continua y despliegue continuo (CI/CD).\n\n\n Capacidad para trabajar en entornos distribuidos y colaborar con equipos internacionales.\n\n\n ¿Qué ofrecemos?\n \n Proyecto internacional de alto impacto dentro del área de Data.\n\n\n Modalidad 100% remota.\n\n\n Horario laboral alineado con Colombia.\n\n\n Participación en iniciativas de transformación y migración de datos en múltiples países de Latinoamérica.\n\n\n Entorno colaborativo y orientado a la innovación tecnológica.\n\n\n Si crees que encajas en este reto y te gustaría formar parte de un proyecto internacional con tecnologías cloud de primer nivel, nos encantará conocerte.\n\n ¡Inscríbete y te contaremos más detalles! 🚀\n\n Para mantenerte informado/a de nuestras novedades, síguenos aquí → knowmad mood \n\n En knowmad mood estamos comprometidos con la igualdad de oportunidades y el respeto a la diversidad. Aplicamos nuestro Plan de Igualdad y el principio de no discriminación en todos nuestros procesos de selección.\n\n Originally posted on Himalayas",
+    "countryRestrictions": [],
+    "requisitionId": "",
+    "sources": [
+      "Himalayas"
+    ],
+    "sourceUrls": [
+      "https://himalayas.app/companies/knowmad-mood/jobs/consultor-a-devsecops-aws-sector-seguros?utm_source=api"
+    ],
+    "descriptionSummary": "Welcome to knowmad mood! Somos una compañía líder en transformación digital, en constante evolución y a la vanguardia de la tecnología.",
+    "status": "New",
+    "notes": "Jobs by Himalayas. Final application remains manual.",
+    "resumeVersion": "",
+    "applicationStartedAt": "",
+    "applicationDate": "",
+    "followUpDate": "",
+    "id": "job-wg7yco",
+    "experienceRequirement": {
+      "minimum": null,
+      "requirements": []
+    },
+    "remoteEligibility": {
+      "status": "unknown",
+      "reason": "Country eligibility not specified; confirm India is allowed"
+    },
+    "matchScore": 77,
+    "matchDetails": {
+      "role": 100,
+      "skills": 100,
+      "experience": 60,
+      "location": 0,
+      "workMode": 100,
+      "jobType": 100,
+      "matchedSkills": [
+        "AWS",
+        "Terraform",
+        "CI/CD",
+        "Git",
+        "Migrations"
+      ],
+      "missingSkills": [
+        "Linux",
+        "Docker",
+        "Docker Compose",
+        "Ansible",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Nginx",
+        "Apache",
+        "MySQL",
+        "PostgreSQL",
+        "Bash",
+        "Python",
+        "Server Administration",
+        "Web Hosting",
+        "DNS",
+        "SSL/TLS",
+        "Monitoring",
+        "Security Hardening",
+        "Cloud Infrastructure",
+        "cPanel/WHM",
+        "CyberPanel",
+        "PHP",
+        "Backups",
+        "Troubleshooting"
+      ],
+      "excluded": false,
+      "overall": 77,
+      "category": "Possible Match",
+      "explanation": [
+        "Role 100%: target or related role matched",
+        "Skills 100%: AWS, Terraform, CI/CD, Git, Migrations",
+        "Experience 60%: not specified; ranked using other signals",
+        "Location 0%: Country eligibility not specified; confirm India is allowed",
+        "Work mode 100%: Remote"
+      ]
+    }
+  }
+]
