@@ -1,1 +1,105 @@
-[]
+[
+  {
+    "title": "DevSecOps Engineer Internship",
+    "company": "Metasys",
+    "location": "Not specified",
+    "experience": "Not specified",
+    "salary": "Not provided",
+    "skills": [
+      "Docker",
+      "Terraform",
+      "CI/CD",
+      "Bash",
+      "Python",
+      "Monitoring",
+      "Cloud Infrastructure"
+    ],
+    "jobType": "Internship",
+    "workMode": "Remote",
+    "source": "Himalayas",
+    "postedAt": "2026-10-22T23:48:53.000Z",
+    "datePosted": "2026-10-22",
+    "discoveredAt": "2026-10-23T05:01:28.517Z",
+    "dateDiscovered": "2026-10-23",
+    "dateFound": "2026-10-23",
+    "url": "https://himalayas.app/companies/metasys/jobs/devsecops-engineer-internship?utm_source=api",
+    "applyUrl": "https://himalayas.app/companies/metasys/jobs/devsecops-engineer-internship?utm_source=api",
+    "description": "Overview: Securing the CI/CD Pipeline \n The DevSecOps Engineer is responsible for automating, integrating, and enforcing security controls throughout the entire development lifecycle, from code commit to production deployment. You will be the vital link between Development, Security, and Operations, ensuring that the continuous integration and delivery pipelines for our e-commerce platform, internal tools, and AI agents are secure by design.\n Internship Details\n Duration: 3 months \n Start Date: Immediate\n Location: Remote\n Stipend: None initially. Based on your first-quarter performance, you may be offered a paid full-time opportunity, or even be absorbed directly by the client as an FTE.\n Key Responsibilities & Core Projects\n You will embed security into the automation processes across the entire tech stack.\n \n Security Automation (CI/CD): Integrate automated security scanning tools, including Static Application Security Testing (SAST) and Dynamic Application Security Testing (DAST), directly into our CI/CD pipelines (managed via Makefile and automated testing pipelines).\n\n\n Infrastructure Security: Enforce secure Infrastructure-as-Code (IaC) practices using Terraform for provisioning and managing our Oracle Cloud Free VMs. Continuously monitor the cloud infrastructure for vulnerabilities and misconfigurations.\n\n\n Container and Runtime Security: Manage and secure the application deployment environment by implementing robust container security policies for Docker and ensuring runtime threat detection and logging for production services.\n\n\n Collaboration & Remediation: Collaborate directly with development teams to promote secure coding practices, provide guidance on vulnerability remediation, and ensure security findings are addressed before deployment.\n\n\n Secrets Management: Implement automated injection and rotation of secrets using Vault into the applications and deployment environment.\n\n\n Observability Integration: Integrate security logs and metrics into the observability stack (Prometheus, Grafana, Loki) to ensure real-time security monitoring and alerting.\n\n\n Required Technologies & Tools \n Candidates must have strong hands-on experience in both DevOps automation and security implementation:\n \n Automation/CI/CD: Makefile, automated testing, scripting (Bash/Python/Node.js).\n\n\n Security Tools: SAST/DAST tools, vulnerability scanners, runtime protection.\n\n\n Infrastructure: Terraform (IaC), Docker, Oracle Cloud/equivalent IaaS.\n\n\n Security & Auth: Vault (Secrets Management), Traefik (Edge Security), Observability stack (Prometheus, Loki).\n\n\n Codebase: Experience securing applications built with Node.js/NestJS and Next.js/React/TypeScript.\n\n\n AI Agent Focus \n You will ensure the secure deployment and operation of our AI layer.\n \n Secure Deployment: Implement dedicated, hardened deployment pipelines for AI agents (built on LangChain/LlamaIndex), isolating them and controlling their access to core supply chain data (MES, WMS, OMS).\n\n\n Runtime Monitoring: Establish specific security logging and monitoring for LLM-related services to detect unusual access patterns or potential data leakage.\n\n\n Success Metrics & Career Path \n Performance will be measured by:\n \n Pipeline Security: Percentage of security checks automated and integrated into the CI/CD pipeline.\n\n\n Vulnerability Reduction: Measurable reduction in critical and high-priority findings in production and pre-production environments.\n\n\n Compliance: Successful auditing and enforcement of secure IaC and container security policies.\n\n\n Mentorship Structure: Reports to the Solution Architect or DevOps Lead, working directly with infrastructure and development teams to implement security-as-code.\n Originally posted on Himalayas",
+    "countryRestrictions": [],
+    "requisitionId": "",
+    "sources": [
+      "Himalayas"
+    ],
+    "sourceUrls": [
+      "https://himalayas.app/companies/metasys/jobs/devsecops-engineer-internship?utm_source=api"
+    ],
+    "descriptionSummary": "Overview: Securing the CI/CD PipelineThe DevSecOps Engineer is responsible for automating, integrating, and enforcing security controls throughout the entire development lifecycle, from code commit to production deployment.",
+    "status": "New",
+    "notes": "Jobs by Himalayas. Final application remains manual.",
+    "resumeVersion": "",
+    "applicationStartedAt": "",
+    "applicationDate": "",
+    "followUpDate": "",
+    "id": "job-1l50kyg",
+    "experienceRequirement": {
+      "minimum": null,
+      "requirements": []
+    },
+    "remoteEligibility": {
+      "status": "unknown",
+      "reason": "Country eligibility not specified; confirm India is allowed"
+    },
+    "matchScore": 77,
+    "matchDetails": {
+      "role": 100,
+      "skills": 100,
+      "experience": 60,
+      "location": 0,
+      "workMode": 100,
+      "jobType": 100,
+      "matchedSkills": [
+        "Docker",
+        "Terraform",
+        "CI/CD",
+        "Bash",
+        "Python",
+        "Monitoring",
+        "Security Hardening",
+        "Cloud Infrastructure"
+      ],
+      "missingSkills": [
+        "Linux",
+        "AWS",
+        "Docker Compose",
+        "Ansible",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Git",
+        "Nginx",
+        "Apache",
+        "MySQL",
+        "PostgreSQL",
+        "Server Administration",
+        "Web Hosting",
+        "DNS",
+        "SSL/TLS",
+        "cPanel/WHM",
+        "CyberPanel",
+        "PHP",
+        "Backups",
+        "Migrations",
+        "Troubleshooting"
+      ],
+      "excluded": false,
+      "overall": 77,
+      "category": "Possible Match",
+      "explanation": [
+        "Role 100%: target or related role matched",
+        "Skills 100%: Docker, Terraform, CI/CD, Bash, Python, Monitoring, Security Hardening, Cloud Infrastructure",
+        "Experience 60%: not specified; ranked using other signals",
+        "Location 0%: Country eligibility not specified; confirm India is allowed",
+        "Work mode 100%: Remote"
+      ]
+    }
+  }
+]
