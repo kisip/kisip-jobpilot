@@ -1,1 +1,121 @@
-[]
+[
+  {
+    "title": "Technical Support Engineer",
+    "company": "NetFoundry",
+    "location": "India",
+    "experience": "0+ years",
+    "salary": "Not provided",
+    "skills": [
+      "AWS",
+      "Terraform",
+      "Ansible",
+      "Python",
+      "Troubleshooting"
+    ],
+    "jobType": "Full-time",
+    "workMode": "Remote",
+    "source": "Himalayas",
+    "postedAt": "2026-10-23T20:43:58.000Z",
+    "datePosted": "2026-10-23",
+    "discoveredAt": "2026-10-23T21:30:04.639Z",
+    "dateDiscovered": "2026-10-23",
+    "dateFound": "2026-10-23",
+    "url": "https://himalayas.app/companies/netfoundry/jobs/technical-support-engineer-24555710?utm_source=api",
+    "applyUrl": "https://himalayas.app/companies/netfoundry/jobs/technical-support-engineer-24555710?utm_source=api",
+    "description": "Job Description – Technical Support Engineer\n Location: India (remote)\n About NetFoundry :\n NetFoundry is the leader in zero trust Cloud Native Networking by design. We enable businesses to securely and efficiently connect distributed applications and machines across edges, clouds, and service meshes via our global overlay fabric. The NetFoundry platform, delivered as NaaS, enables businesses to connect applications without the costs and complexity of VPNs/SD-WAN/MPLS, custom hardware, and private circuits. NetFoundry ’s platform offers zero trust agile connectivity for the embedded edge and app-embedded solutions to securely connect while greatly minimizing threats from bad actors. The platform is accessed via APIs, SDKs, and DevOps tools integrations, enabling practitioners, application developers, and network administrators to get the levels of automation and agility that are only possible with connectivity-as-code. NetFoundry is headquartered in Charlotte, North Carolina, and operates globally.\n Position Overview:\n NetFoundry is looking for smart, energetic people who are aspiring to work on some of the world’s latest technologies in the field of software-defined networking. Selected candidates will be given equal learning opportunities to build their career path at NetFoundry .\n The candidate is expected to work as a technical support engineer for NetFoundry , a leading Zero Trust NAAS provider operating globally.\n The candidate should possess broad functional knowledge in his/her domain and technical knowledge in relevant software-defined network operations. The candidate should have proven expertise in working within a team for Network operational support and remediation activities.\n Role and Responsibilities:\n \n As a technical support engineer will be accountable for resolving service issues affecting customer experience\n\n Knowledge & working experience of WAN / LAN networking including software-defined networks and cloud networking in AWS/GCP/Azure.\n\n Support, maintain & improve customer experience.\n\n Resolve or escalate incidents/problems/SR per established procedures\n\n Responsible for tracking and progress-chasing of incidents to conclusion & in-line with SLA and quality standards\n\n Essential Skills and Experience:\n \n A minimum of a bachelor’s Degree is required in Engineering/computer science, preferred\n\n 0-2 years experience performing various tasks in Network Operations and Troubleshooting\n\n 0-2 years experience in configuring/administrating software-defined networks, cloud networking, security products, cloud-native security solutions etc\n\n Software-defined networking: Clear understanding of SDN concepts, solution design, and deployment, troubleshooting\n\n Security: Understanding and working knowledge of firewalls, ACLs, cloud network security in AWS/Azure/GCP, etc\n\n Cloud/ Virtualization: Working knowledge of AWS / Azure / GCP such as VMs, VPCs/ network gateways/ storage etc\n\n Ready to work in a 24/7/365 environment with rotational shifts (APAC, EMEA, US)\n\n Excellent communication skills, both written and verbal with excellent presentation skills.\n\n Candidates with Certifications in Azure/AWS/GCP or in SDN/Python/Ansible/Terraform are preferred.\n\n Knowledge of AI and prompts to work with AI tools such as Claude.\n\n Desirable Skills and Experience:\n \n Preferred candidate with strong Software-defined networking and cloud security experience from SDWAN/Cloud-based security solution providers ( Product organizations)\n\n Knowledge of scripting language like Python, Ansible, tools like Jenkins, Terraform, etc will be an added advantage\n\n Good knowledge of Incident Management/Change management/Problem Management processes.\n\n Experience working in a globally distributed team.\n\n Environment and Location:\n We are fully remote and always have been! You will work in a fast-paced, high-performance startup environment as part of a globally distributed team. \n What We Offer:\n We have a range of excellent and expanding benefits and perks, including:\n \n Fully remote with flexible working hours\n\n Employer paid comprehensive health benefits (including parent cover) and expanded well-being benefits\n\n Employer-paid Life & AD&D\n\n Paid Holidays\n\n Unlimited PTO\n\n Technology Stipend\n\n Electronics Allowance\n\n SWAG Allowance\n\n Learning and Development Budget\n\n This is a unique opportunity to join a rapidly growing company at the forefront of zero-trust technology and play a pivotal role in shaping its success.\n If you are passionate about cybersecurity and thrive in a dynamic and innovative environment, we invite you to apply for the position and join our globally distributed team as we revolutionize networking and the cybersecurity landscape and redefine the future of secure connectivity!\n Originally posted on Himalayas",
+    "countryRestrictions": [
+      "India"
+    ],
+    "requisitionId": "",
+    "sources": [
+      "Himalayas"
+    ],
+    "sourceUrls": [
+      "https://himalayas.app/companies/netfoundry/jobs/technical-support-engineer-24555710?utm_source=api"
+    ],
+    "descriptionSummary": "Job Description – Technical Support Engineer Location: India (remote)About NetFoundry:NetFoundry is the leader in zero trust Cloud Native Networking by design.",
+    "status": "New",
+    "notes": "Jobs by Himalayas. Final application remains manual.",
+    "resumeVersion": "",
+    "applicationStartedAt": "",
+    "applicationDate": "",
+    "followUpDate": "",
+    "id": "job-1ljfsuc",
+    "experienceRequirement": {
+      "minimum": 0,
+      "requirements": [
+        {
+          "minimum": 0,
+          "preferred": false,
+          "evidence": "0+ years"
+        },
+        {
+          "minimum": 0,
+          "preferred": false,
+          "evidence": "0-2 years experience performing various tasks in network operations and troubleshooting"
+        },
+        {
+          "minimum": 0,
+          "preferred": false,
+          "evidence": "0-2 years experience in configuring/administrating software-defined networks"
+        }
+      ]
+    },
+    "remoteEligibility": {
+      "status": "eligible",
+      "reason": "Remote location includes India"
+    },
+    "matchScore": 87,
+    "matchDetails": {
+      "role": 100,
+      "skills": 100,
+      "experience": 35,
+      "location": 100,
+      "workMode": 100,
+      "jobType": 100,
+      "matchedSkills": [
+        "AWS",
+        "Terraform",
+        "Ansible",
+        "Python",
+        "Security Hardening",
+        "Troubleshooting"
+      ],
+      "missingSkills": [
+        "Linux",
+        "Docker",
+        "Docker Compose",
+        "CI/CD",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Git",
+        "Nginx",
+        "Apache",
+        "MySQL",
+        "PostgreSQL",
+        "Bash",
+        "Server Administration",
+        "Web Hosting",
+        "DNS",
+        "SSL/TLS",
+        "Monitoring",
+        "Cloud Infrastructure",
+        "cPanel/WHM",
+        "CyberPanel",
+        "PHP",
+        "Backups",
+        "Migrations"
+      ],
+      "excluded": false,
+      "overall": 87,
+      "category": "Good Match",
+      "explanation": [
+        "Role 100%: target or related role matched",
+        "Skills 100%: AWS, Terraform, Ansible, Python, Security Hardening, Troubleshooting",
+        "Experience 35%: requirement is outside the preferred range",
+        "Location 100%: Remote location includes India",
+        "Work mode 100%: Remote"
+      ]
+    }
+  }
+]
