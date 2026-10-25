@@ -1,5 +1,114 @@
 [
   {
+    "title": "DevOps & SRE Platform Engineers | Offshore",
+    "company": "Photon Interactive UK Limited",
+    "location": "India",
+    "experience": "Not specified",
+    "salary": "Not provided",
+    "skills": [
+      "AWS",
+      "Docker",
+      "Terraform",
+      "Ansible",
+      "CI/CD",
+      "GitLab CI/CD",
+      "Git",
+      "Bash",
+      "Python",
+      "Monitoring",
+      "Troubleshooting"
+    ],
+    "jobType": "Full-time",
+    "workMode": "Remote",
+    "source": "Himalayas",
+    "postedAt": "2026-10-25T09:43:04.000Z",
+    "datePosted": "2026-10-25",
+    "discoveredAt": "2026-10-25T11:44:15.783Z",
+    "dateDiscovered": "2026-10-25",
+    "dateFound": "2026-10-25",
+    "url": "https://himalayas.app/companies/photon-interactive-uk-limited/jobs/devops-sre-platform-engineers-offshore?utm_source=api",
+    "applyUrl": "https://himalayas.app/companies/photon-interactive-uk-limited/jobs/devops-sre-platform-engineers-offshore?utm_source=api",
+    "description": "Job Description:\n As a DevOps & SRE Platform Engineer, you will be responsible for designing, implementing, and maintaining the infrastructure and tools necessary for the continuous delivery, deployment, and reliability of our software systems. You will work closely with development, operations, and security teams to streamline processes, automate tasks, and ensure the scalability and availability of our platform.\n Responsibilities:\n \n Design, build, and maintain scalable and reliable infrastructure using cloud platforms such as AWS, Azure, or GCP.\n\n Implement and manage container orchestration platforms such as Kubernetes, Docker Swarm, or Amazon ECS.\n\n Develop and maintain CI/CD pipelines to automate build, test, and deployment processes.\n\n Monitor and optimize system performance, reliability, and cost.\n\n Implement infrastructure as code using tools such as Terraform, CloudFormation, or Ansible.\n\n Implement and manage logging, monitoring, and alerting systems to ensure system health and availability.\n\n Design and implement security best practices and ensure compliance with regulatory requirements.\n\n Troubleshoot and resolve infrastructure issues in a timely manner.\n\n Collaborate with development teams to improve application performance, scalability, and reliability.\n\n Participate in on-call rotation and respond to incidents as needed.\n\n Qualifications:\n \n Bachelor's degree in Computer Science, Engineering, or related field.\n\n Proven experience in DevOps, SRE, or related role.\n\n Strong understanding of cloud computing concepts and experience with cloud platforms such as AWS, Azure, or GCP.\n\n Experience with containerization technologies such as Docker and container orchestration platforms such as Kubernetes.\n\n Proficiency in scripting and automation using languages such as Python, Bash, or PowerShell.\n\n Experience with CI/CD tools such as Jenkins, GitLab CI/CD, or CircleCI.\n\n Experience with infrastructure as code tools such as Terraform, CloudFormation, or Ansible.\n\n Experience with monitoring and logging tools such as Prometheus, Grafana, ELK stack, or Splunk.\n\n Strong understanding of networking, security, and compliance principles.\n\n Excellent problem-solving and troubleshooting skills.\n\n Strong communication and collaboration skills.\n\n Originally posted on Himalayas",
+    "countryRestrictions": [
+      "India"
+    ],
+    "requisitionId": "",
+    "sources": [
+      "Himalayas"
+    ],
+    "sourceUrls": [
+      "https://himalayas.app/companies/photon-interactive-uk-limited/jobs/devops-sre-platform-engineers-offshore?utm_source=api"
+    ],
+    "descriptionSummary": "Job Description:As a DevOps & SRE Platform Engineer, you will be responsible for designing, implementing, and maintaining the infrastructure and tools necessary for the continuous delivery, deployment, and reliability of our software systems.",
+    "status": "New",
+    "notes": "Jobs by Himalayas. Final application remains manual.",
+    "resumeVersion": "",
+    "applicationStartedAt": "",
+    "applicationDate": "",
+    "followUpDate": "",
+    "id": "job-l1tejr",
+    "experienceRequirement": {
+      "minimum": null,
+      "requirements": []
+    },
+    "remoteEligibility": {
+      "status": "eligible",
+      "reason": "Remote location includes India"
+    },
+    "matchScore": 92,
+    "matchDetails": {
+      "role": 100,
+      "skills": 100,
+      "experience": 60,
+      "location": 100,
+      "workMode": 100,
+      "jobType": 100,
+      "matchedSkills": [
+        "AWS",
+        "Docker",
+        "Terraform",
+        "Ansible",
+        "CI/CD",
+        "GitLab CI/CD",
+        "Git",
+        "Bash",
+        "Python",
+        "Monitoring",
+        "Security Hardening",
+        "Troubleshooting"
+      ],
+      "missingSkills": [
+        "Linux",
+        "Docker Compose",
+        "GitHub Actions",
+        "Nginx",
+        "Apache",
+        "MySQL",
+        "PostgreSQL",
+        "Server Administration",
+        "Web Hosting",
+        "DNS",
+        "SSL/TLS",
+        "Cloud Infrastructure",
+        "cPanel/WHM",
+        "CyberPanel",
+        "PHP",
+        "Backups",
+        "Migrations"
+      ],
+      "excluded": false,
+      "overall": 92,
+      "category": "Excellent Match",
+      "explanation": [
+        "Role 100%: target or related role matched",
+        "Skills 100%: AWS, Docker, Terraform, Ansible, CI/CD, GitLab CI/CD, Git, Bash, Python, Monitoring, Security Hardening, Troubleshooting",
+        "Experience 60%: not specified; ranked using other signals",
+        "Location 100%: Remote location includes India",
+        "Work mode 100%: Remote"
+      ]
+    }
+  },
+  {
     "title": "Site Reliability Engineer",
     "company": "Canonical",
     "location": "Anywhere",
@@ -93,6 +202,109 @@
         "Skills 75%: Linux, Python, Security Hardening",
         "Experience 60%: not specified; ranked using other signals",
         "Location 100%: Remote location includes India",
+        "Work mode 100%: Remote"
+      ]
+    }
+  },
+  {
+    "title": "Site Reliability Engineer Internship",
+    "company": "Metasys",
+    "location": "Not specified",
+    "experience": "Not specified",
+    "salary": "Not provided",
+    "skills": [
+      "Docker",
+      "Terraform",
+      "CI/CD",
+      "PostgreSQL",
+      "Bash",
+      "Python",
+      "Monitoring"
+    ],
+    "jobType": "Internship",
+    "workMode": "Remote",
+    "source": "Himalayas",
+    "postedAt": "2026-10-25T09:10:58.000Z",
+    "datePosted": "2026-10-25",
+    "discoveredAt": "2026-10-25T11:44:15.783Z",
+    "dateDiscovered": "2026-10-25",
+    "dateFound": "2026-10-25",
+    "url": "https://himalayas.app/companies/metasys/jobs/site-reliability-engineer-internship?utm_source=api",
+    "applyUrl": "https://himalayas.app/companies/metasys/jobs/site-reliability-engineer-internship?utm_source=api",
+    "description": "Overview: Reliability and Operational Excellence \n The Site Reliability Engineer (SRE) is responsible for the ultimate stability, performance, and scalability of our entire integrated supply chain e-commerce platform. You will apply software engineering principles to operations, ensuring the high availability and resilience of the customer-facing e-commerce storefront, internal SaaS tools (WMS, OMS), and specialized AI agent services.\n Internship Details\n Duration: 3 months \n Start Date: Immediate\n Location: Remote\n Stipend: None initially. Based on your first-quarter performance, you may be offered a paid full-time opportunity, or even be absorbed directly by the client as an FTE.\n Key Responsibilities & Core Projects \n You will be the champion of uptime, performance, and automated operations for systems handling the critical MES → WMS → OMS flow.\n \n Availability & SLO Management: Define, implement, and track Service Level Objectives (SLOs) and Service Level Indicators (SLIs) for core business processes and all application layers. Manage the platform's overall Service Level Agreement (SLA).\n\n\n Observability & Alerting: Architect, maintain, and optimize the comprehensive observability stack (Prometheus, Grafana, Loki, Tempo, OpenTelemetry). Develop high-fidelity alerting and ensure distributed tracing across the NestJS modular monolith and associated data stores (PostgreSQL, Redis).\n\n\n Incident Response & Review: Own the incident response workflow, ensuring rapid triage, mitigation, and root cause analysis. Conduct thorough post-incident reviews to drive continuous improvement and eliminate recurring toil.\n\n\n Scalability & Capacity Planning: Optimize auto-scaling policies for all services running on Docker containers. Conduct capacity planning based on business projections, especially for peak e-commerce and manufacturing load.\n\n\n Disaster Recovery (DR): Design, implement, and regularly test Disaster Recovery procedures, including backup and restoration workflows for PostgreSQL 15 using tools like pgBackRest.\n\n\n Automation: Eliminate operational toil through automation, managing infrastructure-as-code (Terraform) and CI/CD pipelines (Makefile).\n\n\n Required Technologies & Tools \n Candidates must possess deep experience in cloud operations, observability, and infrastructure automation:\n \n Observability Stack: Prometheus, Grafana, Loki, Tempo, OpenTelemetry (mandatory).\n\n\n Infrastructure & Platform: Terraform, Docker, Traefik, Oracle Cloud Free VMs (or equivalent public cloud).\n\n\n Data & Resilience: PostgreSQL (Deep knowledge), Redis, pgBackRest.\n\n\n Automation: Strong scripting skills (Python/Bash) and experience with CI/CD tools and Makefile.\n\n\n Methodology: Expert knowledge of SRE principles, toil reduction, and error budgeting.\n\n\n AI Agent Focus \n You will be responsible for the operational reliability of the emerging AI layer.\n \n Agent Reliability: Implement specialized monitoring and logging for the AI agent services, ensuring LLM integrations and multi-agent systems (built with frameworks like LangChain) meet defined performance and availability SLOs.\n\n\n Resource Optimization: Efficiently manage resource allocation for computationally intensive AI workloads to maintain platform stability and cost-efficiency.\n\n\n Success Metrics & Career Path \n Performance will be measured by:\n \n Uptime/Availability: Achieving defined SLAs/SLOs across the platform.\n\n\n MTTR: Reduction in Mean Time To Recover from production incidents.\n\n\n Toil Reduction: Measured percentage reduction in manual, repetitive operational tasks through automation.\n\n\n Mentorship Structure: Reports to the Head of Technology/CTO, working collaboratively with DevSecOps and development teams to ensure software is designed for reliability.\n Originally posted on Himalayas",
+    "countryRestrictions": [],
+    "requisitionId": "",
+    "sources": [
+      "Himalayas"
+    ],
+    "sourceUrls": [
+      "https://himalayas.app/companies/metasys/jobs/site-reliability-engineer-internship?utm_source=api"
+    ],
+    "descriptionSummary": "Overview: Reliability and Operational ExcellenceThe Site Reliability Engineer (SRE) is responsible for the ultimate stability, performance, and scalability of our entire integrated supply chain e-commerce platform.",
+    "status": "New",
+    "notes": "Jobs by Himalayas. Final application remains manual.",
+    "resumeVersion": "",
+    "applicationStartedAt": "",
+    "applicationDate": "",
+    "followUpDate": "",
+    "id": "job-1df6pj5",
+    "experienceRequirement": {
+      "minimum": null,
+      "requirements": []
+    },
+    "remoteEligibility": {
+      "status": "unknown",
+      "reason": "Country eligibility not specified; confirm India is allowed"
+    },
+    "matchScore": 77,
+    "matchDetails": {
+      "role": 100,
+      "skills": 100,
+      "experience": 60,
+      "location": 0,
+      "workMode": 100,
+      "jobType": 100,
+      "matchedSkills": [
+        "Docker",
+        "Terraform",
+        "CI/CD",
+        "PostgreSQL",
+        "Bash",
+        "Python",
+        "Monitoring",
+        "Cloud Infrastructure",
+        "Backups"
+      ],
+      "missingSkills": [
+        "Linux",
+        "AWS",
+        "Docker Compose",
+        "Ansible",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Git",
+        "Nginx",
+        "Apache",
+        "MySQL",
+        "Server Administration",
+        "Web Hosting",
+        "DNS",
+        "SSL/TLS",
+        "Security Hardening",
+        "cPanel/WHM",
+        "CyberPanel",
+        "PHP",
+        "Migrations",
+        "Troubleshooting"
+      ],
+      "excluded": false,
+      "overall": 77,
+      "category": "Possible Match",
+      "explanation": [
+        "Role 100%: target or related role matched",
+        "Skills 100%: Docker, Terraform, CI/CD, PostgreSQL, Bash, Python, Monitoring, Cloud Infrastructure, Backups",
+        "Experience 60%: not specified; ranked using other signals",
+        "Location 0%: Country eligibility not specified; confirm India is allowed",
         "Work mode 100%: Remote"
       ]
     }
