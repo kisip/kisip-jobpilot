@@ -1,1 +1,99 @@
-[]
+[
+  {
+    "title": "Identity Security Operations Engineer",
+    "company": "Ford",
+    "location": "India",
+    "experience": "Not specified",
+    "salary": "Not provided",
+    "skills": [],
+    "jobType": "Full-time",
+    "workMode": "Remote",
+    "source": "Himalayas",
+    "postedAt": "2026-10-31T05:21:52.000Z",
+    "datePosted": "2026-10-31",
+    "discoveredAt": "2026-10-31T05:54:47.567Z",
+    "dateDiscovered": "2026-10-31",
+    "dateFound": "2026-10-31",
+    "url": "https://himalayas.app/companies/ford/jobs/identity-security-operations-engineer?utm_source=api",
+    "applyUrl": "https://himalayas.app/companies/ford/jobs/identity-security-operations-engineer?utm_source=api",
+    "description": "We are seeking a Security Engineer to join our Enterprise Privileged Access Management (ePAM) team. In this role, you will support, maintain, and enhance critical PAM services that protect privileged identities across global cloud and on-premises environments. \n\n You will work within a DevSecOps-focused team responsible for designing secure access controls, automating security operations, onboarding customers to PAM services, and ensuring the reliability and security of identity platforms used across the organization. \n\n This position offers significant exposure to enterprise security technologies, global business stakeholders, and modern cloud identity solutions. \n\n\n Originally posted on Himalayas",
+    "countryRestrictions": [
+      "India"
+    ],
+    "requisitionId": "",
+    "sources": [
+      "Himalayas"
+    ],
+    "sourceUrls": [
+      "https://himalayas.app/companies/ford/jobs/identity-security-operations-engineer?utm_source=api"
+    ],
+    "descriptionSummary": "We are seeking a Security Engineer to join our Enterprise Privileged Access Management (ePAM) team.",
+    "status": "New",
+    "notes": "Jobs by Himalayas. Final application remains manual.",
+    "resumeVersion": "",
+    "applicationStartedAt": "",
+    "applicationDate": "",
+    "followUpDate": "",
+    "id": "job-4semot",
+    "experienceRequirement": {
+      "minimum": null,
+      "requirements": []
+    },
+    "remoteEligibility": {
+      "status": "eligible",
+      "reason": "Remote location includes India"
+    },
+    "matchScore": 70,
+    "matchDetails": {
+      "role": 100,
+      "skills": 25,
+      "experience": 60,
+      "location": 100,
+      "workMode": 100,
+      "jobType": 100,
+      "matchedSkills": [
+        "Security Hardening"
+      ],
+      "missingSkills": [
+        "Linux",
+        "AWS",
+        "Docker",
+        "Docker Compose",
+        "Terraform",
+        "Ansible",
+        "CI/CD",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Git",
+        "Nginx",
+        "Apache",
+        "MySQL",
+        "PostgreSQL",
+        "Bash",
+        "Python",
+        "Server Administration",
+        "Web Hosting",
+        "DNS",
+        "SSL/TLS",
+        "Monitoring",
+        "Cloud Infrastructure",
+        "cPanel/WHM",
+        "CyberPanel",
+        "PHP",
+        "Backups",
+        "Migrations",
+        "Troubleshooting"
+      ],
+      "excluded": false,
+      "overall": 70,
+      "category": "Possible Match",
+      "explanation": [
+        "Role 100%: target or related role matched",
+        "Skills 25%: Security Hardening",
+        "Experience 60%: not specified; ranked using other signals",
+        "Location 100%: Remote location includes India",
+        "Work mode 100%: Remote"
+      ]
+    }
+  }
+]
