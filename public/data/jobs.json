@@ -1,1 +1,107 @@
-[]
+[
+  {
+    "title": "DevOps Engineer",
+    "company": "IO Tech Solutions Limited",
+    "location": "Hong Kong",
+    "experience": "Not specified",
+    "salary": "Not provided",
+    "skills": [
+      "Linux",
+      "AWS",
+      "Terraform",
+      "PostgreSQL",
+      "Bash",
+      "Python",
+      "Monitoring"
+    ],
+    "jobType": "Full-time",
+    "workMode": "Remote",
+    "source": "Himalayas",
+    "postedAt": "2026-11-05T06:01:16.000Z",
+    "datePosted": "2026-11-05",
+    "discoveredAt": "2026-11-05T06:58:59.584Z",
+    "dateDiscovered": "2026-11-05",
+    "dateFound": "2026-11-05",
+    "url": "https://himalayas.app/companies/io-tech-solutions-limited/jobs/devops-engineer-4804460689?utm_source=api",
+    "applyUrl": "https://himalayas.app/companies/io-tech-solutions-limited/jobs/devops-engineer-4804460689?utm_source=api",
+    "description": "We're hiring a DevOps Engineer to manage deployment and infrastructure for a core banking system.\n Key Responsibilities\n \n Build modern, automated, cloud native, continuously delivered distributed data infrastructure.\n\n Collaborate closely with our data, development and product teams in our fast-paced delivery environment.\n\n Actively engage in improvement and maintenance of our data storage infrastructure.\n\n Being a part of on-call rotation team to provide monitoring and reliability of the data infrastructure.\n\n We expect candidates to have in-depth experience in a subset of the following skills and technologies and be interested in filling any gaps in knowledge as needed on the job.\n Requirements:\n \n Strong proficiency in Kubernetes \n\n\n Experience with Infrastructure as Code (Terraform preferred)\n\n Familiarity with modern observability tools (e.g., Prometheus, Grafana, Datadog, OpenTelemetry)\n\n Background in database infrastructure management (PostgreSQL preferred)\n\n Hands‑on with major cloud platforms (AWS, Azure, or GCP)\n\n Strong scripting in Python & Bash \n\n\n Solid knowledge of Linux/UNIX and networking fundamentals. \n\n\n \n Preferably c an communicate in Cantonese, Mandarin, and English. \n\n\n Originally posted on Himalayas",
+    "countryRestrictions": [
+      "Hong Kong"
+    ],
+    "requisitionId": "",
+    "sources": [
+      "Himalayas"
+    ],
+    "sourceUrls": [
+      "https://himalayas.app/companies/io-tech-solutions-limited/jobs/devops-engineer-4804460689?utm_source=api"
+    ],
+    "descriptionSummary": "We're hiring a DevOps Engineer to manage deployment and infrastructure for a core banking system.",
+    "status": "New",
+    "notes": "Jobs by Himalayas. Final application remains manual.",
+    "resumeVersion": "",
+    "applicationStartedAt": "",
+    "applicationDate": "",
+    "followUpDate": "",
+    "id": "job-lacm1q",
+    "experienceRequirement": {
+      "minimum": null,
+      "requirements": []
+    },
+    "remoteEligibility": {
+      "status": "unknown",
+      "reason": "Check country eligibility: Hong Kong"
+    },
+    "matchScore": 77,
+    "matchDetails": {
+      "role": 100,
+      "skills": 100,
+      "experience": 60,
+      "location": 0,
+      "workMode": 100,
+      "jobType": 100,
+      "matchedSkills": [
+        "Linux",
+        "AWS",
+        "Terraform",
+        "PostgreSQL",
+        "Bash",
+        "Python",
+        "Monitoring"
+      ],
+      "missingSkills": [
+        "Docker",
+        "Docker Compose",
+        "Ansible",
+        "CI/CD",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Git",
+        "Nginx",
+        "Apache",
+        "MySQL",
+        "Server Administration",
+        "Web Hosting",
+        "DNS",
+        "SSL/TLS",
+        "Security Hardening",
+        "Cloud Infrastructure",
+        "cPanel/WHM",
+        "CyberPanel",
+        "PHP",
+        "Backups",
+        "Migrations",
+        "Troubleshooting"
+      ],
+      "excluded": false,
+      "overall": 77,
+      "category": "Possible Match",
+      "explanation": [
+        "Role 100%: target or related role matched",
+        "Skills 100%: Linux, AWS, Terraform, PostgreSQL, Bash, Python, Monitoring",
+        "Experience 60%: not specified; ranked using other signals",
+        "Location 0%: Check country eligibility: Hong Kong",
+        "Work mode 100%: Remote"
+      ]
+    }
+  }
+]
