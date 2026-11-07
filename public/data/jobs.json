@@ -1,1 +1,99 @@
-[]
+[
+  {
+    "title": "Partner IAM - Security Platform Engineer",
+    "company": "Ford",
+    "location": "India",
+    "experience": "Not specified",
+    "salary": "Not provided",
+    "skills": [],
+    "jobType": "Full-time",
+    "workMode": "Remote",
+    "source": "Himalayas",
+    "postedAt": "2026-11-07T03:24:01.000Z",
+    "datePosted": "2026-11-07",
+    "discoveredAt": "2026-11-07T06:11:40.494Z",
+    "dateDiscovered": "2026-11-07",
+    "dateFound": "2026-11-07",
+    "url": "https://himalayas.app/companies/ford/jobs/partner-iam-security-platform-engineer?utm_source=api",
+    "applyUrl": "https://himalayas.app/companies/ford/jobs/partner-iam-security-platform-engineer?utm_source=api",
+    "description": "Our Identity and Access Management platforms enable dealers, suppliers, and other external partners to securely access Ford applications and resources.\n\n We are undertaking a critical modernization initiative to migrate B2B users from on-premises identity solutions to cloud-based identity services. This transformation is designed to improve the user and single sign-on experience, strengthen security and risk management, and enable greater automation of user onboarding and offboarding.\n\n In this role, you will design, develop, deploy, and support scalable IAM capabilities using Microsoft Entra ID and Microsoft Entra External ID . You will work closely with globally distributed engineering, architecture, security, and application teams and contribute throughout the software development lifecycle.\n\n\n Originally posted on Himalayas",
+    "countryRestrictions": [
+      "India"
+    ],
+    "requisitionId": "",
+    "sources": [
+      "Himalayas"
+    ],
+    "sourceUrls": [
+      "https://himalayas.app/companies/ford/jobs/partner-iam-security-platform-engineer?utm_source=api"
+    ],
+    "descriptionSummary": "Our Identity and Access Management platforms enable dealers, suppliers, and other external partners to securely access Ford applications and resources.",
+    "status": "New",
+    "notes": "Jobs by Himalayas. Final application remains manual.",
+    "resumeVersion": "",
+    "applicationStartedAt": "",
+    "applicationDate": "",
+    "followUpDate": "",
+    "id": "job-17hn6pw",
+    "experienceRequirement": {
+      "minimum": null,
+      "requirements": []
+    },
+    "remoteEligibility": {
+      "status": "eligible",
+      "reason": "Remote location includes India"
+    },
+    "matchScore": 70,
+    "matchDetails": {
+      "role": 100,
+      "skills": 25,
+      "experience": 60,
+      "location": 100,
+      "workMode": 100,
+      "jobType": 100,
+      "matchedSkills": [
+        "Security Hardening"
+      ],
+      "missingSkills": [
+        "Linux",
+        "AWS",
+        "Docker",
+        "Docker Compose",
+        "Terraform",
+        "Ansible",
+        "CI/CD",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "Git",
+        "Nginx",
+        "Apache",
+        "MySQL",
+        "PostgreSQL",
+        "Bash",
+        "Python",
+        "Server Administration",
+        "Web Hosting",
+        "DNS",
+        "SSL/TLS",
+        "Monitoring",
+        "Cloud Infrastructure",
+        "cPanel/WHM",
+        "CyberPanel",
+        "PHP",
+        "Backups",
+        "Migrations",
+        "Troubleshooting"
+      ],
+      "excluded": false,
+      "overall": 70,
+      "category": "Possible Match",
+      "explanation": [
+        "Role 100%: target or related role matched",
+        "Skills 25%: Security Hardening",
+        "Experience 60%: not specified; ranked using other signals",
+        "Location 100%: Remote location includes India",
+        "Work mode 100%: Remote"
+      ]
+    }
+  }
+]
